@@ -1,0 +1,17 @@
+version: '0.2'
+sources:
+- alias: sandbox
+  target: sandbox
+  type: local
+  writeable: true
+  filters: null
+- alias: ed
+  target: https://github.com/qxcodeed/arcade.git
+  type: git
+  writeable: false
+  filters: null
+expanded: []
+tasks: {}
+flags: {}
+lang: go
+selected: ''
