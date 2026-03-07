@@ -1,0 +1,20 @@
+version: '0.2'
+sources:
+- name: sandbox
+  target: sandbox
+  type: local
+  writeable: true
+  quests: null
+  tasks: null
+- name: ed
+  target: https://github.com/qxcodeed/arcade.git
+  type: git
+  writeable: false
+  quests: null
+  tasks: null
+expanded: []
+tasks: {}
+flags: {}
+lang: go
+selected: ''
+next_draft_id: 0
