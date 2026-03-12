@@ -2,8 +2,93 @@
     "patches": [
         {
             "label": "2026-03-10_19-23-54",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n)\nfunc main() {\n    var N, E int\n    fmt.Scan(&N, &E)\n\n    fila := make([]int, N)\n\n    for i := range fila {\n        fila[i] = i + 1\n    }\n\n    fmt.Println(fila)\n}\n",
+            "content": "@@ -167,13 +167,8 @@\n  %7D%0A%0A\n-    %0A\n     \n",
             "lines": "17"
+        },
+        {
+            "label": "2026-03-12_11-09-34",
+            "content": "@@ -25,17 +25,16 @@\n %22fmt%22%0A)%0A\n-%0A\n func mai\n@@ -171,264 +171,8 @@\n     \n-mortos := 0%0A    %0A    for mortos %3C N - 1 %7B%0A        fmt.Print(%22%5B %22)%0A        for i, v := range fila %7B%0A            fmt.Print(v)%0A            if (E == i) %7B%0A                fmt.Print(%22%3E%22)%0A            %7D%0A            fmt.Print(%22 %22)%0A        %7D%0A        mortos++%0A    %7D%0A%0A\n %0A   \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-12_11-16-46",
+            "content": "@@ -314,20 +314,16 @@\n  (E == i\n- - 1\n ) %7B%0A    \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-12_11-17-15",
+            "content": "@@ -315,17 +315,17 @@\n (E == i \n-+\n+-\n  1) %7B%0A  \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-12_11-17-26",
+            "content": "@@ -449,11 +449,12 @@\n tln(\n-%22%5D%22\n+fila\n )%0A%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-12_11-17-49",
+            "content": "@@ -421,24 +421,28 @@\n ortos++%0A    \n+%7D%0A%0A%0A\n     fmt.Prin\n@@ -450,18 +450,10 @@\n ln(%22%5D%22)%0A\n-    %7D%0A%0A%0A\n %7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-12_11-17-59",
+            "content": "@@ -51,22 +51,17 @@\n  var N, \n-espada\n+E\n  int%0A   \n@@ -79,41 +79,11 @@\n N, &\n-espada)%0A%0A    vaiMorre := espada+1\n+E)%0A\n %0A   \n@@ -271,32 +271,8 @@\n a %7B%0A\n-            if v != 0 %7B%0A\n     \n@@ -308,45 +308,13 @@\n     \n-%7D%0A            %0A            if (espada\n+if (E\n  == \n@@ -397,42 +397,8 @@\n %22 %22)\n-%0A%0A            fila%5BvaiMorre%5D = 0; \n %0A   \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-12_11-20-04",
+            "content": "@@ -302,17 +302,92 @@\n  fila %7B%0A\n+            if v != 0 %7B%0A            fmt.Print(v)%0A            %7D%0A            \n %0A\n-\n         \n@@ -453,24 +453,51 @@\n            %7D\n+%0A            fmt.Print(%22 %22)\n %0A%0A          \n@@ -546,16 +546,16 @@\n ortos++%0A\n+\n         \n@@ -567,17 +567,16 @@\n rintln(%22\n- \n %5D%22)%0A    \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-12_11-22-16",
+            "content": "@@ -306,83 +306,8 @@\n a %7B%0A\n-            if v != 0 %7B%0A            fmt.Print(v)%0A            %7D%0A            \n %0A   \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-12_11-22-37",
+            "content": "@@ -441,17 +441,16 @@\n Print(%22%3E\n- \n %22)%0A     \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-12_11-22-47",
+            "content": "@@ -273,243 +273,8 @@\n  %22)%0A\n-        if mortos == 0 %7B%0A            for i, v := range fila %7B%0A            fmt.Print(v)%0A            %0A            if (espada == i + 1) %7B%0A                fmt.Print(%22%3E %22)%0A            %7D%0A%0A            fila%5BvaiMorre%5D = 0; %0A        %7D%0A        %7D%0A\n     \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-12_11-24-28",
+            "content": "@@ -40,17 +40,20 @@\n ain() %7B%0A\n-%09\n+    \n var N, e\n@@ -62,17 +62,20 @@\n ada int%0A\n-%09\n+    \n fmt.Scan\n@@ -89,17 +89,20 @@\n spada)%0A%0A\n-%09\n+    \n vaiMorre\n@@ -111,22 +111,23 @@\n = espada\n- + 1%0A%09\n++1%0A    \n fila := \n@@ -142,17 +142,20 @@\n nt, N)%0A%0A\n-%09\n+    \n for i :=\n@@ -168,18 +168,24 @@\n  fila %7B%0A\n-%09%09\n+        \n fila%5Bi%5D \n@@ -192,21 +192,27 @@\n = i + 1%0A\n-%09%7D%0A%0A%09\n+    %7D%0A%0A    \n mortos :\n@@ -215,18 +215,25 @@\n os := 0%0A\n-%0A%09\n+    %0A    \n for mort\n@@ -242,15 +242,23 @@\n  %3C N\n--\n+ - \n 1 %7B%0A\n-%09%09\n+        \n fmt.\n@@ -269,25 +269,24 @@\n t(%22%5B %22)%0A\n-%0A\n         \n // prime\n@@ -281,45 +281,8 @@\n     \n-// primeira iteracao, imprime tudo%0A%09%09\n if m\n@@ -294,19 +294,28 @@\n  == 0 %7B%0A\n-%09%09%09\n+            \n for i, v\n@@ -331,20 +331,28 @@\n  fila %7B%0A\n-%09%09%09%09\n+            \n fmt.Prin\n@@ -360,16 +360,37 @@\n (v)%0A\n-%0A%09%09%09%09\n+            %0A            \n if \n+(\n espa\n@@ -400,45 +400,75 @@\n == i\n-+1 %7B%0A%09%09%09%09%09fmt.Print(%22%3E %22)%0A%09%09%09%09%7D%0A%0A%09%09%09%09\n+ + 1) %7B%0A                fmt.Print(%22%3E %22)%0A            %7D%0A%0A            \n fila\n@@ -481,21 +481,18 @@\n rre%5D = 0\n-%0A%09%09%09%7D\n+; \n %0A       \n@@ -496,106 +496,145 @@\n     \n+%7D%0A\n     \n-fmt.Println(%22 %5D%22)%0A%09%09%7D%0A%0A%09%09for i, v := range fila %7B%0A%09%09%09if v != 0 %7B%0A%09%09%09%09fmt.Print(v)%0A%09%09%09%7D%0A%0A%09%09%09\n+    %7D%0A        for i, v := range fila %7B%0A            if v != 0 %7B%0A            fmt.Print(v)%0A            %7D%0A            %0A            \n if \n+(\n espa\n@@ -644,67 +644,114 @@\n == i\n-+1 %7B%0A%09%09%09%09fmt.Print(%22%3E %22)%0A%09%09%09%7D%0A%0A%09%09%09fila%5BvaiMorre%5D = 0%0A%09%09%7D%0A%09%09\n+ + 1) %7B%0A                fmt.Print(%22%3E %22)%0A            %7D%0A%0A            fila%5BvaiMorre%5D = 0; %0A        %7D%0A        \n mort\n@@ -759,10 +759,16 @@\n s++%0A\n-%09%09\n+        \n fmt.\n@@ -785,9 +785,14 @@\n %5D%22)%0A\n-%09%7D\n+    %7D%0A%0A\n %0A%7D%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-12_11-25-52",
+            "content": "@@ -387,16 +387,40 @@\n %22)%0A%09%09%09%09%7D\n+%0A%0A%09%09%09%09fila%5BvaiMorre%5D = 0\n %0A%09%09%09%7D%0A  \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-12_11-26-38",
+            "content": "@@ -273,12 +273,11 @@\n me t\n-o\n+u\n do\n-s\n %0A%09%09i\n@@ -427,60 +427,8 @@\n %5D%22)%0A\n-            fila%5BvaiMorre%5D = 0%0A            mortos++%0A\n %09%09%7D%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-12_11-28-01",
+            "content": "@@ -109,9 +109,9 @@\n a + \n-2\n+1\n %0A%09fi\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-12_11-28-20",
+            "content": "@@ -102,16 +102,20 @@\n = espada\n+ + 2\n %0A%09fila :\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-12_11-28-31",
+            "content": "@@ -206,12 +206,10 @@\n  %3C N\n- - 2\n+-1\n  %7B%0A%09\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-12_11-29-23",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar N, espada int\n\tfmt.Scan(&N, &espada)\n\n\tvaiMorre := espada\n\tfila := make([]int, N)\n\n\tfor i := range fila {\n\t\tfila[i] = i + 1\n\t}\n\n\tmortos := 0\n\n\tfor mortos < N - 2 {\n\t\tfmt.Print(\"[ \")\n\n        // primeira iteracao, imprime todos\n\t\tif mortos == 0 {\n\t\t\tfor i, v := range fila {\n\t\t\t\tfmt.Print(v)\n\n\t\t\t\tif espada == i+1 {\n\t\t\t\t\tfmt.Print(\"> \")\n\t\t\t\t}\n\t\t\t}\n            fmt.Println(\" ]\")\n            fila[vaiMorre] = 0\n            mortos++\n\t\t}\n\n\t\tfor i, v := range fila {\n\t\t\tif v != 0 {\n\t\t\t\tfmt.Print(v)\n\t\t\t}\n\n\t\t\tif espada == i+1 {\n\t\t\t\tfmt.Print(\"> \")\n\t\t\t}\n\n\t\t\tfila[vaiMorre] = 0\n\t\t}\n\t\tmortos++\n\t\tfmt.Println(\" ]\")\n\t}\n}\n",
+            "lines": "51"
         }
     ]
 }
