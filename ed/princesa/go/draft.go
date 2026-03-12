@@ -8,7 +8,7 @@ func main() {
 	var N, espada int
 	fmt.Scan(&N, &espada)
 
-	vaiMorre := espada
+	vitima := espada
 	fila := make([]int, N)
 
 	for i := range fila {
@@ -17,35 +17,34 @@ func main() {
 
 	mortos := 0
 
-	for mortos < N - 2 {
-		fmt.Print("[ ")
+    //mostra todos
+    fmt.Print("[ ")
+	for _, v := range fila {
+	    if espada == v{
+			fmt.Printf("%d> ", v)
+		} else {
+            fmt.Printf("%d ", v)
+        }
+	}
+    fmt.Println("]")
+    fila[vitima] = 0
+    mortos++
+		
+    
+    //matança
+	for mortos < N{ 
+		for _, v := range fila {
+            fmt.Print("[ ")
 
-        // primeira iteracao, imprime todos
-		if mortos == 0 {
-			for i, v := range fila {
-				fmt.Print(v)
+			if espada == v {
+				fmt.Printf("%d> ", v)
+			} else {
+                fmt.Printf("%d ", v)
+            }
 
-				if espada == i+1 {
-					fmt.Print("> ")
-				}
-			}
-            fmt.Println(" ]")
-            fila[vaiMorre] = 0
             mortos++
-		}
-
-		for i, v := range fila {
-			if v != 0 {
-				fmt.Print(v)
-			}
-
-			if espada == i+1 {
-				fmt.Print("> ")
-			}
-
-			fila[vaiMorre] = 0
-		}
-		mortos++
-		fmt.Println(" ]")
+		    fmt.Println("]")
+        }
+        
 	}
 }
