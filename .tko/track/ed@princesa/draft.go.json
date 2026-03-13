@@ -192,7 +192,52 @@
         },
         {
             "label": "2026-03-12_18-45-29",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar N, espada int\n\tfmt.Scan(&N, &espada)\n\n\tvitima := espada\n\tfila := make([]int, N)\n\n\tfor i := range fila {\n\t\tfila[i] = i + 1\n\t}\n\n\tmortos := 0\n\n    //mostra todos\n    fmt.Print(\"[ \")\n\tfor _, v := range fila {\n\t    if espada == v{\n\t\t\tfmt.Printf(\"%d> \", v)\n\t\t} else {\n            fmt.Printf(\"%d \", v)\n        }\n\t}\n    fmt.Println(\"]\")\n    fila[vitima] = 0\n    mortos++\n\t\t\n    \n    //matan\u00e7a\n\tfor mortos < N{ \n\t\tfor _, v := range fila {\n            fmt.Print(\"[ \")\n\n\t\t\tif espada == v {\n\t\t\t\tfmt.Printf(\"%d> \", v)\n\t\t\t} else {\n                fmt.Printf(\"%d \", v)\n            }\n\n            mortos++\n\t\t    fmt.Println(\"]\")\n        }\n        \n\t}\n}\n",
+            "content": "@@ -408,16 +408,19 @@\n ortos++%0A\n+%09%09%0A\n     %0A   \n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-12_22-00-27",
+            "content": "@@ -83,16 +83,34 @@\n spada)%0A%0A\n+%09vitima := espada%0A\n %09fila :=\n@@ -130,116 +130,8 @@\n N)%0A%0A\n-%09//INDICE de quem tem a espada e de quem vai morrer%0A%09espada -= 1 %25 len%0A%09vitima := (espada + 1) %25 len(fila)%0A%0A\n %09for\n@@ -431,25 +431,8 @@\n n%C3%A7a%0A\n-%09fmt.Print(%22%5B %22)%0A\n %09for\n@@ -445,28 +445,22 @@\n s %3C \n-len(fila) %7B%0A%09\n+N%7B %0A\n %09%09for \n-i\n+_, v\n  := \n@@ -476,50 +476,50 @@\n a %7B%0A\n-%09%09%09%09if fila%5Bi%5D != 0 %7B%0A%09\n+            fmt.Print(%22%5B %22)%0A%0A\n %09%09%09\n-%09\n if\n- i ==\n  espada \n %7B%0A%09%09\n@@ -514,19 +514,23 @@\n  espada \n+== v \n %7B%0A\n-%09\n %09%09%09%09fmt.\n@@ -548,30 +548,39 @@\n  %22, \n-fila%5Bi%5D)%0A%09%09%09%09%09%7D %0A%09%09%09%09%09\n+v)%0A%09%09%09%7D else %7B%0A                \n fmt.\n@@ -593,58 +593,92 @@\n (%22%25d\n-%3E\n  %22, \n-fila%5Bi%5D)%0A%09%09%09%09%7D%0A%09%09%09%09mortos++%0A%09%09%09%09espada++%0A%09%09%09%7D\n+v)%0A            %7D%0A%0A            mortos++%0A%09%09    fmt.Println(%22%5D%22)%0A        %7D%0A        \n %0A%09%7D%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-12_22-28-54",
+            "content": "@@ -178,22 +178,16 @@\n  1 %25 len\n-(fila)\n %0A%09vitima\n@@ -722,16 +722,29 @@\n ortos++%0A\n+%09%09%09%09espada++%0A\n %09%09%09%7D%0A%09%7D%0A\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-12_22-29-21",
+            "content": "@@ -172,16 +172,28 @@\n ada -= 1\n+ %25 len(fila)\n %0A%09vitima\n@@ -325,17 +325,17 @@\n %22)%0A%09for \n-i\n+_\n , v := r\n@@ -364,17 +364,17 @@\n pada == \n-i\n+v\n %7B%0A%09%09%09fmt\n@@ -716,20 +716,16 @@\n %0A%09%09%09%09%7D%0A%09\n-%09%09%7D%0A\n %09%09%09morto\n@@ -728,13 +728,18 @@\n ortos++%0A\n+%09%09%09%7D%0A\n %09%7D%0A%7D%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-12_22-31-28",
+            "content": "@@ -511,16 +511,33 @@\n matan%C3%A7a%0A\n+%09fmt.Print(%22%5B %22)%0A\n %09for mor\n@@ -558,26 +558,8 @@\n ) %7B%0A\n-%09%09fmt.Print(%22%5B %22)%0A\n %09%09%09f\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-12_22-32-07",
+            "content": "@@ -680,24 +680,25 @@\n t.Printf(%22%25d\n+%3E\n  %22, fila%5Bi%5D)\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-12_22-32-35",
+            "content": "@@ -724,20 +724,8 @@\n s++%0A\n-%09%09%09espada++%0A\n %09%7D%0A%7D\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-12_22-32-46",
+            "content": "@@ -477,10 +477,8 @@\n tima\n-+1\n %5D = \n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-12_22-33-30",
+            "content": "@@ -473,16 +473,18 @@\n a%5Bvitima\n++1\n %5D = 0%0A  \n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-12_22-34-30",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar N, espada int\n\tfmt.Scan(&N, &espada)\n\n\tfila := make([]int, N)\n\n\t//INDICE de quem tem a espada e de quem vai morrer\n\tespada -= 1\n\tvitima := (espada + 1) % len(fila)\n\n\tfor i := range fila {\n\t\tfila[i] = i + 1\n\t}\n\n\tmortos := 0\n\n    //mostra todos\n    fmt.Print(\"[ \")\n\tfor i, v := range fila {\n\t    if espada == i{\n\t\t\tfmt.Printf(\"%d> \", v)\n\t\t} else {\n            fmt.Printf(\"%d \", v)\n        }\n\t}\n    fmt.Println(\"]\")\n    fila[vitima] = 0\n    mortos++\n    \n    //matan\u00e7a\n\tfor mortos < len(fila) {\n\t\tfmt.Print(\"[ \")\n\t\t\tfor i := range fila {\n\t\t\t\tif fila[i] != 0 {\n\t\t\t\t\tif i == espada {\n\t\t\t\t\tfmt.Printf(\"%d> \", fila[i])\n\t\t\t\t\t} \n\t\t\t\t\tfmt.Printf(\"%d \", fila[i])\n\t\t\t\t}\n\t\t\t}\n\t\t\tmortos++\n\t\t\tespada++\n\t}\n}\n",
             "lines": "50"
         }
     ]

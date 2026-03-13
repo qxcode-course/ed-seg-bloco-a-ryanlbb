@@ -2,14 +2,18 @@ package main
 
 import (
 	"fmt"
+	"slices"
 )
 
 func main() {
 	var N, espada int
 	fmt.Scan(&N, &espada)
 
-	vitima := espada
 	fila := make([]int, N)
+
+	//INDICE de quem tem a espada e de quem vai morrer
+	espada -= 1
+	vitima := (espada + 1) % len(fila)
 
 	for i := range fila {
 		fila[i] = i + 1
@@ -19,8 +23,8 @@ func main() {
 
     //mostra todos
     fmt.Print("[ ")
-	for _, v := range fila {
-	    if espada == v{
+	for i, v := range fila {
+	    if espada == i{
 			fmt.Printf("%d> ", v)
 		} else {
             fmt.Printf("%d ", v)
@@ -29,22 +33,17 @@ func main() {
     fmt.Println("]")
     fila[vitima] = 0
     mortos++
-		
     
     //matança
-	for mortos < N{ 
-		for _, v := range fila {
-            fmt.Print("[ ")
+	for mortos < len(fila) {
+		
+	}
+}
 
-			if espada == v {
-				fmt.Printf("%d> ", v)
-			} else {
-                fmt.Printf("%d ", v)
-            }
-
-            mortos++
-		    fmt.Println("]")
-        }
-        
+func matar (espadaPosic int, vet []int) {
+	vitima := (espadaPosic + 1) % len[vet]
+	
+	for {
+			
 	}
 }
