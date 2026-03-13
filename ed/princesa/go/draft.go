@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"slices"
 )
 
 func main() {
@@ -19,31 +18,39 @@ func main() {
 		fila[i] = i + 1
 	}
 
-	mortos := 0
+	vivos := len(fila)
 
-    //mostra todos
-    fmt.Print("[ ")
-	for i, v := range fila {
-	    if espada == i{
-			fmt.Printf("%d> ", v)
-		} else {
-            fmt.Printf("%d ", v)
-        }
-	}
-    fmt.Println("]")
-    fila[vitima] = 0
-    mortos++
-    
-    //matança
-	for mortos < len(fila) {
+	for vivos > 1 {
+		printarFila(fila, espada)
+		fila[vitima] = 0
+		vivos--
+		espada = proxVivo(fila, espada)
+		vitima = proxVivo(fila, espada)
 		
 	}
+
+	printarFila(fila, espada)
 }
 
-func matar (espadaPosic int, vet []int) {
-	vitima := (espadaPosic + 1) % len[vet]
-	
-	for {
-			
+func proxVivo(fila []int, espadaPosic int) (vivo int){
+	vivo = (espadaPosic + 1) % len(fila)
+	for fila[vivo] == 0 {
+		vivo = (vivo + 1) % len(fila)
 	}
+
+	return vivo
+}
+
+func printarFila(fila []int, espada int) {
+	fmt.Print("[ ")
+	for i, v := range fila {
+		if v != 0 {
+			if espada == i {
+				fmt.Printf("%d> ", v)
+			} else {
+				fmt.Printf("%d ", v)
+			}
+		}
+	}
+	fmt.Println("]")
 }

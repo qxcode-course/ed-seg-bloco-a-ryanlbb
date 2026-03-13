@@ -237,8 +237,23 @@
         },
         {
             "label": "2026-03-12_22-34-30",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar N, espada int\n\tfmt.Scan(&N, &espada)\n\n\tfila := make([]int, N)\n\n\t//INDICE de quem tem a espada e de quem vai morrer\n\tespada -= 1\n\tvitima := (espada + 1) % len(fila)\n\n\tfor i := range fila {\n\t\tfila[i] = i + 1\n\t}\n\n\tmortos := 0\n\n    //mostra todos\n    fmt.Print(\"[ \")\n\tfor i, v := range fila {\n\t    if espada == i{\n\t\t\tfmt.Printf(\"%d> \", v)\n\t\t} else {\n            fmt.Printf(\"%d \", v)\n        }\n\t}\n    fmt.Println(\"]\")\n    fila[vitima] = 0\n    mortos++\n    \n    //matan\u00e7a\n\tfor mortos < len(fila) {\n\t\tfmt.Print(\"[ \")\n\t\t\tfor i := range fila {\n\t\t\t\tif fila[i] != 0 {\n\t\t\t\t\tif i == espada {\n\t\t\t\t\tfmt.Printf(\"%d> \", fila[i])\n\t\t\t\t\t} \n\t\t\t\t\tfmt.Printf(\"%d \", fila[i])\n\t\t\t\t}\n\t\t\t}\n\t\t\tmortos++\n\t\t\tespada++\n\t}\n}\n",
+            "content": "@@ -260,277 +260,221 @@\n %7D%0A%0A%09\n-viv\n+mort\n os := \n-len(fila)%0A%0A%09for vivos %3E 1 %7B%0A%09%09printarFila(fila, espada)%0A%09%09fila%5Bvitima%5D = 0%0A%09%09espada = proxVivo(fila, espada)%0A%09%09vitima = proxVivo(fila, espada)%0A%09%09viv%0A%09%7D%0A%7D%0A%0Afunc proxVivo(fila %5B%5Dint, espadaPosic int) (vivo int)%7B%0A%09vivo = (espadaPosic + 1) %25 len(fila)%0A%09for\n+0%0A%0A    //mostra todos%0A    fmt.Print(%22%5B %22)%0A%09for i, v := range fila %7B%0A%09    if espada == i%7B%0A%09%09%09fmt.Printf(%22%25d%3E %22, v)%0A%09%09%7D else %7B%0A            fmt.Printf(%22%25d %22, v)%0A        %7D%0A%09%7D%0A    fmt.Println(%22%5D%22)%0A   \n  fila%5Bvi\n vo%5D \n@@ -473,114 +473,77 @@\n a%5Bvi\n-vo\n+tima\n %5D =\n-=\n  0\n- %7B%0A%09%09vivo = (vivo + 1) %25 len(fila)%0A%09%7D%0A%0A%09return vivo%0A%7D%0A%0Afunc printarFila(fila %5B%5Dint, espada int\n+%0A    mortos++%0A    %0A    //matan%C3%A7a%0A%09for mortos %3C len(fila\n ) %7B%0A\n+%09\n %09fmt\n@@ -551,33 +551,32 @@\n Print(%22%5B %22)%0A\n+%09%09\n %09for i\n-, v\n  := range fi\n@@ -586,12 +586,20 @@\n %7B%0A%09%09\n+%09\n+%09\n if \n-v\n+fila%5Bi%5D\n  != \n@@ -605,26 +605,33 @@\n  0 %7B%0A%09%09%09\n-if\n+%09%09if i ==\n  espada \n == i %7B%0A%09\n@@ -626,15 +626,11 @@\n ada \n-== i \n %7B%0A\n+%09\n %09%09%09%09\n@@ -652,23 +652,26 @@\n  %22, \n-v\n+fila%5Bi%5D\n )%0A%09%09%09\n+%09\n+%09\n %7D \n-else %7B\n %0A\n+%09\n %09%09%09%09\n@@ -692,39 +692,53 @@\n  %22, \n-v\n+fila%5Bi%5D\n )%0A%09%09%09\n+%09\n %7D%0A\n+%09\n %09%09%7D%0A%09\n-%7D%0A%09fmt.Println(%22%5D%22)\n+%09%09mortos++%0A%09%09%09espada++%0A%09%7D\n %0A%7D%0A\n",
             "lines": "50"
+        },
+        {
+            "label": "2026-03-13_11-02-14",
+            "content": "@@ -344,18 +344,8 @@\n = 0%0A\n-%09%09vivos--%0A\n %09%09es\n@@ -410,16 +410,19 @@\n pada)%0A%09%09\n+viv\n %0A%09%7D%0A%7D%0A%0Af\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-13_11-02-26",
+            "content": "@@ -427,36 +427,8 @@\n %09%0A%09%7D\n-%0A%0A%09printarFila(fila, espada)\n %0A%7D%0A%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-13_11-03-57",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar N, espada int\n\tfmt.Scan(&N, &espada)\n\n\tfila := make([]int, N)\n\n\t//INDICE de quem tem a espada e de quem vai morrer\n\tespada -= 1\n\tvitima := (espada + 1) % len(fila)\n\n\tfor i := range fila {\n\t\tfila[i] = i + 1\n\t}\n\n\tvivos := len(fila)\n\n\tfor vivos > 1 {\n\t\tprintarFila(fila, espada)\n\t\tfila[vitima] = 0\n\t\tvivos--\n\t\tespada = proxVivo(fila, espada)\n\t\tvitima = proxVivo(fila, espada)\n\t\t\n\t}\n\n\tprintarFila(fila, espada)\n}\n\nfunc proxVivo(fila []int, espadaPosic int) (vivo int){\n\tvivo = (espadaPosic + 1) % len(fila)\n\tfor fila[vivo] == 0 {\n\t\tvivo = (vivo + 1) % len(fila)\n\t}\n\n\treturn vivo\n}\n\nfunc printarFila(fila []int, espada int) {\n\tfmt.Print(\"[ \")\n\tfor i, v := range fila {\n\t\tif v != 0 {\n\t\t\tif espada == i {\n\t\t\t\tfmt.Printf(\"%d> \", v)\n\t\t\t} else {\n\t\t\t\tfmt.Printf(\"%d \", v)\n\t\t\t}\n\t\t}\n\t}\n\tfmt.Println(\"]\")\n}\n",
+            "lines": "56"
         }
     ]
 }
