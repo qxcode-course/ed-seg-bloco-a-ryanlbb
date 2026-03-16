@@ -1,14 +1,30 @@
 package main
 import "fmt"
 func main() {
-	var nF1, nF2 int
-	fmt.Scan(&nF1)
+	var nFila, nDeixouFila int
+	fmt.Scan(&nFila)
 
-	fila1 := make([]int, nF1)
+	fila := make([][2]int, nFila)
 	
-	for i := range fila1 {
+	for i := range nFila {
 		var valor int
 		fmt.Scan(&valor)
-		fila1[i] = valor 
+		fila[i][0] = valor
+		fila[i][1] = 1 
 	}
+
+	fmt.Scan(&nDeixouFila)
+	for range nDeixouFila {
+		var valor int
+		fmt.Scan(&valor)
+		fila[valor][1] = 0
+	}
+
+	for i := range nFila {
+		if fila[i][1] == 1 {
+			fmt.Print(i, " ")
+		}
+	}
+
+	fmt.Println()
 }
