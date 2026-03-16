@@ -1,28 +1,32 @@
 package main
 import "fmt"
+
+type Pessoa struct {
+    Id  int
+    naFila bool
+}
+
 func main() {
 	var nFila, nDeixouFila int
 	fmt.Scan(&nFila)
 
-	fila := make([][2]int, nFila)
+	fila := make([]Pessoa, nFila)
 	
-	for i := range nFila {
-		var valor int
-		fmt.Scan(&valor)
-		fila[i][0] = valor
-		fila[i][1] = 1 
+	for i := range fila {
+		fmt.Scan(&fila[i].Id)
+		fila[i].naFila = true
 	}
 
 	fmt.Scan(&nDeixouFila)
 	for range nDeixouFila {
 		var valor int
 		fmt.Scan(&valor)
-		fila[valor][1] = 0
+		for
 	}
 
-	for i := range nFila {
-		if fila[i][1] == 1 {
-			fmt.Print(i, " ")
+	for i := 0; i < nFila-1; i++ {
+		if fila[i].naFila == true {
+			fmt.Print(fila[i].Id, " ")
 		}
 	}
 
