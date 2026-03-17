@@ -21,7 +21,6 @@ func main() {
 	for range nDeixouFila {
 		var valor int
 		fmt.Scan(&valor)
-		for
 	}
 
 	for i := 0; i < nFila-1; i++ {

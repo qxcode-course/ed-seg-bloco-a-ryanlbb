@@ -112,8 +112,13 @@
         },
         {
             "label": "2026-03-16_19-21-26",
-            "content": "package main\nimport \"fmt\"\n\ntype Pessoa struct {\n    Id  int\n    naFila bool\n}\n\nfunc main() {\n\tvar nFila, nDeixouFila int\n\tfmt.Scan(&nFila)\n\n\tfila := make([]Pessoa, nFila)\n\t\n\tfor i := range fila {\n\t\tfmt.Scan(&fila[i].Id)\n\t\tfila[i].naFila = true\n\t}\n\n\tfmt.Scan(&nDeixouFila)\n\tfor range nDeixouFila {\n\t\tvar valor int\n\t\tfmt.Scan(&valor)\n\t\tfila[valor].naFila = false\n\t}\n\n\tfor i := 0; i < nFila-1; i++ {\n\t\tif fila[i].naFila == true {\n\t\t\tfmt.Print(fila[i].Id, \" \")\n\t\t}\n\t}\n\n\tfmt.Println()\n}\n",
+            "content": "@@ -325,16 +325,45 @@\n &valor)%0A\n+%09%09fila%5Bvalor%5D.naFila = false%0A\n %09%7D%0A%0A%09for\n",
             "lines": "34"
+        },
+        {
+            "label": "2026-03-17_18-56-23",
+            "content": "package main\nimport \"fmt\"\n\ntype Pessoa struct {\n    Id  int\n    naFila bool\n}\n\nfunc main() {\n\tvar nFila, nDeixouFila int\n\tfmt.Scan(&nFila)\n\n\tfila := make([]Pessoa, nFila)\n\t\n\tfor i := range fila {\n\t\tfmt.Scan(&fila[i].Id)\n\t\tfila[i].naFila = true\n\t}\n\n\tfmt.Scan(&nDeixouFila)\n\tfor range nDeixouFila {\n\t\tvar valor int\n\t\tfmt.Scan(&valor)\n\t}\n\n\tfor i := 0; i < nFila-1; i++ {\n\t\tif fila[i].naFila == true {\n\t\t\tfmt.Print(fila[i].Id, \" \")\n\t\t}\n\t}\n\n\tfmt.Println()\n}\n",
+            "lines": "33"
         }
     ]
 }
