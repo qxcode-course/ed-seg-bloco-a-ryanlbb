@@ -1,0 +1,12 @@
+2026-03-18 15:28:45, MOVE, v:1, k:ed@pintando, mode:DOWN
+2026-03-18 15:28:46, MOVE, v:1, k:ed@mumia, mode:DOWN
+2026-03-18 15:28:47, MOVE, v:1, k:ed@fuga, mode:DOWN
+2026-03-18 15:28:47, MOVE, v:1, k:ed@pedra, mode:DOWN
+2026-03-18 15:28:47, MOVE, v:1, k:ed@casais, mode:DOWN
+2026-03-18 15:28:47, MOVE, v:1, k:ed@baruel, mode:DOWN
+2026-03-18 15:28:48, MOVE, v:1, k:ed@gomos, mode:DOWN
+2026-03-18 15:28:50, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-18 15:55:18, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-18 15:55:46, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-18 15:58:03, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:5
+2026-03-18 15:58:21, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0
