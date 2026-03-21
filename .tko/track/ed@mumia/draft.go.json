@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-21_15-33-55",
+            "content": "@@ -89,19 +89,19 @@\n an(&\n-nome, &idad\n+idade, &nom\n e)%0A%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-21_15-34-10",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var idade int\n    var nome string\n    fmt.Scan(&nome, &idade)\n\n    switch {\n    case idade < 12:\n        fmt.Println(nome,\"eh crianca\")\n    case idade < 18:\n        fmt.Println(nome, \"eh jovem\")\n    case idade < 65:\n        fmt.Println(nome, \"eh adulto\")\n    case idade < 100:\n        fmt.Println(nome, \"eh idoso\")\n    default:\n        fmt.Println(nome, \"eh mumia\")\n    }\n}",
+            "lines": "20"
+        }
+    ]
+}
