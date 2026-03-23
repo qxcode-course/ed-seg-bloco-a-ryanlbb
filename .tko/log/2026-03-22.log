@@ -19,3 +19,43 @@
 2026-03-22 19:05:28, EXEC, v:1, k:ed@fuga, mode:FULL, rate:100, size:26
 2026-03-22 19:05:41, MOVE, v:1, k:ed@fuga, mode:BACK
 2026-03-22 19:05:55, SELF, v:1, k:ed@fuga, self:1, rate:100, study:40
+2026-03-22 21:50:59, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-03-22 22:01:25, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:26
+2026-03-22 22:06:37, EXEC, v:1, k:ed@pedra, mode:FULL, rate:25, size:36
+2026-03-22 22:11:41, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:40
+2026-03-22 22:12:12, EXEC, v:1, k:ed@pedra, mode:FULL, rate:25, size:40
+2026-03-22 22:14:44, EXEC, v:1, k:ed@pedra, mode:FULL, rate:50, size:45
+2026-03-22 22:15:11, EXEC, v:1, k:ed@pedra, mode:FULL, rate:50, size:45
+2026-03-22 22:18:51, EXEC, v:1, k:ed@pedra, mode:FULL, rate:50, size:45
+2026-03-22 22:19:52, EXEC, v:1, k:ed@pedra, mode:FULL, rate:50, size:45
+2026-03-22 22:21:51, EXEC, v:1, k:ed@pedra, mode:FULL, rate:58, size:40
+2026-03-22 22:22:16, EXEC, v:1, k:ed@pedra, mode:FULL, rate:50, size:40
+2026-03-22 22:25:22, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:44
+2026-03-22 22:25:29, EXEC, v:1, k:ed@pedra, mode:FULL, rate:50, size:44
+2026-03-22 22:26:42, EXEC, v:1, k:ed@pedra, mode:FULL, rate:50, size:45
+2026-03-22 22:27:20, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:48
+2026-03-22 22:28:45, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:44
+2026-03-22 22:29:59, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:46
+2026-03-22 22:30:49, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:46
+2026-03-22 22:32:12, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:46
+2026-03-22 22:33:26, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:46
+2026-03-22 22:33:51, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:46
+2026-03-22 22:34:09, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:46
+2026-03-22 22:34:55, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:47
+2026-03-22 22:36:25, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:47
+2026-03-22 22:36:34, EXEC, v:1, k:ed@pedra, mode:FULL, rate:75, size:45
+2026-03-22 22:37:08, EXEC, v:1, k:ed@pedra, mode:FULL, rate:66, size:45
+2026-03-22 22:37:39, EXEC, v:1, k:ed@pedra, mode:FULL, rate:66
+2026-03-22 22:38:55, EXEC, v:1, k:ed@pedra, mode:FULL, rate:75, size:45
+2026-03-22 22:39:12, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:47
+2026-03-22 22:39:35, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:47
+2026-03-22 22:42:00, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:47
+2026-03-22 22:45:45, EXEC, v:1, k:ed@pedra, mode:FULL, size:47, fail:COMP
+2026-03-22 22:46:39, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:47
+2026-03-22 22:48:37, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:47
+2026-03-22 23:02:59, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:48
+2026-03-22 23:03:15, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:48
+2026-03-22 23:03:25, EXEC, v:1, k:ed@pedra, mode:FULL, rate:100, size:46
+2026-03-22 23:03:26, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-03-22 23:03:38, SELF, v:1, k:ed@pedra, self:1, rate:100
+2026-03-22 23:04:06, SELF, v:1, k:ed@pedra, self:1, rate:100, study:30

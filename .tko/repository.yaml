@@ -14,12 +14,18 @@ sources:
   tasks: null
 expanded:
 - ed@revisão
+- ed@recursão
+- ed@busca-em-profundidade
 - ed@main-quest
+- ed@vetor
+- ed@backtracking
+- ed@busca-em-largura
 - ed@análise
 tasks:
   ed@pintando: '{self:1, rate:100}'
   ed@mumia: '{self:1, rate:100}'
   ed@fuga: '{self:1, rate:100, study:40}'
+  ed@pedra: '{self:1, rate:100, study:30}'
   ed@princesa: '{self:1, rate:100, study:120, concept:1}'
   ed@apagando: '{rate:16}'
   ed@manipulacao: '{rate:42}'
@@ -31,4 +37,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@gomos
+selected: ed@pedra

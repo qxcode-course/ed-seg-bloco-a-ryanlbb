@@ -1,0 +1,179 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-22_22-01-25",
+            "content": "@@ -261,41 +261,8 @@\n , n)\n-%0A    diferencas := make(%5B%5Dint, n)\n %0A%0A  \n@@ -339,204 +339,8 @@\n d2)%0A\n-        diferencas%5Bi%5D = diferencaAbs(jogadas%5Bi%5D.jgd1, jogadas%5Bi%5D.jgd2)%0A    %7D%0A%0A    menor := 0%0A%0A    for i := range n %7B%0A        if diferencas%5Bmenor%5D %3E diferencas%5Bi%5D %7B%0A            menor = i%0A        %7D%0A\n     \n@@ -362,12 +362,14 @@\n tln(\n-menor\n+jogadas\n )%0A%7D\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-22_22-06-37",
+            "content": "@@ -372,118 +372,8 @@\n d2)%0A\n-        if jogadas%5Bi%5D.jgd1 %3C 10 %7C%7C jogadas%5Bi%5D.jgd2 %3C 10 %7B%0A            diferencas%5Bi%5D = -1%0A        %7D else %7B%0A    \n     \n@@ -439,26 +439,16 @@\n %5D.jgd2)%0A\n-        %7D%0A\n     %7D%0A%0A \n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-22_22-11-41",
+            "content": "@@ -616,17 +616,16 @@\n      if \n-(\n diferenc\n@@ -653,32 +653,8 @@\n s%5Bi%5D\n-) && diferencas%5Bi%5D != -1\n  %7B%0A \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-22_22-12-12",
+            "content": "@@ -368,17 +368,16 @@\n %5D.jgd2)%0A\n-%0A\n         \n@@ -579,18 +579,17 @@\n enor := \n--1\n+0\n %0A%0A    fo\n@@ -607,12 +607,8 @@\n e n \n-- 1 \n %7B%0A  \n@@ -628,17 +628,21 @@\n erencas%5B\n-i\n+menor\n %5D %3E dife\n@@ -653,12 +653,8 @@\n as%5Bi\n- + 1\n %5D) &\n@@ -720,86 +720,8 @@\n  %7D%0A%0A\n-    if menor == -1 %7B%0A        fmt.Println(%22sem ganhador%22)%0A        return%0A    %7D%0A\n     \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-22_22-14-44",
+            "content": "@@ -399,17 +399,17 @@\n jgd1 %3C 1\n-1\n+0\n  %7C%7C joga\n@@ -423,17 +423,17 @@\n jgd2 %3C 1\n-1\n+0\n  %7B%0A     \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-22_22-15-11",
+            "content": "@@ -399,17 +399,17 @@\n jgd1 %3C 1\n-0\n+1\n  %7C%7C joga\n@@ -427,9 +427,9 @@\n  %3C 1\n-0\n+1\n  %7B%0A \n@@ -622,16 +622,17 @@\n      if \n+(\n diferenc\n@@ -656,16 +656,17 @@\n s%5Bi + 1%5D\n+)\n  && dife\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-22_22-18-51",
+            "content": "@@ -683,34 +683,8 @@\n  -1 \n-%7C%7C diferencas%5Bi + 1%5D == 0 \n %7B%0A  \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-22_22-19-52",
+            "content": "@@ -20,16 +20,70 @@\n  %22fmt%22%0A%0A\n+type Jogadores struct  %7B%0A    jgd1 int%0A    jgd2 int%0A%7D%0A%0A\n func dif\n@@ -222,16 +222,52 @@\n can(&n)%0A\n+    jogadas := make(%5B%5DJogadores, n)%0A\n     dife\n@@ -327,52 +327,47 @@\n     \n-var jgd1, jgd2 int%0A        fmt.Scan(&jgd1, &\n+fmt.Scan(&jogadas%5Bi%5D.jgd1, &jogadas%5Bi%5D.\n jgd2\n@@ -380,16 +380,27 @@\n      if \n+jogadas%5Bi%5D.\n jgd1 %3C 1\n@@ -404,16 +404,27 @@\n %3C 10 %7C%7C \n+jogadas%5Bi%5D.\n jgd2 %3C 1\n@@ -517,21 +517,43 @@\n ncaAbs(j\n-gd1, \n+ogadas%5Bi%5D.jgd1, jogadas%5Bi%5D.\n jgd2)%0A  \n@@ -728,20 +728,16 @@\n enor = i\n- + 1\n %0A       \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-22_22-21-51",
+            "content": "@@ -546,24 +546,50 @@\n as%5Bi%5D != -1 \n+%7C%7C diferencas%5Bi + 1%5D == 0 \n %7B%0A          \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-22_22-22-16",
+            "content": "@@ -468,32 +468,36 @@\n or i := range n \n+- 1 \n %7B%0A        if dif\n@@ -511,66 +511,9 @@\n %5Bi%5D \n-== -1 %7B%0A            continue%0A        %7D%0A        %0A        if\n+%3E\n  dif\n@@ -513,35 +513,40 @@\n %5D %3E diferencas%5Bi\n-%5D %3E\n+ + 1%5D &&\n  diferencas%5Bi + \n@@ -542,21 +542,23 @@\n rencas%5Bi\n- + 1%5D\n+%5D != -1\n  %7B%0A     \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-22_22-25-22",
+            "content": "@@ -480,12 +480,8 @@\n e n \n-- 1 \n %7B%0A  \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-22_22-25-29",
+            "content": "@@ -351,37 +351,16 @@\n i%5D = -1%0A\n-            continue%0A\n         \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-22_22-26-42",
+            "content": "@@ -670,41 +670,8 @@\n  %7D%0A%0A\n-    fmt.Println(diferencas)%0A    %0A\n     \n@@ -767,10 +767,9 @@\n (menor)%0A\n-%0A\n %7D\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-22_22-27-20",
+            "content": "@@ -532,16 +532,66 @@\n %5Bi%5D \n-!\n+=\n = -1 \n-&&\n+%7B%0A            continue%0A        %7D%0A        %0A        if\n  dif\n@@ -694,16 +694,20 @@\n rencas)%0A\n+    \n %0A    if \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-22_22-28-45",
+            "content": "@@ -603,46 +603,8 @@\n + 1%0A\n-        %7D else %7B%0A            continue%0A\n     \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-22_22-29-59",
+            "content": "@@ -568,19 +568,13 @@\n cas%5B\n-(\n i + 1\n-) %25 n\n %5D %7B%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-22_22-30-49",
+            "content": "@@ -527,16 +527,39 @@\n encas%5Bi%5D\n+ != -1 && diferencas%5Bi%5D\n  %3E difer\n@@ -580,31 +580,8 @@\n %25 n%5D\n- && diferencas%5Bi%5D != -1\n  %7B%0A \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-22_22-32-12",
+            "content": "@@ -528,17 +528,17 @@\n ncas%5Bi%5D \n-%3C\n+%3E\n  diferen\n@@ -600,16 +600,20 @@\n enor = i\n+ + 1\n %0A       \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-22_22-33-26",
+            "content": "@@ -528,17 +528,17 @@\n ncas%5Bi%5D \n-%3E\n+%3C\n  diferen\n@@ -554,18 +554,18 @@\n 1) %25 n%5D \n-%7C%7C\n+&&\n  diferen\n@@ -600,20 +600,16 @@\n enor = i\n- + 1\n %0A       \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-22_22-33-51",
+            "content": "@@ -541,21 +541,27 @@\n erencas%5B\n+(\n i + 1\n+) %25 n\n %5D %7C%7C dif\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-22_22-34-09",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -54,17 +54,20 @@\n ) int %7B%0A\n-%09\n+    \n if a %3E b\n@@ -69,18 +69,24 @@\n a %3E b %7B%0A\n-%09%09\n+        \n return a\n@@ -90,20 +90,26 @@\n n a - b%0A\n-%09%7D%0A%09\n+    %7D%0A    \n return (\n@@ -137,17 +137,20 @@\n ain() %7B%0A\n-%09\n+    \n var n in\n@@ -151,17 +151,20 @@\n r n int%0A\n-%09\n+    \n fmt.Scan\n@@ -168,17 +168,20 @@\n can(&n)%0A\n-%09\n+    \n diferenc\n@@ -202,17 +202,20 @@\n nt, n)%0A%0A\n-%09\n+    \n for i :=\n@@ -225,18 +225,24 @@\n nge n %7B%0A\n-%09%09\n+        \n var jgd1\n@@ -252,18 +252,24 @@\n gd2 int%0A\n-%09%09\n+        \n fmt.Scan\n@@ -284,18 +284,24 @@\n &jgd2)%0A%0A\n-%09%09\n+        \n if jgd1 \n@@ -320,19 +320,28 @@\n  %3C 10 %7B%0A\n-%09%09%09\n+            \n diferenc\n@@ -351,19 +351,28 @@\n i%5D = -1%0A\n-%09%09%09\n+            \n continue\n@@ -372,18 +372,24 @@\n ontinue%0A\n-%09%09\n+        \n %7D else %7B\n@@ -389,19 +389,28 @@\n  else %7B%0A\n-%09%09%09\n+            \n diferenc\n@@ -442,25 +442,37 @@\n , jgd2)%0A\n-%09%09%7D%0A%09%7D%0A%0A%09\n+        %7D%0A    %7D%0A%0A    \n menor :=\n@@ -476,17 +476,20 @@\n  := -1%0A%0A\n-%09\n+    \n for i :=\n@@ -503,18 +503,24 @@\n n - 1 %7B%0A\n-%09%09\n+        \n if difer\n@@ -542,17 +542,19 @@\n rencas%5Bi\n-+\n+ + \n 1%5D %7C%7C di\n@@ -573,19 +573,28 @@\n != -1 %7B%0A\n-%09%09%09\n+            \n menor = \n@@ -599,18 +599,24 @@\n = i + 1%0A\n-%09%09\n+        \n %7D else %7B\n@@ -620,29 +620,50 @@\n e %7B%0A\n-%09%09%09continue%0A%09%09%7D%0A%09%7D%0A%0A%09\n+            continue%0A        %7D%0A    %7D%0A%0A    \n fmt.\n@@ -683,17 +683,20 @@\n encas)%0A%0A\n-%09\n+    \n if menor\n@@ -704,18 +704,24 @@\n == -1 %7B%0A\n-%09%09\n+        \n fmt.Prin\n@@ -744,21 +744,33 @@\n r%22)%0A\n-%09%09return%0A%09%7D%0A%09\n+        return%0A    %7D%0A    \n fmt.\n@@ -786,9 +786,8 @@\n enor)%0A%0A%7D\n-%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-22_22-34-55",
+            "content": "@@ -463,20 +463,16 @@\n rencas%5Bi\n- + 1\n %5D != -1 \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-22_22-36-25",
+            "content": "@@ -525,16 +525,42 @@\n %09%09%7D%0A%09%7D%0A%0A\n+%09fmt.Println(diferencas)%0A%0A\n %09if meno\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-22_22-36-34",
+            "content": "@@ -452,10 +452,10 @@\n +1%5D \n-&&\n+%7C%7C\n  dif\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-22_22-37-08",
+            "content": "@@ -448,18 +448,18 @@\n as%5Bi+1%5D \n-%7C%7C\n+&&\n  diferen\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-22_22-38-55",
+            "content": "@@ -529,37 +529,8 @@\n %09%7D%0A%0A\n-    fmt.Println(diferencas)%0A%0A\n %09if \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-22_22-39-11",
+            "content": "@@ -473,11 +473,13 @@\n  1%5D \n-%3E 0\n+!= -1\n  %7B%0A%09\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-22_22-39-35",
+            "content": "@@ -447,19 +447,11 @@\n cas%5B\n-(i + 1) %25 n\n+i+1\n %5D %7C%7C\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-22_22-42-00",
+            "content": "@@ -401,23 +401,15 @@\n  := \n-len(diferencas)\n+range n\n  - 1\n@@ -443,21 +443,27 @@\n erencas%5B\n+(\n i + 1\n+) %25 n\n %5D %7C%7C dif\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-22_22-45-45",
+            "content": "@@ -396,22 +396,16 @@\n for i :=\n- range\n  len(dif\n@@ -483,10 +483,9 @@\n  1%5D \n-!=\n+%3E\n  0 %7B\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-22_22-46-39",
+            "content": "@@ -488,18 +488,17 @@\n + 1%5D != \n--1\n+0\n  %7B%0A%09%09%09me\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-22_22-48-37",
+            "content": "@@ -389,43 +389,8 @@\n = -1\n-%0A    menorVal := 999999999999999999\n %0A%0A%09f\n@@ -403,16 +403,20 @@\n = range \n+len(\n diferenc\n@@ -417,16 +417,21 @@\n ferencas\n+) - 1\n  %7B%0A%09%09if \n@@ -448,21 +448,30 @@\n %5Bi%5D \n-%3C menorVal &&\n+%3E diferencas%5Bi + 1%5D %7C%7C\n  dif\n@@ -479,16 +479,20 @@\n rencas%5Bi\n+ + 1\n %5D != -1 \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-22_23-02-59",
+            "content": "@@ -518,16 +518,20 @@\n enor = i\n+ + 1\n %0A%09%09%7D els\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-22_23-03-15",
+            "content": "@@ -550,16 +550,45 @@\n %09%09%7D%0A%09%7D%0A%0A\n+    fmt.Println(diferencas)%0A%0A\n %09if meno\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-22_23-03-25",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc diferencaAbs(a, b int) int {\n\tif a > b {\n\t\treturn a - b\n\t}\n\treturn (a - b) * -1\n}\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\tdiferencas := make([]int, n)\n\n\tfor i := range n {\n\t\tvar jgd1, jgd2 int\n\t\tfmt.Scan(&jgd1, &jgd2)\n\n\t\tif jgd1 < 10 || jgd2 < 10 {\n\t\t\tdiferencas[i] = -1\n\t\t\tcontinue\n\t\t} else {\n\t\t\tdiferencas[i] = diferencaAbs(jgd1, jgd2)\n\t\t}\n\t}\n\n\tmenor := -1\n    menorVal := 999999999999999999\n\n\tfor i := range diferencas {\n\t\tif diferencas[i] < menorVal && diferencas[i] != -1 {\n\t\t\tmenor = i\n\t\t} else {\n\t\t\tcontinue\n\t\t}\n\t}\n\n\tif menor == -1 {\n\t\tfmt.Println(\"sem ganhador\")\n\t\treturn\n\t}\n\tfmt.Println(menor)\n\n}\n",
+            "lines": "46"
+        }
+    ]
+}
