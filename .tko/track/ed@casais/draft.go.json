@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-23_11-06-07",
+            "content": "@@ -298,33 +298,8 @@\n  %7D%0A%0A\n-    fmt.Println(animais)%0A\n     \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-23_11-07-01",
+            "content": "@@ -176,29 +176,8 @@\n (&a)\n-%0A        animais%5Ba%5D++\n %0A%0A  \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-23_11-07-31",
+            "content": "@@ -315,16 +315,41 @@\n %0A    %7D%0A%0A\n+    fmt.Println(animais)%0A\n     fmt.\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-23_11-07-45",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    animais :=  make(map[int]int)\n    casados := 0\n\n    for range n {\n        var a int\n        fmt.Scan(&a)\n        animais[a]++\n\n        if animais[-a] > 0 {\n            casados++\n            animais[-a]--\n            animais[a]--\n        } \n    }\n\n    fmt.Println(casados)\n}",
+            "lines": "22"
+        }
+    ]
+}

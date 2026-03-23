@@ -32,8 +32,6 @@ func main() {
 	for i := range diferencas {
 		if diferencas[i] < menorVal && diferencas[i] != -1 {
 			menor = i
-		} else {
-			continue
 		}
 	}
 

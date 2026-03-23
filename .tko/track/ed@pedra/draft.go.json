@@ -172,8 +172,13 @@
         },
         {
             "label": "2026-03-22_23-03-25",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc diferencaAbs(a, b int) int {\n\tif a > b {\n\t\treturn a - b\n\t}\n\treturn (a - b) * -1\n}\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\tdiferencas := make([]int, n)\n\n\tfor i := range n {\n\t\tvar jgd1, jgd2 int\n\t\tfmt.Scan(&jgd1, &jgd2)\n\n\t\tif jgd1 < 10 || jgd2 < 10 {\n\t\t\tdiferencas[i] = -1\n\t\t\tcontinue\n\t\t} else {\n\t\t\tdiferencas[i] = diferencaAbs(jgd1, jgd2)\n\t\t}\n\t}\n\n\tmenor := -1\n    menorVal := 999999999999999999\n\n\tfor i := range diferencas {\n\t\tif diferencas[i] < menorVal && diferencas[i] != -1 {\n\t\t\tmenor = i\n\t\t} else {\n\t\t\tcontinue\n\t\t}\n\t}\n\n\tif menor == -1 {\n\t\tfmt.Println(\"sem ganhador\")\n\t\treturn\n\t}\n\tfmt.Println(menor)\n\n}\n",
+            "content": "@@ -519,16 +519,39 @@\n nor = i%0A\n+%09%09%7D else %7B%0A%09%09%09continue%0A\n %09%09%7D%0A%09%7D%0A%0A\n@@ -630,10 +630,11 @@\n (menor)%0A\n+%0A\n %7D%0A\n",
             "lines": "46"
+        },
+        {
+            "label": "2026-03-23_10-28-53",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc diferencaAbs(a, b int) int {\n\tif a > b {\n\t\treturn a - b\n\t}\n\treturn (a - b) * -1\n}\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\tdiferencas := make([]int, n)\n\n\tfor i := range n {\n\t\tvar jgd1, jgd2 int\n\t\tfmt.Scan(&jgd1, &jgd2)\n\n\t\tif jgd1 < 10 || jgd2 < 10 {\n\t\t\tdiferencas[i] = -1\n\t\t\tcontinue\n\t\t} else {\n\t\t\tdiferencas[i] = diferencaAbs(jgd1, jgd2)\n\t\t}\n\t}\n\n\tmenor := -1\n    menorVal := 999999999999999999\n\n\tfor i := range diferencas {\n\t\tif diferencas[i] < menorVal && diferencas[i] != -1 {\n\t\t\tmenor = i\n\t\t}\n\t}\n\n\tif menor == -1 {\n\t\tfmt.Println(\"sem ganhador\")\n\t\treturn\n\t}\n\tfmt.Println(menor)\n}\n",
+            "lines": "43"
         }
     ]
 }

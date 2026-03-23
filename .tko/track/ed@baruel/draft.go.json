@@ -1,0 +1,79 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-23_11-16-48",
+            "content": "@@ -387,13 +387,8 @@\n nt(v\n-, %22 %22\n )%0A  \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-23_11-16-59",
+            "content": "@@ -80,41 +80,8 @@\n s :=\n- make(%5B%5Dint, n)%0A    figsDoCaba :=\n  mak\n@@ -149,108 +149,8 @@\n  0%0A%0A\n-    // todas as fig%0A    for i := range n %7B%0A        figs%5Bi%5D = i + 1%0A    %7D%0A%0A    // fig que o caba tem%0A\n     \n@@ -214,22 +214,16 @@\n     figs\n-DoCaba\n %5Ba%5D++%0A%0A \n@@ -236,22 +236,16 @@\n  if figs\n-DoCaba\n %5Ba%5D %3E 1 \n@@ -337,29 +337,111 @@\n %0A   \n-fmt.Println(figsDoCaba\n+ for _, v := range repetidas %7B%0A        fmt.Print(v, %22 %22)%0A    %7D%0A    fmt.Println()%0A    fmt.Println(repetiu\n )%0A%7D\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-23_11-22-47",
+            "content": "@@ -45,28 +45,9 @@\n var \n-totalFig, nBaruelFig\n+n\n  int\n@@ -62,24 +62,17 @@\n t.Scan(&\n-totalFig\n+n\n )%0A    fi\n@@ -89,24 +89,17 @@\n (%5B%5Dint, \n-totalFig\n+n\n )%0A    fi\n@@ -100,22 +100,22 @@\n     figs\n-Baruel\n+DoCaba\n  := make\n@@ -221,16 +221,9 @@\n nge \n-totalFig\n+n\n  %7B%0A \n@@ -252,17 +252,16 @@\n %0A    %7D%0A%0A\n-%0A\n     // f\n@@ -297,17 +297,8 @@\n ge n\n-BaruelFig\n  %7B%0A \n@@ -347,22 +347,22 @@\n     figs\n-Baruel\n+DoCaba\n %5Ba%5D++%0A%0A \n@@ -375,22 +375,22 @@\n  if figs\n-Baruel\n+DoCaba\n %5Ba%5D %3E 1 \n@@ -498,13 +498,13 @@\n figs\n-Baruel\n+DoCaba\n )%0A%7D\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-23_11-25-20",
+            "content": "@@ -296,38 +296,8 @@\n  %7D%0A%0A\n-    fmt.Scan(&nBaruelFig)%0A    \n %0A   \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-23_11-25-56",
+            "content": "@@ -192,16 +192,33 @@\n %5Dint, 0)\n+%0A    repetiu := 0\n %0A%0A    //\n@@ -318,16 +318,20 @@\n uelFig)%0A\n+    \n %0A    // \n@@ -528,85 +528,39 @@\n     \n-%7D%0A\n     \n-%7D%0A%0A    if repetidas == nil %7B%0A        fmt.Println(repetidas)\n+repetiu++%0A        %7D\n %0A    %7D%0A\n-   %0A \n+%0A\n    f\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-23_11-28-23",
+            "content": "@@ -523,12 +523,8 @@\n  if \n-len(\n repe\n@@ -532,14 +532,15 @@\n idas\n-)\n  == \n-0\n+nil\n  %7B%0A \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-23_11-28-45",
+            "content": "@@ -565,11 +565,17 @@\n tln(\n-%22N%22\n+repetidas\n )%0A  \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-23_11-29-00",
+            "content": "@@ -575,118 +575,12 @@\n    %7D\n- else %7B%0A        for _, v := range repetidas %7B%0A            fmt.Print(v, %22 %22)%0A        %7D%0A    %7D%0A    fmt.Println()%0A\n+%0A   \n %0A   \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-23_11-29-47",
+            "content": "@@ -508,89 +508,8 @@\n    %7D\n-%0A%0A        if figsBaruel%5Ba%5D == figs%5Ba + 1%5D %7B%0A           figs%5Ba + 1%5D = 0 %0A        %7D\n %0A   \n@@ -702,11 +702,17 @@\n tln(figs\n+Baruel\n )%0A%7D\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-23_11-31-59",
+            "content": "@@ -540,16 +540,20 @@\n = figs%5Ba\n+ + 1\n %5D %7B%0A    \n@@ -565,16 +565,20 @@\n   figs%5Ba\n+ + 1\n %5D = 0 %0A \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-23_11-32-11",
+            "content": "@@ -509,40 +509,8 @@\n   %7D%0A\n-    %7D%0A%0A    for i := range figs %7B\n %0A   \n@@ -521,18 +521,24 @@\n  if figs\n-%5Bi\n+Baruel%5Ba\n %5D == fig\n@@ -542,21 +542,14 @@\n figs\n-Baruel%5Bi\n+%5Ba\n %5D %7B%0A\n- \n     \n@@ -564,14 +564,15 @@\n igs%5B\n-i\n+a\n %5D = 0\n+ \n %0A   \n@@ -577,17 +577,16 @@\n        %7D\n- \n %0A    %7D%0A%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-23_11-33-58",
+            "content": "@@ -576,10 +576,8 @@\n el%5Bi\n-+1\n %5D %7B%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-23_11-34-15",
+            "content": "@@ -521,19 +521,16 @@\n    for i\n-, v\n  := rang\n@@ -549,17 +549,23 @@\n      if \n-v\n+figs%5Bi%5D\n  == figs\n@@ -572,16 +572,18 @@\n Baruel%5Bi\n++1\n %5D %7B%0A    \n@@ -590,17 +590,23 @@\n         \n-v\n+figs%5Bi%5D\n  = 0%0A   \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-23_11-35-17",
+            "content": "@@ -538,22 +538,16 @@\n nge figs\n-Baruel\n  %7B%0A     \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-23_11-35-41",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var totalFig, nBaruelFig int \n    fmt.Scan(&totalFig)\n    figs := make([]int, totalFig)\n    figsBaruel := make(map[int]int)\n    repetidas := make([]int, 0)\n\n    // todas as fig\n    for i := range totalFig {\n        figs[i] = i + 1\n    }\n\n    fmt.Scan(&nBaruelFig)\n\n    // fig que o caba tem\n    for range nBaruelFig {\n        var a int\n        fmt.Scan(&a)\n        figsBaruel[a]++\n\n        if figsBaruel[a] > 1 {\n            repetidas = append(repetidas, a)\n        }\n    }\n\n    for i, v := range figsBaruel {\n        if v == figsBaruel[i] {\n            v = 0\n        } \n    }\n\n    if len(repetidas) == 0 {\n        fmt.Println(\"N\")\n    } else {\n        for _, v := range repetidas {\n            fmt.Print(v, \" \")\n        }\n    }\n    fmt.Println()\n\n    fmt.Println(figs)\n}",
+            "lines": "44"
+        }
+    ]
+}
