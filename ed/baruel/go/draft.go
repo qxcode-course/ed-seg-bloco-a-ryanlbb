@@ -25,6 +25,7 @@ func main() {
         }
     }
 
+    faltas := 0
     for i, v := range figs {
         if figsBaruel[v] > 0 {
             figs[i] = 0
@@ -32,7 +33,7 @@ func main() {
     }
 
     if len(repetidas) == 0 {
-        fmt.Println("N")
+        fmt.Print("N")
     } else {
         for _, v := range repetidas {
             fmt.Print(v, " ")
@@ -40,7 +41,15 @@ func main() {
     }
     fmt.Println()
 
-    for range figs {
-        if figs
+    if faltas > 0 {
+        for _, v := range figs {
+            if v != 0 {
+            fmt.Print(v, " ") 
+            } 
+        }
+    } else {
+        fmt.Print("N")
     }
+    fmt.Println()
+    fmt.Println(faltas)
 }

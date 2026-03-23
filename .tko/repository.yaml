@@ -13,14 +13,14 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@backtracking
-- ed@revisão
-- ed@recursão
-- ed@busca-em-profundidade
-- ed@vetor
 - ed@análise
-- ed@busca-em-largura
 - ed@main-quest
+- ed@busca-em-profundidade
+- ed@revisão
+- ed@backtracking
+- ed@vetor
+- ed@recursão
+- ed@busca-em-largura
 tasks:
   ed@pintando: '{self:1, rate:100}'
   ed@mumia: '{self:1, rate:100}'
