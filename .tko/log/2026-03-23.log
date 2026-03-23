@@ -34,3 +34,11 @@
 2026-03-23 11:34:15, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:44
 2026-03-23 11:35:17, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:44
 2026-03-23 11:35:41, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:44
+2026-03-23 12:00:56, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-03-23 12:13:51, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-23 12:13:52, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:44
+2026-03-23 12:14:41, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:44
+2026-03-23 12:14:59, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:44
+2026-03-23 12:15:18, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:44
+2026-03-23 12:15:43, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:44
+2026-03-23 12:17:28, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:44

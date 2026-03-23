@@ -72,7 +72,37 @@
         },
         {
             "label": "2026-03-23_11-35-41",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var totalFig, nBaruelFig int \n    fmt.Scan(&totalFig)\n    figs := make([]int, totalFig)\n    figsBaruel := make(map[int]int)\n    repetidas := make([]int, 0)\n\n    // todas as fig\n    for i := range totalFig {\n        figs[i] = i + 1\n    }\n\n    fmt.Scan(&nBaruelFig)\n\n    // fig que o caba tem\n    for range nBaruelFig {\n        var a int\n        fmt.Scan(&a)\n        figsBaruel[a]++\n\n        if figsBaruel[a] > 1 {\n            repetidas = append(repetidas, a)\n        }\n    }\n\n    for i, v := range figsBaruel {\n        if v == figsBaruel[i] {\n            v = 0\n        } \n    }\n\n    if len(repetidas) == 0 {\n        fmt.Println(\"N\")\n    } else {\n        for _, v := range repetidas {\n            fmt.Print(v, \" \")\n        }\n    }\n    fmt.Println()\n\n    fmt.Println(figs)\n}",
+            "content": "@@ -512,33 +512,33 @@\n %0A    %7D%0A%0A    for \n-_\n+i\n , v := range fig\n@@ -538,16 +538,22 @@\n nge figs\n+Baruel\n  %7B%0A     \n@@ -574,17 +574,17 @@\n sBaruel%5B\n-v\n+i\n %5D %7B%0A    \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-23_12-13-52",
+            "content": "@@ -543,32 +543,37 @@\n igs %7B%0A        if\n+ v ==\n  figsBaruel%5Bv%5D !\n@@ -574,13 +574,8 @@\n l%5Bv%5D\n- != 0\n  %7B%0A \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-23_12-14-41",
+            "content": "@@ -570,12 +570,12 @@\n %5Bv%5D \n-== v\n+!= 0\n  %7B%0A \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-23_12-14-59",
+            "content": "@@ -524,12 +524,12 @@\n for \n-v, _\n+_, v\n  := \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-23_12-15-18",
+            "content": "@@ -524,12 +524,12 @@\n for \n-i, v\n+v, _\n  := \n@@ -585,23 +585,17 @@\n         \n-figs%5Bi%5D\n+v\n  = 0%0A   \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-23_12-15-43",
+            "content": "@@ -570,11 +570,12 @@\n %5Bv%5D \n-%3E 0\n+== v\n  %7B%0A \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-23_12-17-28",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var totalFig, nBaruelFig int \n    fmt.Scan(&totalFig)\n    figs := make([]int, totalFig)\n    figsBaruel := make(map[int]int)\n    repetidas := make([]int, 0)\n\n    // todas as fig\n    for i := range totalFig {\n        figs[i] = i + 1\n    }\n\n    fmt.Scan(&nBaruelFig)\n\n    // fig que o caba tem\n    for range nBaruelFig {\n        var a int\n        fmt.Scan(&a)\n        figsBaruel[a]++\n\n        if figsBaruel[a] > 1 {\n            repetidas = append(repetidas, a)\n        }\n    }\n\n    for i, v := range figs {\n        if figsBaruel[v] > 0 {\n            figs[i] = 0\n        } \n    }\n\n    if len(repetidas) == 0 {\n        fmt.Println(\"N\")\n    } else {\n        for _, v := range repetidas {\n            fmt.Print(v, \" \")\n        }\n    }\n    fmt.Println()\n\n    fmt.Println(figs)\n}",
             "lines": "44"
         }
     ]

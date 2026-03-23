@@ -25,9 +25,9 @@ func main() {
         }
     }
 
-    for i, v := range figsBaruel {
-        if v == figsBaruel[i] {
-            v = 0
+    for i, v := range figs {
+        if figsBaruel[v] > 0 {
+            figs[i] = 0
         } 
     }
 
@@ -40,5 +40,7 @@ func main() {
     }
     fmt.Println()
 
-    fmt.Println(figs)
+    for range figs {
+        if figs
+    }
 }
