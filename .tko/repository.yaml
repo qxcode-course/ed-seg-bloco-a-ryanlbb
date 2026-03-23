@@ -14,12 +14,12 @@ sources:
   tasks: null
 expanded:
 - ed@análise
-- ed@main-quest
 - ed@busca-em-profundidade
 - ed@revisão
-- ed@backtracking
 - ed@vetor
+- ed@main-quest
 - ed@recursão
+- ed@backtracking
 - ed@busca-em-largura
 tasks:
   ed@pintando: '{self:1, rate:100}'
@@ -28,7 +28,7 @@ tasks:
   ed@pedra: '{self:1, rate:100, study:30}'
   ed@casais: '{self:1, rate:100, study:10}'
   ed@princesa: '{self:1, rate:100, study:120, concept:1}'
-  ed@apagando: '{rate:16}'
+  ed@apagando: '{self:1, rate:100, study:60}'
   ed@manipulacao: '{rate:42}'
 flags:
   painel: 1
@@ -38,4 +38,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@baruel
+selected: ed@manipulacao

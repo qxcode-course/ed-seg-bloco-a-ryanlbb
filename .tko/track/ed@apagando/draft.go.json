@@ -117,8 +117,63 @@
         },
         {
             "label": "2026-03-17_18-56-23",
-            "content": "package main\nimport \"fmt\"\n\ntype Pessoa struct {\n    Id  int\n    naFila bool\n}\n\nfunc main() {\n\tvar nFila, nDeixouFila int\n\tfmt.Scan(&nFila)\n\n\tfila := make([]Pessoa, nFila)\n\t\n\tfor i := range fila {\n\t\tfmt.Scan(&fila[i].Id)\n\t\tfila[i].naFila = true\n\t}\n\n\tfmt.Scan(&nDeixouFila)\n\tfor range nDeixouFila {\n\t\tvar valor int\n\t\tfmt.Scan(&valor)\n\t}\n\n\tfor i := 0; i < nFila-1; i++ {\n\t\tif fila[i].naFila == true {\n\t\t\tfmt.Print(fila[i].Id, \" \")\n\t\t}\n\t}\n\n\tfmt.Println()\n}\n",
+            "content": "@@ -10,42 +10,72 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-%09%22text/scanner%22%0A)\n+%0Atype Pessoa struct %7B%0A    Id  int%0A    naFila bool%0A%7D\n %0A%0Afu\n@@ -151,20 +151,16 @@\n ake(\n-map%5Bint%5Dbool\n+%5B%5DPessoa\n , nF\n@@ -174,25 +174,29 @@\n %09for\n+ i :=\n  range \n-nF\n+f\n ila %7B%0A%09%09\n var \n@@ -195,54 +195,46 @@\n %7B%0A%09%09\n-var valor int%0A%09%09fmt.Scan(&valor)%0A%09%09fila%5Bvalor%5D\n+fmt.Scan(&fila%5Bi%5D.Id)%0A%09%09fila%5Bi%5D.naFila\n  = t\n@@ -239,18 +239,16 @@\n  true%0A%09%7D\n-%0A%09\n %0A%0A%09fmt.S\n@@ -330,53 +330,40 @@\n r)%0A%09\n-%09fila%5Bvalor%5D = false%0A%09%7D%0A%0A%09for i := range fila\n+%7D%0A%0A%09for i := 0; i %3C nFila-1; i++\n  %7B%0A%09\n@@ -373,16 +373,23 @@\n  fila%5Bi%5D\n+.naFila\n  == true\n@@ -411,16 +411,19 @@\n (fila%5Bi%5D\n+.Id\n , %22 %22)%0A%09\n",
             "lines": "33"
+        },
+        {
+            "label": "2026-03-23_16-38-45",
+            "content": "@@ -23,16 +23,32 @@\n %0A%09%22fmt%22%0A\n+%09%22text/scanner%22%0A\n )%0A%0Afunc \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-23_16-38-55",
+            "content": "@@ -325,11 +325,8 @@\n or i\n-, v\n  := \n@@ -374,17 +374,23 @@\n t.Print(\n-v\n+fila%5Bi%5D\n , %22 %22)%0A%09\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-23_16-39-59",
+            "content": "@@ -377,17 +377,17 @@\n t.Print(\n-i\n+v\n , %22 %22)%0A%09\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-23_16-40-07",
+            "content": "@@ -321,16 +321,19 @@\n %0A%0A%09for i\n+, v\n  := rang\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-23_16-40-15",
+            "content": "@@ -319,35 +319,8 @@\n %09%7D%0A%0A\n-%09valores := make(%5B%5Dint, 0)%0A\n %09for\n@@ -368,35 +368,24 @@\n %0A%09%09%09\n-valores = append(valores, i\n+fmt.Print(i, %22 %22\n )%0A%09%09\n@@ -390,18 +390,16 @@\n %09%09%7D%0A%09%7D%0A%0A\n-%0A%0A\n %09fmt.Pri\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-23_16-43-14",
+            "content": "@@ -443,19 +443,12 @@\n Println(\n-valores\n )%0A%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-23_16-43-23",
+            "content": "@@ -105,13 +105,20 @@\n ake(\n-%5B%5Dint\n+map%5Bint%5Dbool\n , nF\n@@ -132,13 +132,8 @@\n %09for\n- i :=\n  ran\n@@ -149,91 +149,90 @@\n %7B%0A%09%09\n-fmt.Scan(&fila%5Bi%5D)%0A%09%7D%0A%09%0A%0A%09fmt.Scan(&nDeixouFila)%0A%09deixaramFila := make(map%5Bint%5Dbool\n+var valor int%0A%09%09fmt.Scan(&valor)%0A%09%09fila%5Bvalor%5D = true%0A%09%7D%0A%09%0A%0A%09fmt.Scan(&nDeixouFila\n )%0A%09f\n@@ -291,25 +291,17 @@\n alor)%0A%09%09\n-deixaramF\n+f\n ila%5Bvalo\n@@ -309,23 +309,51 @@\n %5D = \n-tru\n+fals\n e%0A%09%7D%0A%0A\n+%09valores := make(%5B%5Dint, 0)%0A\n %09for \n-v\n+i\n  := \n@@ -374,22 +374,14 @@\n %09if \n-deixaramF\n+f\n ila%5B\n-v\n+i\n %5D ==\n@@ -395,47 +395,35 @@\n %0A%09%09%09\n-continue%0A%09%09%7D else %7B%0A%09%09%09fmt.Print(v, %22 %22\n+valores = append(valores, i\n )%0A%09%09\n@@ -443,12 +443,19 @@\n Println(\n+valores\n )%0A%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-23_16-48-02",
+            "content": "@@ -147,58 +147,26 @@\n %7B%0A%09%09\n-var valor int%0A%09%09fmt.Scan(&valor)%0A%09%09fila%5Bi%5D = valor\n+fmt.Scan(&fila%5Bi%5D)\n %0A%09%7D%0A\n@@ -427,16 +427,18 @@\n %09%09%7D%0A%09%7D%0A%0A\n+%0A%0A\n %09fmt.Pri\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-23_16-49-11",
+            "content": "@@ -86,16 +86,17 @@\n &nFila)%0A\n+%0A\n %09fila :=\n@@ -115,16 +115,18 @@\n  nFila)%0A\n+%09%0A\n %09for i :\n@@ -196,16 +196,18 @@\n valor%0A%09%7D\n+%0A%09\n %0A%0A%09fmt.S\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-23_16-51-02",
+            "content": "@@ -356,11 +356,8 @@\n %09for\n- i,\n  v :\n@@ -438,23 +438,17 @@\n t.Print(\n-fila%5Bi%5D\n+v\n , %22 %22)%0A%09\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-23_16-52-22",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar nFila, nDeixouFila int\n\tfmt.Scan(&nFila)\n\tfila := make([]int, nFila)\n\tfor i := range nFila {\n\t\tvar valor int\n\t\tfmt.Scan(&valor)\n\t\tfila[i] = valor\n\t}\n\n\tfmt.Scan(&nDeixouFila)\n\tdeixaramFila := make(map[int]bool)\n\tfor range nDeixouFila {\n\t\tvar valor int\n\t\tfmt.Scan(&valor)\n\t\tdeixaramFila[valor] = true\n\t}\n\n\tfor i, v := range fila {\n\t\tif deixaramFila[v] == true {\n\t\t\tcontinue\n\t\t} else {\n\t\t\tfmt.Print(fila[i], \" \")\n\t\t}\n\t}\n\n\tfmt.Println()\n}\n",
+            "lines": "34"
         }
     ]
 }
