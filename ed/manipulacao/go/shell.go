@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"sort"
 	"strconv"
 	"strings"
 )
@@ -29,8 +30,8 @@ func getCalmWomen(vet []int) []int {
 }
 
 func sortVet(vet []int) []int {
-	_ = vet
-	return nil
+	sort.Ints(vet)
+	return vet
 }
 
 func sortStress(vet []int) []int {
@@ -56,17 +57,21 @@ func unique(vet []int) []int {
 		}
 	}
 
-	for i := range semrep {
-		if i < len(semrep)-1 {
-			return semrep[i]
-		}
-	}
-	return nil
+	return semrep
 }
 
 func repeated(vet []int) []int {
-	_ = vet
-	return nil
+	mapRepet := make(map[int]int)
+	repetidos := make([]int, 0)
+	for i := range vet {
+		mapRepet[vet[i]]++
+
+		if mapRepet[vet[i]] > 1 {
+			repetidos = append(repetidos, vet[i])
+		}
+	}
+
+	return repetidos
 }
 
 func main() {

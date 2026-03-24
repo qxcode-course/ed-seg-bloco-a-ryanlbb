@@ -67,8 +67,53 @@
         },
         {
             "label": "2026-03-24_11-24-08",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc getMen(vet []int) []int {\n\tcalmMen := make([]int, 0)\n\tfor _, v := range vet {\n\t\tif v > 0 {\n\t\t\tcalmMen = append(calmMen, v)\n\t\t}\n\t}\n\treturn calmMen\n}\n\nfunc getCalmWomen(vet []int) []int {\n\tcalmWomen := make([]int, 0)\n\tfor _, v := range vet {\n\t\tif v < 0  && v > -10 {\n\t\t\tcalmWomen = append(calmWomen, v)\n\t\t}\n\t}\n\treturn calmWomen\n}\n\nfunc sortVet(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc sortStress(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc reverse(vet []int) []int {\n\treverse := make([]int, 0)\n\tfor i := len(vet) - 1; i >= 0; i-- {\n\t\treverse = append(reverse, vet[i])\n\t}\n\treturn reverse\n}\n\nfunc unique(vet []int) []int {\n\tmapUnicos := make(map[int]int)\n\tsemrep := make([]int, 0)\n\tfor i := range vet {\n\t\tif mapUnicos[vet[i]] < 1 {\n\t\t\tmapUnicos[vet[i]]++\n\t\t\tsemrep = append(semrep, vet[i])\n\t\t}\n\t}\n\n\tfmt.Print(semrep)\n\treturn nil\n}\n\nfunc repeated(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor {\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tfmt.Print(\"$\")\n\t\tline := scanner.Text()\n\t\targs := strings.Split(line, \" \")\n\t\tfmt.Println(line)\n\n\t\tswitch args[0] {\n\t\tcase \"get_men\":\n\t\t\tprintVec(getMen(str2vet(args[1])))\n\t\tcase \"get_calm_women\":\n\t\t\tprintVec(getCalmWomen(str2vet(args[1])))\n\t\tcase \"sort\":\n\t\t\tprintVec(sortVet(str2vet(args[1])))\n\t\tcase \"sort_stress\":\n\t\t\tprintVec(sortStress(str2vet(args[1])))\n\t\tcase \"reverse\":\n\t\t\tarray := str2vet(args[1])\n\t\t\tother := reverse(array)\n\t\t\tprintVec(array)\n\t\t\tprintVec(other)\n\t\tcase \"unique\":\n\t\t\tprintVec(unique(str2vet(args[1])))\n\t\tcase \"repeated\":\n\t\t\tprintVec(repeated(str2vet(args[1])))\n\t\tcase \"end\":\n\t\t\treturn\n\t\t}\n\t}\n}\n\nfunc printVec(vet []int) {\n\tfmt.Print(\"[\")\n\tfor i, val := range vet {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(val)\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc str2vet(s string) []int {\n\tif s == \"[]\" {\n\t\treturn nil\n\t}\n\ts = s[1 : len(s)-1]\n\tparts := strings.Split(s, \",\")\n\tvar vet []int\n\tfor _, part := range parts {\n\t\tn, _ := strconv.Atoi(part)\n\t\tvet = append(vet, n)\n\t}\n\treturn vet\n}\n\n",
+            "content": "@@ -879,82 +879,24 @@\n %0A%0A%09f\n-or i := range semrep %7B%0A%09%09if i %3C len(semrep)-1 %7B%0A%09%09%09return semrep%5Bi%5D%0A%09%09%7D%0A%09%7D\n+mt.Print(semrep)\n %0A%09re\n",
             "lines": "128"
+        },
+        {
+            "label": "2026-03-24_19-27-22",
+            "content": "@@ -873,32 +873,16 @@\n %09%09%7D%0A%09%7D%0A%0A\n-%09fmt.Print(%22%5B%22)%0A\n %09for i :\n@@ -902,28 +902,8 @@\n p %7B%0A\n-%09%09fmt.Print(semrep)%0A\n %09%09if\n@@ -930,46 +930,31 @@\n %0A%09%09%09\n-fmt.Print(%22, %22)%0A%09%09%7D%0A%09%7D%0A%09fmt.Print(%22%5D%22)\n+return semrep%5Bi%5D%0A%09%09%7D%0A%09%7D\n %0A%09re\n",
+            "lines": "132"
+        },
+        {
+            "label": "2026-03-24_19-28-50",
+            "content": "@@ -932,19 +932,16 @@\n t(semrep\n-%5Bi%5D\n )%0A%09%09if i\n",
+            "lines": "135"
+        },
+        {
+            "label": "2026-03-24_19-29-41",
+            "content": "@@ -685,24 +685,30 @@\n e(vet %5B%5Dint)\n+ %5B%5Dint\n  %7B%0A%09mapUnico\n@@ -994,32 +994,42 @@\n %7D%0A%09fmt.Print\n-ln\n (%22%5D%22)%0A\n+%09return nil%0A\n %7D%0A%0Afunc repe\n",
+            "lines": "135"
+        },
+        {
+            "label": "2026-03-24_19-30-05",
+            "content": "@@ -685,30 +685,24 @@\n e(vet %5B%5Dint)\n- %5B%5Dint\n  %7B%0A%09mapUnico\n@@ -872,21 +872,139 @@\n %7D%0A%0A%09\n-return semrep\n+fmt.Print(%22%5B%22)%0A%09for i := range semrep %7B%0A%09%09fmt.Print(semrep%5Bi%5D)%0A%09%09if i %3C len(semrep)-1 %7B%0A%09%09%09fmt.Print(%22, %22)%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(%22%5D%22)\n %0A%7D%0A%0A\n",
+            "lines": "134"
+        },
+        {
+            "label": "2026-03-24_19-31-11",
+            "content": "@@ -929,205 +929,27 @@\n  %7B%0A%09\n-mapRepet := make(map%5Bint%5Dint)%0A%09repetidos := make(%5B%5Dint, 0)%0A%09for i := range vet %7B%0A%09%09if mapRepet%5Bvet%5Bi%5D%5D %3E 1 %7B%0A%09%09%09mapRepet%5Bvet%5Bi%5D%5D++%0A%09%09%09repetidos = append(repetidos, vet%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%0A%09return repetidos\n+_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "127"
+        },
+        {
+            "label": "2026-03-24_19-34-46",
+            "content": "@@ -1010,30 +1010,8 @@\n t %7B%0A\n-%09%09mapRepet%5Bvet%5Bi%5D%5D++%0A%0A\n %09%09if\n@@ -1034,16 +1034,38 @@\n %5D %3E 1 %7B%0A\n+%09%09%09mapRepet%5Bvet%5Bi%5D%5D++%0A\n %09%09%09repet\n",
+            "lines": "135"
+        },
+        {
+            "label": "2026-03-24_19-36-59",
+            "content": "@@ -42,16 +42,8 @@\n os%22%0A\n-%09%22sort%22%0A\n %09%22st\n@@ -434,39 +434,15 @@\n  %7B%0A%09\n-vetor := vet%0A%0A%09sort.Ints(vetor)\n+_ = vet\n %0A%09re\n@@ -450,13 +450,11 @@\n urn \n-vetor\n+nil\n %0A%7D%0A%0A\n",
+            "lines": "136"
+        },
+        {
+            "label": "2026-03-24_19-40-38",
+            "content": "@@ -437,16 +437,31 @@\n %5B%5Dint %7B%0A\n+%09vetor := vet%0A%0A\n %09sort.In\n@@ -466,16 +466,18 @@\n Ints(vet\n+or\n )%0A%09retur\n@@ -477,24 +477,26 @@\n %0A%09return vet\n+or\n %0A%7D%0A%0Afunc sor\n",
+            "lines": "139"
+        },
+        {
+            "label": "2026-03-24_19-41-33",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"sort\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc getMen(vet []int) []int {\n\tcalmMen := make([]int, 0)\n\tfor _, v := range vet {\n\t\tif v > 0 {\n\t\t\tcalmMen = append(calmMen, v)\n\t\t}\n\t}\n\treturn calmMen\n}\n\nfunc getCalmWomen(vet []int) []int {\n\tcalmWomen := make([]int, 0)\n\tfor _, v := range vet {\n\t\tif v < 0  && v > -10 {\n\t\t\tcalmWomen = append(calmWomen, v)\n\t\t}\n\t}\n\treturn calmWomen\n}\n\nfunc sortVet(vet []int) []int {\n\tsort.Ints(vet)\n\treturn vet\n}\n\nfunc sortStress(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc reverse(vet []int) []int {\n\treverse := make([]int, 0)\n\tfor i := len(vet) - 1; i >= 0; i-- {\n\t\treverse = append(reverse, vet[i])\n\t}\n\treturn reverse\n}\n\nfunc unique(vet []int) []int {\n\tmapUnicos := make(map[int]int)\n\tsemrep := make([]int, 0)\n\tfor i := range vet {\n\t\tif mapUnicos[vet[i]] < 1 {\n\t\t\tmapUnicos[vet[i]]++\n\t\t\tsemrep = append(semrep, vet[i])\n\t\t}\n\t}\n\n\treturn semrep\n}\n\nfunc repeated(vet []int) []int {\n\tmapRepet := make(map[int]int)\n\trepetidos := make([]int, 0)\n\tfor i := range vet {\n\t\tmapRepet[vet[i]]++\n\n\t\tif mapRepet[vet[i]] > 1 {\n\t\t\trepetidos = append(repetidos, vet[i])\n\t\t}\n\t}\n\n\treturn repetidos\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor {\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tfmt.Print(\"$\")\n\t\tline := scanner.Text()\n\t\targs := strings.Split(line, \" \")\n\t\tfmt.Println(line)\n\n\t\tswitch args[0] {\n\t\tcase \"get_men\":\n\t\t\tprintVec(getMen(str2vet(args[1])))\n\t\tcase \"get_calm_women\":\n\t\t\tprintVec(getCalmWomen(str2vet(args[1])))\n\t\tcase \"sort\":\n\t\t\tprintVec(sortVet(str2vet(args[1])))\n\t\tcase \"sort_stress\":\n\t\t\tprintVec(sortStress(str2vet(args[1])))\n\t\tcase \"reverse\":\n\t\t\tarray := str2vet(args[1])\n\t\t\tother := reverse(array)\n\t\t\tprintVec(array)\n\t\t\tprintVec(other)\n\t\tcase \"unique\":\n\t\t\tprintVec(unique(str2vet(args[1])))\n\t\tcase \"repeated\":\n\t\t\tprintVec(repeated(str2vet(args[1])))\n\t\tcase \"end\":\n\t\t\treturn\n\t\t}\n\t}\n}\n\nfunc printVec(vet []int) {\n\tfmt.Print(\"[\")\n\tfor i, val := range vet {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(val)\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc str2vet(s string) []int {\n\tif s == \"[]\" {\n\t\treturn nil\n\t}\n\ts = s[1 : len(s)-1]\n\tparts := strings.Split(s, \",\")\n\tvar vet []int\n\tfor _, part := range parts {\n\t\tn, _ := strconv.Atoi(part)\n\t\tvet = append(vet, n)\n\t}\n\treturn vet\n}\n\n",
+            "lines": "137"
         }
     ]
 }
