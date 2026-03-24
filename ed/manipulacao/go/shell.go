@@ -47,7 +47,20 @@ func reverse(vet []int) []int {
 }
 
 func unique(vet []int) []int {
-	_ = vet
+	mapUnicos := make(map[int]int)
+	semrep := make([]int, 0)
+	for i := range vet {
+		if mapUnicos[vet[i]] < 1 {
+			mapUnicos[vet[i]]++
+			semrep = append(semrep, vet[i])
+		}
+	}
+
+	for i := range semrep {
+		if i < len(semrep)-1 {
+			return semrep[i]
+		}
+	}
 	return nil
 }
 

@@ -13,14 +13,7 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@análise
-- ed@busca-em-profundidade
-- ed@revisão
-- ed@vetor
-- ed@main-quest
-- ed@recursão
-- ed@backtracking
-- ed@busca-em-largura
+- ed@map_set
 tasks:
   ed@pintando: '{self:1, rate:100}'
   ed@mumia: '{self:1, rate:100}'
@@ -31,9 +24,9 @@ tasks:
   ed@apagando: '{self:1, rate:100, study:60}'
   ed@manipulacao: '{rate:42}'
 flags:
-  painel: 1
-  quests: 0
-  tracks: 1
+  panel: 0
+  inbox: 0
+  show_panel: 0
   tasks: 0
   task_graph_mode: 0
   show_time: 0
