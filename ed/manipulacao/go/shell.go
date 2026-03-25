@@ -35,8 +35,10 @@ func sortVet(vet []int) []int {
 }
 
 func sortStress(vet []int) []int {
-	_ = vet
-	return nil
+	stressAbs := make([]int, len(vet))
+	
+	return stressAbs
+	
 }
 
 func reverse(vet []int) []int {
