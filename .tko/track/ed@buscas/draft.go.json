@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-01_11-59-43",
+            "content": "@@ -46,27 +46,8 @@\n ar n\n-_consulta, n_buscas\n  int\n@@ -66,213 +66,17 @@\n n(&n\n-_consulta)%0A    consulta := make(map%5Bstring%5Dint, n_consulta)%0A    for range n_consulta %7B%0A        var coisa string  %0A        fmt.Scan(coisa)%0A        consulta%5Bcoisa%5D++%0A    %7D%0A%0A    fmt.Scan(&n_buscas)%0A    buscas\n+)%0A    vet\n  := \n@@ -91,24 +91,18 @@\n tring, n\n-_buscas\n )\n+%0A\n %0A    for\n@@ -114,23 +114,16 @@\n  range n\n-_buscas\n  %7B%0A     \n@@ -139,181 +139,15 @@\n an(&\n-buscas%5Bi%5D)%0A    %7D%0A%0A    matchs := make(%5B%5Dint, n_buscas) %0A    for i := range buscas %7B%0A        if consulta%5Bbuscas%5Bi%5D%5D %3E 0 %7B%0A            matchs%5Bi%5D = consulta%5Bbuscas%5Bi%5D%5D%0A        %7D\n+vet%5Bi%5D)\n %0A   \n@@ -170,14 +170,11 @@\n tln(\n-matchs\n+vet\n )%0A%7D%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-04-01_19-38-04",
+            "content": "@@ -319,45 +319,8 @@\n as)%0A\n-    matchs := make(%5B%5Dint, n_buscas) %0A\n     \n@@ -374,24 +374,27 @@\n cas%5Bi%5D)%0A    \n+%7D%0A%0A\n     matchs%5Bi\n@@ -395,22 +395,34 @@\n tchs\n-%5Bi%5D = 0%0A    %7D%0A\n+ := make(%5B%5Dint, n_buscas) \n %0A   \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-01_19-39-28",
+            "content": "@@ -582,18 +582,18 @@\n Println(\n-busca\n+match\n s)%0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-01_19-39-50",
+            "content": "@@ -582,22 +582,18 @@\n Println(\n-n_consulta\n+buscas\n )%0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-01_19-40-16",
+            "content": "@@ -582,16 +582,18 @@\n Println(\n+n_\n consulta\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-01_19-40-28",
+            "content": "@@ -127,16 +127,28 @@\n ring%5Dint\n+, n_consulta\n )%0A    fo\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-01_19-40-48",
+            "content": "@@ -200,17 +200,16 @@\n mt.Scan(\n-&\n coisa)%0A \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-01_19-41-52",
+            "content": "@@ -571,18 +571,20 @@\n Println(\n-buscas\n+consulta\n )%0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-01_19-42-16",
+            "content": "@@ -571,18 +571,18 @@\n Println(\n-match\n+busca\n s)%0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-01_19-42-26",
+            "content": "@@ -559,70 +559,8 @@\n  %7D%0A%0A\n-    for _, v := range matchs %7B%0A        fmt.Print(v %22 %22)%0A    %7D%0A\n     \n@@ -571,12 +571,18 @@\n Println(\n+matchs\n )%0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-01_19-43-02",
+            "content": "@@ -605,17 +605,16 @@\n .Print(v\n-,\n  %22 %22)%0A  \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-01_19-43-06",
+            "content": "@@ -563,17 +563,17 @@\n     for \n-i\n+_\n , v := r\n@@ -609,76 +609,14 @@\n nt(v\n-)%0A        if i %3C len(matchs) %7B%0A            fmt.Printf(%22 %22)%0A        %7D\n+, %22 %22)\n %0A   \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-01_19-43-46",
+            "content": "@@ -637,12 +637,8 @@\n chs)\n- - 1\n  %7B%0A \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-01_19-43-53",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var n_consulta, n_buscas int\n    fmt.Scan(&n_consulta)\n    consulta := make(map[string]int)\n    for range n_consulta {\n        var coisa string  \n        fmt.Scan(&coisa)\n        consulta[coisa]++\n    }\n\n    fmt.Scan(&n_buscas)\n    buscas := make([]string, n_buscas)\n    matchs := make([]int, n_buscas) \n    for i := range n_buscas {\n        fmt.Scan(&buscas[i])\n        matchs[i] = 0\n    }\n\n    for i := range buscas {\n        if consulta[buscas[i]] > 0 {\n            matchs[i] = consulta[buscas[i]]\n        }\n    }\n\n    for i, v := range matchs {\n        fmt.Print(v)\n        if i < len(matchs) - 1 {\n            fmt.Printf(\" \")\n        }\n    }\n    fmt.Println()\n}\n",
+            "lines": "34"
+        }
+    ]
+}
