@@ -1,0 +1,9 @@
+2026-03-31 19:11:05, MOVE, v:1, k:ed@treinando, mode:DOWN
+2026-03-31 19:11:30, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-03-31 19:14:19, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:84
+2026-03-31 19:19:45, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-03-31 19:19:57, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-03-31 19:19:59, MOVE, v:1, k:ed@resto, mode:PICK
+2026-03-31 19:33:33, EXEC, v:1, k:ed@resto, mode:FULL, rate:0, size:17
+2026-03-31 19:33:52, EXEC, v:1, k:ed@resto, mode:FULL, rate:0, size:18
+2026-03-31 19:34:21, MOVE, v:1, k:ed@resto, mode:BACK
