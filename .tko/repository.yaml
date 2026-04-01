@@ -14,9 +14,7 @@ sources:
   writeable: false
   quests: null
   tasks: null
-expanded:
-- ed@rec
-- ed@map_set
+expanded: []
 tasks:
   ed@pintando: '{self:1, rate:100}'
   ed@mumia: '{self:1, rate:100}'
@@ -28,11 +26,11 @@ tasks:
   ed@apagando: '{self:1, rate:100, study:60}'
   ed@manipulacao: '{rate:85}'
   ed@buscas: '{self:1, rate:100, study:20}'
+  ed@rotacoes: '{self:1, rate:100, study:15}'
   ed@fractais: '{self:1}'
   ed@baruel: '{}'
   ed@gomos: '{}'
   ed@especiais: '{}'
-  ed@rotacoes: '{}'
   ed@alternando: '{}'
   ed@crec_view: '{}'
   ed@rec_read: '{}'
@@ -117,4 +115,4 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@buscas
+selected: ed@rec

@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-01_19-55-24",
+            "content": "@@ -61,25 +61,8 @@\n int%0A\n-    fmt.Scan(&n)%0A\n     \n@@ -113,24 +113,41 @@\n e(%5B%5Dint, n)%0A\n+    fmt.Scan(&n)%0A\n     for i :=\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-04-01_19-57-18",
+            "content": "@@ -188,53 +188,9 @@\n     \n-    rotacionado%5Bi %25 rotacoes%5D = vet%5Bi%5D%0A    %7D%0A\n+%7D\n %0A%0A  \n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-04-01_19-58-22",
+            "content": "@@ -76,19 +76,8 @@\n n(&n\n-, &rotacoes\n )%0A  \n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-01_19-58-51",
+            "content": "@@ -191,16 +191,59 @@\n = i + 1%0A\n+        rotacionado%5Bi %25 rotacoes%5D = vet%5Bi%5D%0A\n     %7D%0A%0A%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-01_20-00-39",
+            "content": "@@ -195,88 +195,8 @@\n + 1%0A\n-        if rotacoes %3E 0 %7B%0A            vet%5B(i + rotacoes) %25 n%5D = i + 1%0A        %7D%0A\n     \n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-01_20-01-32",
+            "content": "@@ -229,27 +229,19 @@\n         \n-rotacionado\n+vet\n %5B(i + ro\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-01_20-04-39",
+            "content": "@@ -296,140 +296,49 @@\n    f\n-or i, v := range rotacionado %7B%0A        fmt.Print(v)%0A        if i %3C len(rotacionado) - 1 %7B%0A            fmt.Print(%22 %22)%0A        %7D%0A    %7D\n+mt.Println(rotacoes)%0A    fmt.Println(vet)\n %0A   \n@@ -350,12 +350,23 @@\n Println(\n+rotacionado\n )%0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-01_20-06-06",
+            "content": "@@ -290,27 +290,8 @@\n  %7D%0A%0A\n-    fmt.Print(%22%5B %22)\n %0A   \n@@ -346,14 +346,84 @@\n nt(v\n-, %22 %22)\n+)%0A        if i %3C len(rotacionado) - 1 %7B%0A            fmt.Print(%22 %22)%0A        %7D\n %0A   \n@@ -445,11 +445,8 @@\n tln(\n-%22%5D%22\n )%0A%7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-01_20-06-45",
+            "content": "@@ -318,9 +318,9 @@\n for \n-_\n+i\n , v \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-01_20-06-51",
+            "content": "@@ -272,71 +272,18 @@\n  + 1\n- %0A            continue%0A        %7D%0A        rotacionado%5Bi%5D = i + 1\n+%0A        %7D\n %0A   \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-01_20-07-50",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var n, rotacoes int\n    fmt.Scan(&n, &rotacoes)\n    vet := make([]int, n)\n    rotacionado := make([]int, n)\n    for i := range n {\n        vet[i] = i + 1\n        if rotacoes > 0 {\n            rotacionado[(i + rotacoes) % n] = i + 1 \n            continue\n        }\n        rotacionado[i] = i + 1\n    }\n\n    fmt.Print(\"[ \")\n    for _, v := range rotacionado {\n        fmt.Print(v, \" \")\n    }\n    fmt.Println(\"]\")\n}\n",
+            "lines": "22"
+        }
+    ]
+}
