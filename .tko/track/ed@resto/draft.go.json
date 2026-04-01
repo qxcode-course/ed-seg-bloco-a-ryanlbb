@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-31_19-33-33",
+            "content": "@@ -128,31 +128,8 @@\n %25 2%0A\n-    fmt.Println(resto)%0A\n     \n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-31_19-33-52",
+            "content": "package main\nimport \"fmt\"\n\nfunc empilhamento(x int) (string) {\n    if x != 0 {\n        \n    }\n    div := x / 2\n    resto := x  % 2\n    fmt.Println(resto)\n    return string(div)+ \" \" +string(resto)\n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    empilhamento(n)\n}\n",
+            "lines": "18"
+        }
+    ]
+}
