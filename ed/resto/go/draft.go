@@ -1,14 +1,16 @@
 package main
 import "fmt"
 
-func empilhamento(x int) (string) {
-    if x != 0 {
-        
+func empilhamento(x int) {
+    if x <= 0 {
+        return
     }
-    div := x / 2
-    resto := x  % 2
-    fmt.Println(resto)
-    return string(div)+ " " +string(resto)
+
+    resto := x % 2
+    x = x / 2
+
+    empilhamento(x)
+    fmt.Println(x, resto)
 }
 
 func main() {

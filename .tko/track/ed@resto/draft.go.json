@@ -7,8 +7,73 @@
         },
         {
             "label": "2026-03-31_19-33-52",
-            "content": "package main\nimport \"fmt\"\n\nfunc empilhamento(x int) (string) {\n    if x != 0 {\n        \n    }\n    div := x / 2\n    resto := x  % 2\n    fmt.Println(resto)\n    return string(div)+ \" \" +string(resto)\n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    empilhamento(n)\n}\n",
+            "content": "@@ -50,24 +50,14 @@\n t) (\n-int, \n string\n-, int\n ) %7B%0A\n@@ -162,43 +162,39 @@\n urn \n+string(\n div\n-,\n+)+\n  %22 %22 +\n- fmt.Sprint\n+string\n (resto)\n-, resto\n %0A%7D%0A%0A\n",
             "lines": "18"
+        },
+        {
+            "label": "2026-04-02_11-16-09",
+            "content": "@@ -79,12 +79,12 @@\n f x \n-%3C= 1\n+!= 0\n  %7B%0A \n@@ -94,41 +94,8 @@\n     \n-return 0, %22 %22 + fmt.Sprint(1), 1 \n %0A   \n@@ -138,22 +138,8 @@\n %25 2%0A\n-    x = x / 2%0A\n     \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-02_11-20-07",
+            "content": "@@ -130,16 +130,33 @@\n  %0A    %7D%0A\n+    div := x / 2%0A\n     rest\n@@ -185,28 +185,8 @@\n / 2%0A\n-    empilhamento(x)%0A\n     \n@@ -201,16 +201,8 @@\n tln(\n-x, %22 %22, \n rest\n@@ -219,16 +219,43 @@\n urn \n-0, %22%22, 0\n+div, %22 %22 + fmt.Sprint(resto), resto\n %0A%7D%0A%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-03_13-18-22",
+            "content": "@@ -202,16 +202,21 @@\n intln(x,\n+ %22 %22,\n  resto)%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-03_13-18-41",
+            "content": "@@ -138,35 +138,35 @@\n     \n-x \n+resto :\n = x \n-/\n+ %25\n  2%0A    \n-resto :\n+x \n = x \n- %25\n+/\n  2%0A \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-03_13-18-59",
+            "content": "@@ -159,16 +159,17 @@\n to := x \n+ \n %25 2%0A    \n@@ -225,17 +225,16 @@\n urn 0, %22\n- \n %22, 0%0A%7D%0A%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-03_13-20-21",
+            "content": "@@ -138,34 +138,34 @@\n     \n-resto :\n+x \n = x \n-%25\n+/\n  2%0A    \n-x \n+resto :\n = x \n-/\n+%25\n  2%0A \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-03_13-20-31",
+            "content": "@@ -103,19 +103,36 @@\n n 0, %22 %22\n-, 0\n+ + fmt.Sprint(1), 1 \n %0A    %7D%0A \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-03_13-20-57",
+            "content": "@@ -78,17 +78,17 @@\n if x %3C= \n-0\n+1\n  %7B%0A     \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-03_13-21-35",
+            "content": "@@ -44,16 +44,35 @@\n o(x int)\n+ (int, string, int)\n  %7B%0A    i\n@@ -94,26 +94,24 @@\n     \n-fmt.Println(%220 1%22)\n+return 0, %22 %22, 0\n %0A   \n@@ -192,16 +192,37 @@\n  resto)%0A\n+    return 0, %22 %22, 0%0A\n %7D%0A%0Afunc \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-03_13-25-03",
+            "content": "@@ -94,23 +94,8 @@\n 1%22)%0A\n-        return%0A\n     \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-03_13-26-39",
+            "content": "@@ -63,16 +63,43 @@\n  %3C= 0 %7B%0A\n+        fmt.Println(%220 1%22)%0A\n         \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-03_13-26-55",
+            "content": "@@ -84,17 +84,16 @@\n n%0A    %7D%0A\n-%0A\n     rest\n@@ -117,17 +117,16 @@\n = x / 2%0A\n-%0A\n     empi\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-03_13-29-09",
+            "content": "package main\nimport \"fmt\"\n\nfunc empilhamento(x int) {\n    if x <= 0 {\n        return\n    }\n\n    resto := x % 2\n    x = x / 2\n\n    empilhamento(x)\n    fmt.Println(x, resto)\n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    empilhamento(n)\n}\n",
+            "lines": "20"
         }
     ]
 }
