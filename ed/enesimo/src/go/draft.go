@@ -1,4 +1,5 @@
 package main
+
 import "fmt"
 
 func eh_primo(x int, div int) bool {
@@ -6,32 +7,27 @@ func eh_primo(x int, div int) bool {
 		return true
 	}
 
-	if x <= 1 || x % div == 0 {
+	if x <= 1 || x%div == 0 {
 		return false
-	} 
+	}
 
-	return eh_primo(x, div + 1)
+	return eh_primo(x, div+1)
 }
 
-func gerar_enesimo_primo(idx int) int {
-    primo := 2
-    indice := 1
-	
-	for indice <= idx {
-		if !eh_primo(primo, 2) {
-			primo++
-			continue
-		} else {
-			indice++
-			continue
-		}
+func gerar_enesimo_primo(idx, idxAtual, primo int) int {
+	if primo > 2 && eh_primo(primo, 2) {
+		idxAtual++
 	}
-	
-    return primo
+
+	if idx == idxAtual {
+		return primo
+	}
+
+	return gerar_enesimo_primo(idx, idxAtual, primo + 1)
 }
 
 func main() {
-    var x int
-    fmt.Scan(&x)
-	fmt.Println(gerar_enesimo_primo(x))
+	var x int
+	fmt.Scan(&x)
+	fmt.Println(gerar_enesimo_primo(x, 1, 2))
 }

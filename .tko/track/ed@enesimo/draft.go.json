@@ -17,8 +17,93 @@
         },
         {
             "label": "2026-04-06_11-21-21",
-            "content": "package main\nimport \"fmt\"\n\nfunc eh_primo(x int, div int) bool {\n\tif x == div {\n\t\treturn true\n\t}\n\n\tif x <= 1 || x % div == 0 {\n\t\treturn false\n\t} \n\n\treturn eh_primo(x, div + 1)\n}\n\nfunc gerar_enesimo_primo(idx int) int {\n    primo := 2\n    indice := 1\n\t\n\tfor indice <= idx {\n\t\tif !eh_primo(primo, 2) {\n\t\t\tprimo++\n\t\t\tcontinue\n\t\t} else {\n\t\t\tindice++\n\t\t\tcontinue\n\t\t}\n\t}\n    return primo\n}\n\nfunc main() {\n    var x int\n    fmt.Scan(&x)\n\tfmt.Println(gerar_enesimo_primo(x))\n}\n",
+            "content": "@@ -293,25 +293,8 @@\n , 2)\n- && indice %3C= idx\n  %7B%0A%09\n@@ -357,18 +357,16 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%09%0A\n     retu\n",
             "lines": "36"
+        },
+        {
+            "label": "2026-04-06_18-43-32",
+            "content": "@@ -298,14 +298,20 @@\n && i\n-dx %3E 1\n+ndice %3C= idx\n  %7B%0A%09\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-06_19-06-30",
+            "content": "@@ -203,18 +203,8 @@\n (idx\n-, idxAtual\n  int\n@@ -230,64 +230,53 @@\n = 2%0A\n-%0A%09if idx == idxAtual %7B%0A%09%09return primo%0A%09%7D%0A%0A%09primo++%0A%09for \n+    indice := 1%0A%09%0A%09for indice %3C= idx %7B%0A%09%09if !\n eh_p\n@@ -289,19 +289,31 @@\n rimo, 2)\n+ && idx %3E 1\n  %7B%0A\n+%09\n %09%09primo+\n@@ -314,19 +314,71 @@\n primo++%0A\n+%09%09%09continue%0A%09%09%7D else %7B%0A%09%09%09indice++%0A%09%09%09continue%0A%09%09%7D%0A\n %09%7D%0A\n+%09\n %0A    ret\n@@ -473,11 +473,8 @@\n mo(x\n-, 1\n ))%0A%7D\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-06_19-30-12",
+            "content": "@@ -330,19 +330,8 @@\n %0A%09%7D%0A\n-%09idxAtual++\n %0A   \n@@ -342,42 +342,13 @@\n urn \n-gerar_enesimo_primo(idx, idxAtual)\n+primo\n %0A%7D%0A%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-06_19-30-50",
+            "content": "@@ -342,10 +342,8 @@\n l++%0A\n-%09%0A\n     \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-06_19-31-28",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -109,9 +109,11 @@\n %7C%7C x\n-%25\n+ %25 \n div \n@@ -136,16 +136,17 @@\n false%0A%09%7D\n+ \n %0A%0A%09retur\n@@ -162,17 +162,19 @@\n o(x, div\n-+\n+ + \n 1)%0A%7D%0A%0Afu\n@@ -221,17 +221,20 @@\n ) int %7B%0A\n-%09\n+    \n primo :=\n@@ -338,18 +338,22 @@\n Atual++%0A\n-%0A\n %09\n+%0A    \n return g\n@@ -403,17 +403,20 @@\n ain() %7B%0A\n-%09\n+    \n var x in\n@@ -417,17 +417,20 @@\n r x int%0A\n-%09\n+    \n fmt.Scan\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-06_19-31-59",
+            "content": "@@ -453,14 +453,14 @@\n rimo(x, \n-0\n+1\n ))%0A%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-06_19-32-39",
+            "content": "@@ -289,9 +289,8 @@\n for \n-!\n eh_p\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-06_19-33-30",
+            "content": "@@ -285,16 +285,17 @@\n ++%0A%09for \n+!\n eh_primo\n@@ -308,17 +308,8 @@\n , 2)\n- == false\n  %7B%0A%09\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-06_19-34-30",
+            "content": "@@ -281,13 +281,10 @@\n rimo\n- += 1\n+++\n %0A%09fo\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-06_19-34-46",
+            "content": "@@ -205,23 +205,16 @@\n idxAtual\n-, primo\n  int) in\n@@ -216,16 +216,28 @@\n t) int %7B\n+%0A%09primo := 2\n %0A%0A%09if id\n@@ -389,15 +389,8 @@\n tual\n-, primo\n )%0A%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-06_19-37-44",
+            "content": "@@ -468,16 +468,13 @@\n imo(x, 0\n-, 2\n ))%0A%7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-06_19-37-53",
+            "content": "@@ -467,17 +467,17 @@\n rimo(x, \n-1\n+0\n , 2))%0A%7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-06_19-38-08",
+            "content": "@@ -224,16 +224,17 @@\n ) int %7B%0A\n+%0A\n %09if idx \n@@ -271,23 +271,23 @@\n %7D%0A%0A%09\n-if \n primo \n-%3E 2 &&\n++= 1%0A%09for\n  eh_\n@@ -302,19 +302,40 @@\n imo, 2) \n-%7B%0A%09\n+== false %7B%0A%09%09primo++%0A%09%7D%0A\n %09idxAtua\n@@ -337,19 +337,16 @@\n xAtual++\n-%0A%09%7D\n %0A%0A%09retur\n@@ -387,18 +387,16 @@\n l, primo\n-+1\n )%0A%7D%0A%0Afun\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-06_19-41-07",
+            "content": "@@ -368,16 +368,18 @@\n l, primo\n++1\n )%0A%7D%0A%0Afun\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-06_19-42-03",
+            "content": "@@ -224,16 +224,57 @@\n ) int %7B%0A\n+%09if idx == idxAtual %7B%0A%09%09return primo%0A%09%7D%0A%0A\n %09if prim\n@@ -324,49 +324,8 @@\n %09%7D%0A%0A\n-%09if idx == idxAtual %7B%0A%09%09return primo%0A%09%7D%0A%0A\n %09ret\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-06_19-42-52",
+            "content": "@@ -372,12 +372,8 @@\n rimo\n- + 1\n )%0A%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-06_19-43-01",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc eh_primo(x int, div int) bool {\n\tif x == div {\n\t\treturn true\n\t}\n\n\tif x <= 1 || x%div == 0 {\n\t\treturn false\n\t}\n\n\treturn eh_primo(x, div+1)\n}\n\nfunc gerar_enesimo_primo(idx, idxAtual, primo int) int {\n\tif primo > 2 && eh_primo(primo, 2) {\n\t\tidxAtual++\n\t}\n\n\tif idx == idxAtual {\n\t\treturn primo\n\t}\n\n\treturn gerar_enesimo_primo(idx, idxAtual, primo + 1)\n}\n\nfunc main() {\n\tvar x int\n\tfmt.Scan(&x)\n\tfmt.Println(gerar_enesimo_primo(x, 1, 2))\n}\n",
+            "lines": "33"
         }
     ]
 }
