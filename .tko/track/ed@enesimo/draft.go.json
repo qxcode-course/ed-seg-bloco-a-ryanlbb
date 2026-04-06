@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-06_11-19-49",
+            "content": "@@ -401,43 +401,7 @@\n &x)%0A\n-%09fmt.Println(gerar_enesimo_primo(x))\n %0A%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-06_11-20-15",
+            "content": "@@ -321,17 +321,9 @@\n %0A%09%09%7D\n- else %7B%0A%09\n+%0A\n %09%09in\n@@ -329,32 +329,16 @@\n ndice++%0A\n-%09%09%09continue%0A%09%09%7D%0A\n %09%7D%0A    r\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-06_11-20-56",
+            "content": "@@ -257,17 +257,16 @@\n indice %3C\n-=\n  idx %7B%0A%09\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-06_11-21-21",
+            "content": "package main\nimport \"fmt\"\n\nfunc eh_primo(x int, div int) bool {\n\tif x == div {\n\t\treturn true\n\t}\n\n\tif x <= 1 || x % div == 0 {\n\t\treturn false\n\t} \n\n\treturn eh_primo(x, div + 1)\n}\n\nfunc gerar_enesimo_primo(idx int) int {\n    primo := 2\n    indice := 1\n\t\n\tfor indice <= idx {\n\t\tif !eh_primo(primo, 2) {\n\t\t\tprimo++\n\t\t\tcontinue\n\t\t} else {\n\t\t\tindice++\n\t\t\tcontinue\n\t\t}\n\t}\n    return primo\n}\n\nfunc main() {\n    var x int\n    fmt.Scan(&x)\n\tfmt.Println(gerar_enesimo_primo(x))\n}\n",
+            "lines": "36"
+        }
+    ]
+}

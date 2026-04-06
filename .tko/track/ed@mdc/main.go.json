@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-03_13-30-22",
+            "content": "@@ -31,26 +31,17 @@\n )%0A%0Afunc \n-encontrarM\n+m\n dc(a, b \n@@ -52,42 +52,19 @@\n  int\n-%7B%0A%09if a == 0 && b != 0\n  %7B%0A\n-%09\n %09return \n b%0A%09%7D\n@@ -63,81 +63,9 @@\n urn \n-b%0A%09%7D%0A%09if b == 0 && a != 0 %7B%0A%09%09return a%0A%09%7D%0A%0A%09return encontrarMdc(b, a %25 b)\n+0\n %0A%7D%0A%0A\n@@ -127,18 +127,9 @@\n tln(\n-encontrarM\n+m\n dc(a\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-04-03_13-45-43",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc encontrarMdc(a, b int) int{\n\tif a == 0 && b != 0 {\n\t\treturn b\n\t}\n\tif b == 0 && a != 0 {\n\t\treturn a\n\t}\n\n\treturn encontrarMdc(b, a % b)\n}\n\nfunc main() {\n\tvar a, b int\n\tfmt.Scan(&a, &b)\n\tfmt.Println(encontrarMdc(a, b))\n}\n",
+            "lines": "22"
+        }
+    ]
+}
