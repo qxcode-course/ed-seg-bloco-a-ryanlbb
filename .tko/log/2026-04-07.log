@@ -1,0 +1,27 @@
+2026-04-07 09:02:41, MOVE, v:1, k:ed@vetequals, mode:DOWN
+2026-04-07 09:02:50, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-04-07 09:04:48, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:70, size:49
+2026-04-07 09:13:16, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:80, size:54
+2026-04-07 09:21:23, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:10, size:58
+2026-04-07 09:21:28, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-04-07 09:21:36, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-04-07 09:21:40, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20, size:58
+2026-04-07 09:24:14, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:10, size:58
+2026-04-07 09:24:24, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20, size:58
+2026-04-07 09:24:40, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:10, size:58
+2026-04-07 09:28:24, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20, size:58
+2026-04-07 09:30:02, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-04-07 09:30:17, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-04-07 09:30:20, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-04-07 09:30:26, MOVE, v:1, k:ed@escada, mode:DOWN
+2026-04-07 09:30:27, MOVE, v:1, k:ed@escada, mode:PICK
+2026-04-07 09:30:59, MOVE, v:1, k:ed@escada, mode:BACK
+2026-04-07 09:34:28, MOVE, v:1, k:ed@enesimo, mode:PICK
+2026-04-07 09:34:44, MOVE, v:1, k:ed@enesimo, mode:BACK
+2026-04-07 09:34:54, MOVE, v:1, k:ed@escada, mode:PICK
+2026-04-07 09:44:10, MOVE, v:1, k:ed@escada, mode:BACK
+2026-04-07 09:46:02, MOVE, v:1, k:ed@triangulo, mode:DOWN
+2026-04-07 09:46:05, MOVE, v:1, k:ed@triangulo, mode:PICK
+2026-04-07 09:52:40, MOVE, v:1, k:ed@triangulo, mode:BACK
+2026-04-07 09:53:17, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-04-07 09:55:21, MOVE, v:1, k:ed@treinando, mode:BACK

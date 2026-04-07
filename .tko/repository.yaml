@@ -20,7 +20,7 @@ flags:
   inbox: all
   panel: graph
   show_panel: 'true'
-  task_graph_mode: executions
+  task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: ed@eh_primo
+selected: ed@treinando
