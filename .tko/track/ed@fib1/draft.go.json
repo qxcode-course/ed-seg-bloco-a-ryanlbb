@@ -1,0 +1,104 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-11_12-15-29",
+            "content": "@@ -107,19 +107,19 @@\n Println(\n-mes\n+par\n es)%0A    \n@@ -140,13 +140,8 @@\n  %7D%0A%0A\n-    %0A\n     \n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-11_12-18-17",
+            "content": "@@ -80,9 +80,9 @@\n mes \n-%3C\n+=\n = me\n@@ -107,16 +107,21 @@\n Println(\n+meses\n )%0A      \n@@ -144,24 +144,8 @@\n     \n-coelhos := pares\n %0A   \n@@ -176,18 +176,8 @@\n ares\n- + coelhos\n , me\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-11_12-20-05",
+            "content": "@@ -107,23 +107,16 @@\n Println(\n-coelhos\n )%0A      \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-11_12-20-11",
+            "content": "@@ -69,29 +69,8 @@\n ) %7B%0A\n-    coelhos := pares%0A\n     \n@@ -138,16 +138,37 @@\n %0A    %7D%0A%0A\n+    coelhos := pares%0A\n     coel\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-11_12-20-22",
+            "content": "@@ -80,17 +80,21 @@\n lhos := \n-1\n+pares\n %0A    if \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-11_12-21-32",
+            "content": "@@ -84,9 +84,9 @@\n  := \n-2\n+1\n %0A   \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-11_12-22-41",
+            "content": "@@ -93,17 +93,17 @@\n  if mes \n-=\n+%3C\n = meses \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-11_12-23-02",
+            "content": "@@ -124,24 +124,16 @@\n Println(\n-pares + \n coelhos)\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-11_12-23-16",
+            "content": "@@ -80,17 +80,17 @@\n lhos := \n-1\n+2\n %0A    if \n@@ -124,16 +124,24 @@\n Println(\n+pares + \n coelhos)\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-11_12-23-43",
+            "content": "@@ -80,22 +80,17 @@\n lhos := \n-pares \n+1\n %0A    if \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-11_12-26-31",
+            "content": "@@ -91,70 +91,8 @@\n es %0A\n-    if mes == 1 %7B%0A        fmt.Println(1)%0A        return%0A    %7D%0A\n     \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-11_12-28-03",
+            "content": "@@ -97,18 +97,16 @@\n   if mes\n-es\n  == 1 %7B%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-11_12-28-20",
+            "content": "@@ -104,12 +104,12 @@\n ses \n-%3C= 2\n+== 1\n  %7B%0A \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-11_12-28-35",
+            "content": "@@ -80,17 +80,21 @@\n lhos := \n-1\n+pares\n  %0A    if\n@@ -281,134 +281,8 @@\n %0A%7D%0A%0A\n-func fib(n, numero, vezes int) int%7B%0A%0Anum := numero%0A%0Aif n == vezes %7B%0A    return num%0A%7D%0A%0Areturn fib(n, numero + num, vezes+1)%0A%7D%0A%0A\n func\n@@ -352,11 +352,8 @@\n %0A   \n- //\n  coe\n@@ -385,23 +385,6 @@\n  1)%0A\n-    fib(4, 1, 1)%0A\n %7D%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-11_12-36-28",
+            "content": "@@ -309,16 +309,17 @@\n t) int%7B%0A\n+%0A\n num := n\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-11_12-37-34",
+            "content": "@@ -287,100 +287,116 @@\n ib(n\n- int) int%7B%0A    if n == 0 %7C%7C n == 1 %7B%0A        return 1%0A    %7D%0A    %0A    return fib(n-1) + fib(n\n+, numero, vezes int) int%7B%0Anum := numero%0A%0Aif n == vezes %7B%0A    return num%0A%7D%0A%0Areturn fib(n, numero + num, vezes\n +1)%0A\n@@ -514,12 +514,18 @@\n    fib(4\n+, 1, 1\n )%0A%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-11_12-39-16",
+            "content": "@@ -379,10 +379,10 @@\n ib(n\n--2\n++1\n )%0A%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-11_12-39-44",
+            "content": "@@ -346,22 +346,14 @@\n    %7D\n- else %7B %0A\n %0A    \n+%0A\n     \n@@ -379,27 +379,16 @@\n ib(n-2)%0A\n-    %7D%0A    %0A\n %7D%0A%0Afunc \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-11_12-40-05",
+            "content": "@@ -516,26 +516,13 @@\n     \n-fmt.Println(\n fib(4)\n-)\n %0A%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-11_12-41-26",
+            "content": "package main\nimport \"fmt\"\n\nfunc coelhosEmMeses(meses, pares, mes int) {\n    coelhos := 1 \n    if meses <= 2 {\n        fmt.Println(1)\n        return\n    }\n    if mes == meses {\n        fmt.Println(coelhos)\n        return\n    }\n\n    coelhosEmMeses(meses, pares + coelhos, mes+1)\n}\n\nfunc fib(n int) int{\n    if n == 0 || n == 1 {\n        return 1\n    } else { \n\n        return fib(n-1) + fib(n-2)\n    }\n    \n}\n\nfunc main() {\n    var meses, pares int\n    fmt.Scan(&meses, &pares)\n    // coelhosEmMeses(meses, pares, 1)\n    fmt.Println(fib(4))\n}\n",
+            "lines": "33"
+        }
+    ]
+}
