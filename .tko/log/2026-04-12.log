@@ -1,0 +1,8 @@
+2026-04-12 17:43:50, MOVE, v:1, k:ed@fib1, mode:PICK
+2026-04-12 17:48:20, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-12 17:49:53, EXEC, v:1, k:ed@fib1, mode:FULL, size:28, fail:COMP
+2026-04-12 17:50:31, EXEC, v:1, k:ed@fib1, mode:FULL, rate:4, size:28
+2026-04-12 17:51:15, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-12 17:50:30, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-12 17:56:18, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-12 18:01:01, MOVE, v:1, k:ed@fib1, mode:BACK

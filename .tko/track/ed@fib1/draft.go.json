@@ -97,8 +97,18 @@
         },
         {
             "label": "2026-04-11_12-41-26",
-            "content": "package main\nimport \"fmt\"\n\nfunc coelhosEmMeses(meses, pares, mes int) {\n    coelhos := 1 \n    if meses <= 2 {\n        fmt.Println(1)\n        return\n    }\n    if mes == meses {\n        fmt.Println(coelhos)\n        return\n    }\n\n    coelhosEmMeses(meses, pares + coelhos, mes+1)\n}\n\nfunc fib(n int) int{\n    if n == 0 || n == 1 {\n        return 1\n    } else { \n\n        return fib(n-1) + fib(n-2)\n    }\n    \n}\n\nfunc main() {\n    var meses, pares int\n    fmt.Scan(&meses, &pares)\n    // coelhosEmMeses(meses, pares, 1)\n    fmt.Println(fib(4))\n}\n",
+            "content": "@@ -48,24 +48,29 @@\n meses, pares\n+, mes\n  int) %7B%0A    \n@@ -84,19 +84,74 @@\n  := \n-fib * pares\n+1 %0A    if meses %3C= 2 %7B%0A        fmt.Println(1)%0A        return%0A    %7D\n %0A   \n@@ -161,15 +161,17 @@\n  mes\n-es\n  == \n-1\n+meses\n  %7B%0A \n@@ -248,17 +248,32 @@\n eses\n--1\n , pares\n+ + coelhos, mes+1\n )%0A%7D%0A\n@@ -294,16 +294,20 @@\n t) int%7B%0A\n+    \n if n == \n@@ -468,24 +468,27 @@\n  &pares)%0A   \n+ //\n  coelhosEmMe\n@@ -503,12 +503,39 @@\n s, pares\n+, 1)%0A    fmt.Println(fib(4)\n )%0A%7D%0A\n",
             "lines": "33"
+        },
+        {
+            "label": "2026-04-12_17-49-53",
+            "content": "@@ -82,15 +82,16 @@\n  fib\n-(\n+ * \n pares\n-)\n %0A   \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-12_17-50-31",
+            "content": "package main\nimport \"fmt\"\n\nfunc coelhosEmMeses(meses, pares int) {\n    coelhos := fib(pares)\n    if meses == 1 {\n        fmt.Println(coelhos)\n        return\n    }\n\n    coelhosEmMeses(meses-1, pares)\n}\n\nfunc fib(n int) int{\nif n == 0 || n == 1 {\n        return 1\n    } else { \n\n        return fib(n-1) + fib(n-2)\n    }\n    \n}\n\nfunc main() {\n    var meses, pares int\n    fmt.Scan(&meses, &pares)\n    coelhosEmMeses(meses, pares)\n}\n",
+            "lines": "28"
         }
     ]
 }

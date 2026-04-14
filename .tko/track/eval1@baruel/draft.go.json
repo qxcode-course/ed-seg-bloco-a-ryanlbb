@@ -1,0 +1,254 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-13_16-40-46",
+            "content": "@@ -49,17 +49,17 @@\n nFigs, n\n-B\n+b\n aruel in\n@@ -171,288 +171,8 @@\n  %7D%0A%0A\n-    fmt.Scan(&nBaruel)%0A    baruel := make(%5B%5Dint, nBaruel)%0A    baruelMap := make(map%5Bint%5Dbool)%0A%0A    for i := range nBaruel %7B%0A        var figurinha int%0A        fmt.Scan(&figurinha)%0A        baruel%5Bi%5D = figurinha%0A        baruelMap%5Bfigurinha%5D = true %0A    %7D%0A%0A    fmt.Println(baruelMap)%0A\n     \n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-04-13_16-46-41",
+            "content": "@@ -85,44 +85,8 @@\n gs)%0A\n-    baruelMap := make(map%5Bint%5Dbool)%0A\n     \n@@ -164,39 +164,8 @@\n i+1%0A\n-        baruelMap%5Bi+1%5D = false%0A\n     \n@@ -224,16 +224,52 @@\n nBaruel)\n+%0A    baruelMap := make(map%5Bint%5Dbool)\n %0A%0A    fo\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-13_16-48-08",
+            "content": "@@ -455,122 +455,8 @@\n  %7D%0A%0A\n-    for _, v := range baruel %7B%0A        if baruelMap%5Bv%5D == false %7B%0A            fmt.Print(v, %22 %22)%0A        %7D %0A    %7D%0A%0A\n     \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-13_16-51-27",
+            "content": "@@ -565,10 +565,59 @@\n %0A    %7D%0A%0A\n+    fmt.Println(baruelMap)%0A    fmt.Println(figs)%0A\n %7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-13_16-51-35",
+            "content": "@@ -569,33 +569,6 @@\n  %7D%0A%0A\n-    fmt.Println(baruelMap)%0A\n %7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-13_16-52-50",
+            "content": "@@ -587,12 +587,15 @@\n n(baruel\n+Map\n )%0A%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-13_21-01-25",
+            "content": "@@ -121,44 +121,8 @@\n ol)%0A\n-    baruelCont := make(map%5Bint%5Dint)%0A\n     \n@@ -446,40 +446,8 @@\n true\n-%0A        baruelCont%5Bfigurinha%5D++\n  %0A  \n@@ -593,34 +593,6 @@\n el)%0A\n-    fmt.Println(baruelCont)%0A\n %7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-13_21-02-16",
+            "content": "@@ -127,25 +127,20 @@\n   baruel\n-Repetidos\n+Cont\n  := make\n@@ -491,69 +491,18 @@\n     \n-if \n baruel\n-Map%5Bfigurinha%5D == true %7B%0A            baruelRepetidos\n+Cont\n %5Bfig\n@@ -516,18 +516,8 @@\n ++ %0A\n-        %7D%0A\n     \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-13_21-04-03",
+            "content": "@@ -745,21 +745,16 @@\n n(baruel\n-Repetidos\n+Cont\n )%0A%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-13_21-04-10",
+            "content": "@@ -77,25 +77,24 @@\n can(&nFigs)%0A\n-%0A\n     baruelMa\n@@ -189,17 +189,16 @@\n  nFigs)%0A\n-%0A\n     for \n@@ -338,41 +338,8 @@\n l)%0A%0A\n-    // preenche todos os vetores%0A\n     \n@@ -484,17 +484,16 @@\n  = true%0A\n-%0A\n         \n@@ -568,16 +568,16 @@\n nha%5D++ %0A\n+\n         \n@@ -589,164 +589,8 @@\n  %7D%0A%0A\n-    // deixa s%C3%B3 os repetidos%0A    for _, v := range baruelRepetidos %7B%0A        if baruelRepetidos%5Bv%5D %3E 1 %7B%0A            baruelRepetidos%5Bv%5D--%0A        %7D %0A    %7D%0A%0A\n     \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-13_21-14-26",
+            "content": "@@ -195,37 +195,8 @@\n s)%0A%0A\n-    // todas as fig original%0A\n     \n@@ -686,24 +686,60 @@\n Repetidos %7B%0A\n+        if baruelRepetidos%5Bv%5D %3E 1 %7B%0A\n             \n@@ -759,16 +759,27 @@\n os%5Bv%5D--%0A\n+        %7D %0A\n     %7D%0A%0A \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-13_21-15-53",
+            "content": "@@ -548,16 +548,63 @@\n  = true%0A\n+%0A        if baruelMap%5Bfigurinha%5D == true %7B%0A    \n         \n@@ -631,16 +631,27 @@\n rinha%5D++\n+ %0A        %7D\n %0A    %7D%0A%0A\n@@ -715,24 +715,28 @@\n Repetidos %7B%0A\n+    \n         baru\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-13_21-19-02",
+            "content": "@@ -629,17 +629,17 @@\n     for \n-i\n+_\n , v := r\n@@ -685,17 +685,17 @@\n petidos%5B\n-i\n+v\n %5D--%0A    \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-13_21-20-00",
+            "content": "@@ -622,32 +622,35 @@\n etidos%0A    for i\n+, v\n  := range baruel\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-13_21-20-04",
+            "content": "@@ -698,32 +698,8 @@\n  %7D%0A%0A\n-    // printa repetidos%0A\n     \n@@ -746,24 +746,23 @@\n ruel\n-Repetidos%5Bv%5D %3E 0\n+Map%5Bv%5D == false\n  %7B%0A \n@@ -783,16 +783,21 @@\n .Print(v\n+, %22 %22\n )%0A      \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-13_21-21-47",
+            "content": "@@ -781,17 +781,17 @@\n os%5Bv%5D %3E \n-1\n+0\n  %7B%0A     \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-13_21-22-02",
+            "content": "@@ -588,24 +588,126 @@\n a%5D++%0A    %7D%0A%0A\n+    // deixa s%C3%B3 os repetidos%0A    for i := range baruelRepetidos %7B%0A        baruelRepetidos%5Bi%5D--%0A    %7D%0A%0A\n     // print\n@@ -814,41 +814,8 @@\n (v)%0A\n-            baruelRepetidos%5Bv%5D--%0A\n     \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-13_21-23-00",
+            "content": "@@ -712,90 +712,8 @@\n (v)%0A\n-            if i %3C len(baruel) - 1 %7B%0A                fmt.Print(%22 %22)%0A            %7D%0A\n     \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-13_21-23-31",
+            "content": "@@ -624,17 +624,17 @@\n     for \n-i\n+_\n , v := r\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-13_21-23-38",
+            "content": "@@ -833,32 +833,56 @@\n       %7D %0A    %7D%0A%0A\n+    fmt.Println(baruel)%0A\n     fmt.Println(\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-13_21-23-47",
+            "content": "@@ -745,9 +745,9 @@\n ) - \n-2\n+1\n  %7B%0A \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-13_21-24-07",
+            "content": "@@ -10,40 +10,21 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-%09%22math/rand%22%0A)%0A\n func\n@@ -92,21 +92,19 @@\n   baruel\n-Falta\n+Map\n  := make\n@@ -282,21 +282,19 @@\n   baruel\n-Falta\n+Map\n %5Bi+1%5D = \n@@ -526,21 +526,19 @@\n   baruel\n-Falta\n+Map\n %5Bfigurin\n@@ -849,138 +849,35 @@\n     \n-// printa o que falta%0A    for i, v := range baruel %7B%0A        if baruelFalta%5Bv%5D == false %7B%0A            fmt.Print(v)%0A        %7D %0A    %7D\n+fmt.Println(baruelRepetidos)\n %0A%7D%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-13_21-25-43",
+            "content": "@@ -904,9 +904,9 @@\n for \n-_\n+i\n , v \n@@ -1006,24 +1006,6 @@\n   %7D%0A\n-    fmt.Println()%0A\n %7D%0A\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-13_21-26-01",
+            "content": "@@ -23,16 +23,29 @@\n %0A%09%22fmt%22%0A\n+%09%22math/rand%22%0A\n )%0Afunc m\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-04-13_21-26-09",
+            "content": "@@ -991,47 +991,9 @@\n     \n-    %0A    %7D%0A    fmt.Println(baruelFalta)\n+%7D\n %0A   \n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-13_21-26-38",
+            "content": "@@ -28,537 +28,8 @@\n t%22%0A)\n-%0A%0Afunc printaFaltantes(vet %5B%5Dint, mapa map%5Bint%5Dbool) %7B%0A    falta := false %0A%0A%0A%7D%0A%0Afunc printaRepetidos(vet %5B%5Dint, mapa map%5Bint%5Dint) %7B%0A    repete := false%0A    for i := range mapa %7B%0A        if mapa%5Bi%5D %3E 1 %7B%0A            repete = true%0A        %7D%0A    %7D%0A%0A    if repete == false %7B%0A        fmt.Println(%22N%22)%0A        return%0A    %7D%0A%0A    for i, v := range vet %7B%0A        if mapa%5Bv%5D %3E 1 %7B%0A            fmt.Print(v)%0A            if i %3C len(vet) - 2 %7B%0A                fmt.Print(%22 %22)%0A            %7D%0A            mapa%5Bv%5D--%0A        %7D %0A    %7D%0A%0A    return%0A%7D%0A%0A\n %0Afun\n@@ -611,48 +611,444 @@\n %0A   \n+ //\n  printa\n-Repetidos(baruel, baruelRepetidos\n+ repetidos%0A    for i, v := range baruel %7B%0A        if baruelRepetidos%5Bv%5D %3E 1 %7B%0A            fmt.Print(v)%0A            if i %3C len(baruel) - 2 %7B%0A                fmt.Print(%22 %22)%0A            %7D%0A            baruelRepetidos%5Bv%5D--%0A        %7D %0A    %7D%0A%0A    // printa o que falta%0A    for _, v := range baruel %7B%0A        if baruelFalta%5Bv%5D == false %7B%0A            fmt.Print(v)%0A        %7D %0A        %0A    %7D%0A    fmt.Println(baruelFalta)%0A    fmt.Println(\n )%0A%7D%0A\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-04-13_21-35-50",
+            "content": "@@ -83,18 +83,16 @@\n ) %7B%0A    \n-//\n falta :=\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-04-13_21-35-59",
+            "content": "@@ -79,24 +79,26 @@\n bool) %7B%0A    \n+//\n falta := fal\n@@ -105,181 +105,8 @@\n se %0A\n-    for i := range mapa %7B%0A        if mapa%5Bi%5D == false %7B%0A            falta = true%0A        %7D%0A    %7D%0A%0A    if falta == false %7B%0A        fmt.Println(%22N%22)%0A        return%0A    %7D%0A%0A    \n %0A%0A%7D%0A\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-04-13_22-49-43",
+            "content": "@@ -1355,47 +1355,6 @@\n os)%0A\n-    printaFaltantes(baruel, baruelFalta)%0A\n %7D%0A\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-04-13_22-50-08",
+            "content": "@@ -715,30 +715,8 @@\n   %7D%0A\n-    %0A    fmt.Println()\n %0A   \n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-04-13_22-50-25",
+            "content": "@@ -79,17 +79,20 @@\n bool) %7B%0A\n-%09\n+    \n falta :=\n@@ -89,34 +89,38 @@\n   falta := false\n-%0A%09\n+ %0A    \n for i := range m\n@@ -117,34 +117,40 @@\n := range mapa %7B%0A\n-%09%09\n+        \n if mapa%5Bi%5D == fa\n@@ -155,19 +155,28 @@\n false %7B%0A\n-%09%09%09\n+            \n falta = \n@@ -180,25 +180,37 @@\n  = true%0A\n-%09%09%7D%0A%09%7D%0A%0A%09\n+        %7D%0A    %7D%0A%0A    \n if falta\n@@ -213,34 +213,40 @@\n alta == false %7B%0A\n-%09%09\n+        \n fmt.Println(%22N%22)\n@@ -250,157 +250,34 @@\n N%22)%0A\n-%09%09return%0A%09%7D%0A%0A    for i, v := range vet %7B%0A%09%09if mapa%5Bv%5D == false %7B%0A%09%09%09fmt.Print(v)%0A%09%09%09if i %3C len(vet)-2 %7B%0A%09%09%09%09fmt.Print(%22 %22)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09fmt.Println()\n+        return%0A    %7D%0A%0A    \n %0A%0A%7D%0A\n@@ -329,17 +329,20 @@\n %5Dint) %7B%0A\n-%09\n+    \n repete :\n@@ -349,17 +349,20 @@\n = false%0A\n-%09\n+    \n for i :=\n@@ -375,18 +375,24 @@\n  mapa %7B%0A\n-%09%09\n+        \n if mapa%5B\n@@ -400,19 +400,28 @@\n %5D %3E 1 %7B%0A\n-%09%09%09\n+            \n repete =\n@@ -430,17 +430,29 @@\n rue%0A\n-%09%09%7D%0A%09%7D%0A%0A%09\n+        %7D%0A    %7D%0A%0A    \n if r\n@@ -468,18 +468,24 @@\n false %7B%0A\n-%09%09\n+        \n fmt.Prin\n@@ -497,22 +497,34 @@\n N%22)%0A\n-%09%09return%0A%09%7D%0A%0A%09\n+        return%0A    %7D%0A%0A    \n for \n@@ -543,18 +543,24 @@\n e vet %7B%0A\n-%09%09\n+        \n if mapa%5B\n@@ -568,19 +568,28 @@\n %5D %3E 1 %7B%0A\n-%09%09%09\n+            \n fmt.Prin\n@@ -593,19 +593,28 @@\n rint(v)%0A\n-%09%09%09\n+            \n if i %3C l\n@@ -624,58 +624,108 @@\n vet)\n--\n+ - \n 2 %7B%0A\n-%09%09%09%09fmt.Print(%22 %22)%0A%09%09%09%7D%0A%09%09%09mapa%5Bv%5D--%0A%09%09%7D%0A%09%7D%0A%09\n+                fmt.Print(%22 %22)%0A            %7D%0A            mapa%5Bv%5D--%0A        %7D %0A    %7D%0A    %0A    \n fmt.\n@@ -734,19 +734,31 @@\n intln()%0A\n+    return%0A\n %7D%0A%0A\n+%0A\n func mai\n@@ -763,17 +763,20 @@\n ain() %7B%0A\n-%09\n+    \n var nFig\n@@ -790,17 +790,20 @@\n uel int%0A\n-%09\n+    \n fmt.Scan\n@@ -812,17 +812,20 @@\n nFigs)%0A%0A\n-%09\n+    \n baruelFa\n@@ -850,17 +850,20 @@\n t%5Dbool)%0A\n-%09\n+    \n baruelRe\n@@ -891,17 +891,20 @@\n nt%5Dint)%0A\n-%09\n+    \n figs := \n@@ -923,17 +923,20 @@\n nFigs)%0A%0A\n-%09\n+    \n // todas\n@@ -952,17 +952,20 @@\n riginal%0A\n-%09\n+    \n for i :=\n@@ -978,18 +978,24 @@\n  figs %7B%0A\n-%09%09\n+        \n figs%5Bi%5D \n@@ -1001,15 +1001,19 @@\n  = i\n- + 1%0A%09%09\n++1%0A        \n baru\n@@ -1033,21 +1033,27 @@\n = false%0A\n-%09%7D%0A%0A%09\n+    %7D%0A%0A    \n fmt.Scan\n@@ -1063,17 +1063,20 @@\n Baruel)%0A\n-%09\n+    \n baruel :\n@@ -1099,17 +1099,20 @@\n aruel)%0A%0A\n-%09\n+    \n // preen\n@@ -1132,17 +1132,20 @@\n vetores%0A\n-%09\n+    \n for i :=\n@@ -1161,18 +1161,24 @@\n aruel %7B%0A\n-%09%09\n+        \n var figu\n@@ -1187,18 +1187,24 @@\n nha int%0A\n-%09%09\n+        \n fmt.Scan\n@@ -1216,18 +1216,24 @@\n urinha)%0A\n-%09%09\n+        \n baruel%5Bi\n@@ -1246,18 +1246,24 @@\n gurinha%0A\n-%09%09\n+        \n baruelFa\n@@ -1288,10 +1288,16 @@\n rue%0A\n-%09%09\n+        \n baru\n@@ -1325,13 +1325,19 @@\n %5D++%0A\n-%09%7D%0A%0A%09\n+    %7D%0A%0A    \n prin\n@@ -1373,17 +1373,20 @@\n etidos)%0A\n-%09\n+    \n printaFa\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-04-13_22-55-18",
+            "content": "@@ -263,19 +263,20 @@\n a%5Bv%5D == \n-tru\n+fals\n e %7B%0A%09%09%09f\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-04-13_22-55-33",
+            "content": "@@ -263,21 +263,20 @@\n a%5Bv%5D == \n-falta\n+true\n  %7B%0A%09%09%09fm\n@@ -305,17 +305,17 @@\n en(vet)-\n-1\n+2\n  %7B%0A%09%09%09%09f\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-04-13_22-56-32",
+            "content": "@@ -263,20 +263,21 @@\n a%5Bv%5D == \n-true\n+falta\n  %7B%0A%09%09%09fm\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-04-13_22-56-49",
+            "content": "@@ -259,28 +259,27 @@\n  mapa%5Bv%5D == \n-fals\n+tru\n e %7B%0A%09%09%09fmt.P\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-04-13_22-56-56",
+            "content": "@@ -1279,35 +1279,6 @@\n ta)%0A\n-    fmt.Println(baruelFalta)%0A\n %7D%0A\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-04-13_22-57-21",
+            "content": "@@ -249,33 +249,33 @@\n vet %7B%0A%09%09if mapa%5B\n-i\n+v\n %5D == false %7B%0A%09%09%09\n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-04-13_22-59-17",
+            "content": "@@ -263,19 +263,20 @@\n a%5Bi%5D == \n-tru\n+fals\n e %7B%0A%09%09%09f\n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-04-13_22-59-31",
+            "content": "@@ -261,18 +261,17 @@\n apa%5B\n-v\n+i\n %5D == \n-fals\n+tru\n e %7B%0A\n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-04-13_23-00-27",
+            "content": "@@ -348,32 +348,33 @@\n %0A%09fmt.Println()%0A\n+%0A\n %7D%0A%0Afunc printaRe\n@@ -1258,14 +1258,45 @@\n tes(\n-figs, \n+baruel, baruelFalta)%0A    fmt.Println(\n baru\n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-04-13_23-02-06",
+            "content": "@@ -298,33 +298,33 @@\n if i %3C len(vet)-\n-2\n+1\n  %7B%0A%09%09%09%09fmt.Print\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-04-13_23-02-27",
+            "content": "@@ -305,16 +305,18 @@\n len(vet)\n+-2\n  %7B%0A%09%09%09%09f\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-04-13_23-02-36",
+            "content": "@@ -309,10 +309,8 @@\n vet)\n--1\n  %7B%0A%09\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-04-13_23-02-46",
+            "content": "@@ -223,50 +223,8 @@\n %09%7D%0A%0A\n-    vetFaltantes := make(%5B%5Dint, len(vet))%0A\n     \n@@ -278,27 +278,62 @@\n %0A%09%09%09\n-vetFaltantes%5Bi%5D = v\n+fmt.Print(v)%0A%09%09%09if i %3C len(vet)-1 %7B%0A%09%09%09%09fmt.Print(%22 %22)\n %0A%09%09%09\n@@ -342,16 +342,12 @@\n %09%09%7D%0A\n-        \n+%09%7D%0A%09\n fmt.\n@@ -358,25 +358,11 @@\n tln(\n-vetFaltantes)%0A%09%7D%0A\n+)%0A%7D\n %0A%0Afu\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-04-13_23-14-11",
+            "content": "@@ -255,9 +255,16 @@\n nt, \n-0\n+len(vet)\n )%0A  \n@@ -273,9 +273,9 @@\n for \n-_\n+i\n , v \n@@ -332,222 +332,60 @@\n ntes\n- = append(vetFaltantes, v)%0A            %7D%0A%09%09%7D%0A    %0A        fmt.Println(vetFaltantes)%0A%09//for i, v := range vet %7B%0A%09//%09if mapa%5Bv%5D %3E 1 %7B%0A%09//%09%09fmt.Print(v)%0A%09//%09%09if i %3C len(vet)-2 %7B%0A%09//%09%09%09fmt.Print(%22 %22)%0A%09//%09%09%7D%0A%09//%09%7D%0A%09//%7D%0A\n+%5Bi%5D = v%0A%09%09%09%7D%0A%09%09%7D%0A        fmt.Println(vetFaltantes)%0A%09\n %7D%0A%0A%0A\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-04-13_23-18-06",
+            "content": "@@ -375,35 +375,93 @@\n    %0A\n-%09for i, v := range vet %7B%09%09%0A\n+        fmt.Println(vetFaltantes)%0A%09//for i, v := range vet %7B%0A%09//%09if mapa%5Bv%5D %3E 1 %7B%0A%09//\n %09%09fm\n@@ -471,16 +471,19 @@\n rint(v)%0A\n+%09//\n %09%09if i %3C\n@@ -492,21 +492,23 @@\n en(vet)-\n-1\n+2\n  %7B%0A%09\n+//\n %09%09%09fmt.P\n@@ -522,16 +522,26 @@\n %22)%0A%09\n-%09%7D%0A%09%7D%0A\n+//%09%09%7D%0A%09//%09%7D%0A%09//\n %7D%0A\n+%7D\n %0A%0A%0Af\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-04-13_23-18-50",
+            "content": "@@ -393,25 +393,16 @@\n ange vet\n-Faltantes\n  %7B%09%09%0A%09%09f\n@@ -429,25 +429,16 @@\n  len(vet\n-Faltantes\n )-1 %7B%0A%09%09\n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-04-13_23-19-03",
+            "content": "@@ -483,27 +483,11 @@\n %0A%09%7D%0A\n-    fmt.Println()%0A%7D\n+%7D%0A%0A\n %0A%0Afu\n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-04-13_23-19-35",
+            "content": "@@ -694,47 +694,15 @@\n %09%7D%0A%0A\n-    vetRepetidos := make(%5B%5Dint, 0)%0A\n %09for\n+ i,\n  v :\n@@ -741,46 +741,67 @@\n %0A%09%09%09\n-vetRepetidos = app\n+fmt.Print(v)%0A%09%09%09if i %3C l\n en\n-d\n (vet\n-Repetidos, v)\n+)-2 %7B%0A%09%09%09%09fmt.Print(%22 %22)%0A%09%09%09%7D\n %0A%09%09%09\n@@ -834,20 +834,8 @@\n tln(\n-vetRepetidos\n )%0A%7D%0A\n",
+            "lines": "89"
+        },
+        {
+            "label": "2026-04-13_23-21-22",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc printaFaltantes(vet []int, mapa map[int]bool) {\n\tfalta := false\n\tfor i := range mapa {\n\t\tif mapa[i] == false {\n\t\t\tfalta = true\n\t\t}\n\t}\n\n\tif falta == false {\n\t\tfmt.Println(\"N\")\n\t\treturn\n\t}\n\n    vetFaltantes := make([]int, 0)\n    for _, v := range vet {\n\t\tif mapa[v] == false {\n\t\t\tvetFaltantes = append(vetFaltantes, v)\n            }\n\t\t}\n    \n\tfor i, v := range vetFaltantes {\t\t\n\t\tfmt.Print(v)\n\t\tif i < len(vetFaltantes)-1 {\n\t\t\t\tfmt.Print(\" \")\n\t\t}\n\t}\n    fmt.Println()\n}\n\nfunc printaRepetidos(vet []int, mapa map[int]int) {\n\trepete := false\n\tfor i := range mapa {\n\t\tif mapa[i] > 1 {\n\t\t\trepete = true\n\t\t}\n\t}\n\n\tif repete == false {\n\t\tfmt.Println(\"N\")\n\t\treturn\n\t}\n\n    vetRepetidos := make([]int, 0)\n\tfor v := range vet {\n\t\tif mapa[v] > 1 {\n\t\t\tvetRepetidos = append(vetRepetidos, v)\n\t\t\tmapa[v]--\n\t\t}\n\t}\n\tfmt.Println(vetRepetidos)\n}\n\nfunc main() {\n\tvar nFigs, nBaruel int\n\tfmt.Scan(&nFigs)\n\n\tbaruelFalta := make(map[int]bool)\n\tbaruelRepetidos := make(map[int]int)\n\tfigs := make([]int, nFigs)\n\n\t// todas as fig original\n\tfor i := range figs {\n\t\tfigs[i] = i + 1\n\t\tbaruelFalta[i+1] = false\n\t}\n\n\tfmt.Scan(&nBaruel)\n\tbaruel := make([]int, nBaruel)\n\n\t// preenche todos os vetores\n\tfor i := range nBaruel {\n\t\tvar figurinha int\n\t\tfmt.Scan(&figurinha)\n\t\tbaruel[i] = figurinha\n\t\tbaruelFalta[figurinha] = true\n\t\tbaruelRepetidos[figurinha]++\n\t}\n\n\tprintaRepetidos(baruel, baruelRepetidos)\n\tprintaFaltantes(figs, baruelFalta)\n}\n",
+            "lines": "87"
+        }
+    ]
+}

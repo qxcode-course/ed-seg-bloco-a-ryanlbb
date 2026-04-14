@@ -2,8 +2,143 @@
     "patches": [
         {
             "label": "2026-04-06_19-02-12",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc main() {\n\tpen := NewPen(500, 500)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(255, 0, 0)     // muda a cor do pincel para vermelho\n\tpen.SetPosition(250, 500) // move o pincel para x 250, y 500\n\tpen.SetHeading(90)        // coloca o pincel apontando para cima\n\tpen.Walk(100)             // anda 100 pixels\n\tpen.Left(30)              // dobra 30 graus para esquerda\n\tpen.Walk(100)             // anda 100 pixels\n\tpen.DrawCircle(50)        // desenha um c\u00edrculo de raio 50\n\tpen.Right(60)             // gira para direita 60 graus\n\tpen.Walk(150)\n\tfor range 10 {\n\t\tpen.Up()\n\t\tpen.Walk(30) // anda sem riscar\n\t\tpen.Down()\n\n\t\tpen.DrawCircle(10) //desenha um circulo pequeno\n\n\t\tpen.Up()\n\t\tpen.Walk(-30) // volta sem riscar\n\t\tpen.Down()\n\n\t\tpen.Left(36) // gira\n\t}\n\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "content": "@@ -119,198 +119,712 @@\n unc \n-drawTree(pen *Pen, comprimento float64) %7B%0A%09if comprimento %3C 5 %7B%0A%09%09return%0A%09%7D%0A%0A%7D%0A%0Afunc main() %7B%0A%09pen := NewPen(500, 500)%0A%09pen.SetRGB(70, 70, 10)%0A%09pen.SetPosition(250, 500)%0A%09pen.SetHeading(90\n+main() %7B%0A%09pen := NewPen(500, 500)   // cria um canvas de 500 de largura por 500 de altura%0A%09pen.SetRGB(255, 0, 0)     // muda a cor do pincel para vermelho%0A%09pen.SetPosition(250, 500) // move o pincel para x 250, y 500%0A%09pen.SetHeading(90)        // coloca o pincel apontando para cima%0A%09pen.Walk(100)             // anda 100 pixels%0A%09pen.Left(30)              // dobra 30 graus para esquerda%0A%09pen.Walk(100)             // anda 100 pixels%0A%09pen.DrawCircle(50)        // desenha um c%C3%ADrculo de raio 50%0A%09pen.Right(60)             // gira para direita 60 graus%0A%09pen.Walk(150)%0A%09for range 10 %7B%0A%09%09pen.Up()%0A%09%09pen.Walk(30) // anda sem riscar%0A%09%09pen.Down()%0A%0A%09%09pen.DrawCircle(10) //desenha um circulo pequeno%0A%0A%09%09pen.Up(\n )%0A\n+%09\n %09pen\n@@ -829,20 +829,80 @@\n en.Walk(\n-100)\n+-30) // volta sem riscar%0A%09%09pen.Down()%0A%0A%09%09pen.Left(36) // gira%0A%09%7D\n %0A%0A%09pen.S\n",
             "lines": "39"
+        },
+        {
+            "label": "2026-04-13_14-31-24",
+            "content": "@@ -196,53 +196,8 @@\n %09%7D%0A%0A\n-%09pen.Right(45)%0A%09drawTree(pen, comprimento/3)%0A\n %7D%0A%0Af\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-13_14-32-39",
+            "content": "@@ -211,31 +211,8 @@\n 45)%0A\n-%09pen.Walk(comprimento)%0A\n %09dra\n@@ -364,29 +364,8 @@\n alk(\n-300)%0A%0A%09drawTree(pen, \n 100)\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-13_14-33-17",
+            "content": "@@ -192,16 +192,31 @@\n urn%0A%09%7D%0A%0A\n+%09pen.Right(45)%0A\n %09pen.Wal\n@@ -230,31 +230,16 @@\n imento)%0A\n-%09pen.Right(45)%0A\n %09drawTre\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-13_14-33-24",
+            "content": "@@ -196,23 +196,8 @@\n %09%7D%0A%0A\n-%09pen.Right(45)%0A\n %09pen\n@@ -215,16 +215,31 @@\n imento)%0A\n+%09pen.Right(45)%0A\n %09drawTre\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-13_14-33-52",
+            "content": "@@ -383,17 +383,17 @@\n en.Walk(\n-1\n+3\n 00)%0A%0A%09dr\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-13_14-34-02",
+            "content": "@@ -383,17 +383,17 @@\n en.Walk(\n-2\n+1\n 00)%0A%0A%09dr\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-13_14-34-10",
+            "content": "@@ -257,17 +257,17 @@\n rimento/\n-2\n+3\n )%0A%7D%0A%0Afun\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-13_14-34-25",
+            "content": "@@ -387,10 +387,10 @@\n alk(\n-15\n+20\n 0)%0A%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-13_14-34-37",
+            "content": "@@ -196,25 +196,8 @@\n %09%7D%0A%0A\n-%09degree := 30.0%0A%0A\n %09pen\n@@ -203,22 +203,18 @@\n n.Right(\n-degree\n+45\n )%0A%09pen.W\n@@ -263,61 +263,8 @@\n o/2)\n-%0A%0A%09pen.Left(2 * degree)%0A%09drawTree(pen, comprimento/2)\n %0A%7D%0A%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-13_14-35-29",
+            "content": "@@ -337,51 +337,8 @@\n o/2)\n-%0A%0A%09pen.Walk(-comprimento)%0A%09pen.Left(degree)\n %0A%7D%0A%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-13_14-35-49",
+            "content": "@@ -304,39 +304,16 @@\n degree)%0A\n-%09pen.Walk(comprimento)%0A\n %09drawTre\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-13_14-36-04",
+            "content": "@@ -304,16 +304,39 @@\n degree)%0A\n+%09pen.Walk(comprimento)%0A\n %09drawTre\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-13_14-36-11",
+            "content": "@@ -251,17 +251,16 @@\n imento)%0A\n-%0A\n %09drawTre\n@@ -304,39 +304,16 @@\n degree)%0A\n-%09pen.Walk(comprimento)%0A\n %09drawTre\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-13_14-38-12",
+            "content": "@@ -283,16 +283,92 @@\n nto/2)%0A%0A\n+%09pen.Left(2 * degree)%0A%09pen.Walk(comprimento)%0A%09drawTree(pen, comprimento/2)%0A%0A\n %09pen.Wal\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-13_14-38-22",
+            "content": "@@ -477,46 +477,8 @@\n 100)\n-%0A%09pen.SetRGB(255, 0, 0)%0A%09pen.Walk(100)\n %0A%0A%09p\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-13_14-38-47",
+            "content": "@@ -284,18 +284,16 @@\n to/2)%0A%0A%09\n-//\n pen.Walk\n@@ -312,10 +312,8 @@\n o)%0A%09\n-//\n pen.\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-13_14-40-45",
+            "content": "@@ -288,54 +288,10 @@\n )%0A%0A%09\n-pen.Left(2 * degree)%0A%09pen.Walk(comprimento)%0A%0A%09\n+//\n pen.\n@@ -310,16 +310,18 @@\n mento)%0A%09\n+//\n pen.Left\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-13_14-41-36",
+            "content": "@@ -292,46 +292,46 @@\n pen.\n-Walk(comprimento)%0A%09pen.Left(2 * degree\n+Left(2 * degree)%0A%09pen.Walk(comprimento\n )%0A%0A%09\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-13_14-41-45",
+            "content": "@@ -292,51 +292,46 @@\n pen.\n-Left(2 * degree)%0A%09drawTree(pen, comprimento\n+Walk(comprimento)%0A%09pen.Left(2 * degree\n )%0A%0A%09\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-13_14-42-19",
+            "content": "@@ -323,34 +323,32 @@\n pen, comprimento\n-/2\n )%0A%0A%09pen.Walk(-co\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-13_14-42-44",
+            "content": "@@ -361,28 +361,27 @@\n mento)%0A%09pen.\n-Righ\n+Lef\n t(degree)%0A%7D%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-13_14-52-53",
+            "content": "@@ -175,17 +175,17 @@\n mento %3C \n-2\n+5\n  %7B%0A%09%09ret\n@@ -204,17 +204,17 @@\n ree := 3\n-5\n+0\n .0%0A%0A%09pen\n@@ -218,43 +218,43 @@\n pen.\n-Walk(comprimento)%0A%09pen.Right(degree\n+Right(degree)%0A%09pen.Walk(comprimento\n )%0A%0A%09\n@@ -345,44 +345,44 @@\n pen.\n-Right(degree)%0A%09pen.Walk(-comprimento\n+Walk(-comprimento)%0A%09pen.Right(degree\n )%0A%7D%0A\n@@ -523,17 +523,17 @@\n ee(pen, \n-2\n+1\n 00)%0A%09pen\n@@ -550,16 +550,31 @@\n 5, 0, 0)\n+%0A%09pen.Walk(100)\n %0A%0A%09pen.S\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-13_14-55-10",
+            "content": "@@ -415,16 +415,14 @@\n Pen(\n-10\n+5\n 00, \n-10\n+5\n 00)%0A\n@@ -466,15 +466,14 @@\n ion(\n+2\n 5\n-0\n 0, \n-10\n+5\n 00)%0A\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-13_14-55-22",
+            "content": "@@ -271,33 +271,33 @@\n en, comprimento/\n-3\n+2\n )%0A%0A%09pen.Left(2 *\n@@ -332,17 +332,17 @@\n rimento/\n-3\n+2\n )%0A%0A%09pen.\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-13_14-55-33",
+            "content": "@@ -271,33 +271,33 @@\n en, comprimento/\n-6\n+3\n )%0A%0A%09pen.Left(2 *\n@@ -332,17 +332,17 @@\n rimento/\n-6\n+3\n )%0A%0A%09pen.\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-13_14-55-54",
+            "content": "@@ -270,36 +270,33 @@\n pen, comprimento\n-*0.6\n+/\n 6)%0A%0A%09pen.Left(2 \n@@ -335,12 +335,9 @@\n ento\n-*0.6\n+/\n 6)%0A%0A\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-13_14-56-15",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc drawTree(pen *Pen, comprimento float64) {\n\tif comprimento < 2 {\n\t\treturn\n\t}\n\n\tdegree := 35.0\n\n\tpen.Walk(comprimento)\n\tpen.Right(degree)\n\n\tdrawTree(pen, comprimento*0.66)\n\n\tpen.Left(2 * degree)\n\tdrawTree(pen, comprimento*0.66)\n\n\tpen.Right(degree)\n\tpen.Walk(-comprimento)\n}\n\nfunc main() {\n\tpen := NewPen(1000, 1000)\n\tpen.SetRGB(70, 70, 10)\n\tpen.SetPosition(500, 1000)\n\tpen.SetHeading(90)\n\tpen.Walk(150)\n\n\tdrawTree(pen, 200)\n\tpen.SetRGB(255, 0, 0)\n\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "lines": "43"
         }
     ]
 }
