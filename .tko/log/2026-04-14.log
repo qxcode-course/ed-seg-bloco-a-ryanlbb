@@ -1,0 +1,31 @@
+2026-04-14 09:25:56, MOVE, v:1, k:eval1@baruel, mode:PICK
+2026-04-14 09:26:05, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:75, size:89
+2026-04-14 09:28:34, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:25, size:87
+2026-04-14 09:29:06, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:100, size:94
+2026-04-14 09:29:08, MOVE, v:1, k:eval1@baruel, mode:BACK
+2026-04-14 09:29:18, SELF, v:1, k:eval1@baruel, self:1, rate:100, study:45
+2026-04-14 09:29:22, MOVE, v:1, k:eval1@apagando, mode:DOWN
+2026-04-14 09:29:23, MOVE, v:1, k:eval1@apagando, mode:PICK
+2026-04-14 09:29:06, MOVE, v:1, k:eval1@baruel, mode:EDIT
+2026-04-14 09:29:06, MOVE, v:1, k:eval1@baruel, mode:EDIT
+2026-04-14 09:29:22, MOVE, v:1, k:eval1@apagando, mode:EDIT
+2026-04-14 09:29:22, MOVE, v:1, k:eval1@apagando, mode:EDIT
+2026-04-14 09:29:22, MOVE, v:1, k:eval1@apagando, mode:EDIT
+2026-04-14 09:33:37, EXEC, v:1, k:eval1@apagando, mode:FULL, rate:0, size:15
+2026-04-14 09:35:45, MOVE, v:1, k:eval1@apagando, mode:EDIT
+2026-04-14 09:33:37, MOVE, v:1, k:eval1@apagando, mode:EDIT
+2026-04-14 09:37:46, EXEC, v:1, k:eval1@apagando, mode:FULL, size:28, fail:COMP
+2026-04-14 09:37:49, EXEC, v:1, k:eval1@apagando, mode:FULL, rate:0, size:28
+2026-04-14 09:39:43, EXEC, v:1, k:eval1@apagando, mode:FULL, rate:0, size:33
+2026-04-14 09:39:51, EXEC, v:1, k:eval1@apagando, mode:FULL, rate:0, size:34
+2026-04-14 09:39:52, EXEC, v:1, k:eval1@apagando, mode:FULL, rate:0
+2026-04-14 09:40:12, EXEC, v:1, k:eval1@apagando, mode:FULL, rate:0, size:34
+2026-04-14 09:40:22, EXEC, v:1, k:eval1@apagando, mode:FULL, rate:0
+2026-04-14 09:40:26, EXEC, v:1, k:eval1@apagando, mode:FULL, rate:0, size:34
+2026-04-14 09:40:35, MOVE, v:1, k:eval1@apagando, mode:BACK
+2026-04-14 09:40:22, MOVE, v:1, k:eval1@apagando, mode:EDIT
+2026-04-14 09:40:26, MOVE, v:1, k:eval1@apagando, mode:EDIT
+2026-04-14 09:42:36, MOVE, v:1, k:eval1@apagando, mode:PICK
+2026-04-14 09:42:37, EXEC, v:1, k:eval1@apagando, mode:FULL, rate:100, size:35
+2026-04-14 09:42:42, MOVE, v:1, k:eval1@apagando, mode:BACK
+2026-04-14 09:42:50, SELF, v:1, k:eval1@apagando, self:1, rate:100, study:10

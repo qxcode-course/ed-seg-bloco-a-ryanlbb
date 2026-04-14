@@ -46,16 +46,21 @@ func printaRepetidos(vet []int, mapa map[int]int) {
 		return
 	}
 
-	for i, v := range vet {
+	vetRepetidos := make([]int, 0)
+	for _, v := range vet {
 		if mapa[v] > 1 {
-			fmt.Print(v)
-			if i < len(vet)-2 {
-				fmt.Print(" ")
-			}
+			vetRepetidos = append(vetRepetidos, v)
 			mapa[v]--
 		}
 	}
-	fmt.Println()
+
+	for i, v := range vetRepetidos {		
+		fmt.Print(v)
+		if i < len(vetRepetidos)-1 {
+				fmt.Print(" ")
+		}
+	}
+    fmt.Println()
 }
 
 func main() {

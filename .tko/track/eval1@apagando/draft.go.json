@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_09-33-37",
+            "content": "@@ -43,22 +43,8 @@\n ar n\n-Vet, nApagando\n  int\n@@ -56,19 +56,16 @@\n .Scan(&n\n-Vet\n )%0A%09vet :\n@@ -83,17 +83,14 @@\n t, n\n-Vet)%0A%09map\n+)%0A%09vet\n Apag\n@@ -156,27 +156,27 @@\n (&vet%5Bi%5D)%0A%09%09\n-map\n+vet\n Apagando%5Bvet\n@@ -200,296 +200,45 @@\n fmt.\n-Scan(&nApagando)%0A%09vetApagar := make(%5B%5Dint, nApagando)%0A%09for i := range nApagando %7B%0A%09%09fmt.Scan(&vetApagar%5Bi%5D)%0A%09%09mapApagando%5BvetApagar%5Bi%5D%5D = false%0A%09%7D%0A%0A%09vetFinal := make(%5B%5Dint, 0)%0A%09for _, v := range vet %7B%0A%09%09if mapApagando%5Bv%5D == true %7B%0A%09%09%09vetFinal = append(vetFinal, v)%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Println(ve\n+Println(vet)%0A%09fmt.Println(vetApagando\n )%0A%7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-04-14_09-37-46",
+            "content": "@@ -504,18 +504,12 @@\n intln(ve\n-tFinal\n )%0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-14_09-37-49",
+            "content": "@@ -495,101 +495,27 @@\n %0A%0A%09f\n-or i, v := range vetFinal %7B%0A%09%09fmt.Print(v)%0A%09%09if i %3C len(vetFinal)-1 %7B%0A%09%09%09fmt.Print(%22 %22)%0A%09%09%7D%0A%09%7D\n+mt.Println(vetFinal)\n %0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-14_09-39-43",
+            "content": "@@ -590,21 +590,6 @@\n %0A%09%7D%0A\n-%09fmt.Println()%0A\n %7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-14_09-39-51",
+            "content": "@@ -561,9 +561,9 @@\n al)-\n-2\n+1\n  %7B%0A%09\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-14_09-40-12",
+            "content": "@@ -561,9 +561,9 @@\n al)-\n-1\n+2\n  %7B%0A%09\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-14_09-40-26",
+            "content": "@@ -538,17 +538,16 @@\n (v)%0A\n-%0A\n %09%09if i %3C\n = le\n@@ -542,17 +542,16 @@\n %09%09if i %3C\n-=\n  len(vet\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-14_09-42-37",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\tvar nVet, nApagando int\n\tfmt.Scan(&nVet)\n\tvet := make([]int, nVet)\n\tmapApagando := make(map[int]bool)\n\tfor i := range vet {\n\t\tfmt.Scan(&vet[i])\n\t\tmapApagando[vet[i]] = true\n\t}\n\n\tfmt.Scan(&nApagando)\n\tvetApagar := make([]int, nApagando)\n\tfor i := range nApagando {\n\t\tfmt.Scan(&vetApagar[i])\n\t\tmapApagando[vetApagar[i]] = false\n\t}\n\n\tvetFinal := make([]int, 0)\n\tfor _, v := range vet {\n\t\tif mapApagando[v] == true {\n\t\t\tvetFinal = append(vetFinal, v)\n\t\t}\n\t}\n\n\tfor i, v := range vetFinal {\n\t\tfmt.Print(v)\n\n\t\tif i <= len(vetFinal)-1 {\n\t\t\tfmt.Print(\" \")\n\t\t}\n\t}\n\tfmt.Println()\n}\n",
+            "lines": "35"
+        }
+    ]
+}

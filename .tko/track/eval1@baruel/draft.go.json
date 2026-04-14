@@ -247,8 +247,23 @@
         },
         {
             "label": "2026-04-13_23-21-22",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc printaFaltantes(vet []int, mapa map[int]bool) {\n\tfalta := false\n\tfor i := range mapa {\n\t\tif mapa[i] == false {\n\t\t\tfalta = true\n\t\t}\n\t}\n\n\tif falta == false {\n\t\tfmt.Println(\"N\")\n\t\treturn\n\t}\n\n    vetFaltantes := make([]int, 0)\n    for _, v := range vet {\n\t\tif mapa[v] == false {\n\t\t\tvetFaltantes = append(vetFaltantes, v)\n            }\n\t\t}\n    \n\tfor i, v := range vetFaltantes {\t\t\n\t\tfmt.Print(v)\n\t\tif i < len(vetFaltantes)-1 {\n\t\t\t\tfmt.Print(\" \")\n\t\t}\n\t}\n    fmt.Println()\n}\n\nfunc printaRepetidos(vet []int, mapa map[int]int) {\n\trepete := false\n\tfor i := range mapa {\n\t\tif mapa[i] > 1 {\n\t\t\trepete = true\n\t\t}\n\t}\n\n\tif repete == false {\n\t\tfmt.Println(\"N\")\n\t\treturn\n\t}\n\n    vetRepetidos := make([]int, 0)\n\tfor v := range vet {\n\t\tif mapa[v] > 1 {\n\t\t\tvetRepetidos = append(vetRepetidos, v)\n\t\t\tmapa[v]--\n\t\t}\n\t}\n\tfmt.Println(vetRepetidos)\n}\n\nfunc main() {\n\tvar nFigs, nBaruel int\n\tfmt.Scan(&nFigs)\n\n\tbaruelFalta := make(map[int]bool)\n\tbaruelRepetidos := make(map[int]int)\n\tfigs := make([]int, nFigs)\n\n\t// todas as fig original\n\tfor i := range figs {\n\t\tfigs[i] = i + 1\n\t\tbaruelFalta[i+1] = false\n\t}\n\n\tfmt.Scan(&nBaruel)\n\tbaruel := make([]int, nBaruel)\n\n\t// preenche todos os vetores\n\tfor i := range nBaruel {\n\t\tvar figurinha int\n\t\tfmt.Scan(&figurinha)\n\t\tbaruel[i] = figurinha\n\t\tbaruelFalta[figurinha] = true\n\t\tbaruelRepetidos[figurinha]++\n\t}\n\n\tprintaRepetidos(baruel, baruelRepetidos)\n\tprintaFaltantes(figs, baruelFalta)\n}\n",
+            "content": "@@ -690,23 +690,55 @@\n urn%0A%09%7D%0A%0A\n+    vetRepetidos := make(%5B%5Dint, 0)%0A\n %09for\n- i,\n  v := ra\n@@ -773,67 +773,46 @@\n %0A%09%09%09\n-fmt.Print(v)%0A%09%09%09if i %3C l\n+vetRepetidos = app\n en\n+d\n (vet\n-)-2 %7B%0A%09%09%09%09fmt.Print(%22 %22)%0A%09%09%09%7D\n+Repetidos, v)\n %0A%09%09%09\n@@ -833,32 +833,44 @@\n %09%7D%0A%09fmt.Println(\n+vetRepetidos\n )%0A%7D%0A%0Afunc main()\n",
             "lines": "87"
+        },
+        {
+            "label": "2026-04-14_09-26-05",
+            "content": "@@ -694,46 +694,14 @@\n %09%7D%0A%0A\n-%09vetRepetidos := make(%5B%5Dint, 0)%0A\n %09for \n-_\n+i\n , v \n@@ -741,46 +741,67 @@\n %0A%09%09%09\n-vetRepetidos = app\n+fmt.Print(v)%0A%09%09%09if i %3C l\n en\n-d\n (vet\n-Repetidos, v)\n+)-2 %7B%0A%09%09%09%09fmt.Print(%22 %22)%0A%09%09%09%7D\n %0A%09%09%09\n@@ -834,20 +834,8 @@\n tln(\n-vetRepetidos\n )%0A%7D%0A\n",
+            "lines": "89"
+        },
+        {
+            "label": "2026-04-14_09-28-34",
+            "content": "@@ -832,133 +832,33 @@\n %0A%09%7D%0A\n-%0A%09for i, v := range vetRepetidos %7B%09%09%0A%09%09fmt.Print(v)%0A%09%09if i %3C len(vetRepetidos)-1 %7B%0A%09%09%09%09fmt.Print(%22 %22)%0A%09%09%7D%0A%09%7D%0A    fmt.Println(\n+%09fmt.Println(vetRepetidos\n )%0A%7D%0A\n",
+            "lines": "87"
+        },
+        {
+            "label": "2026-04-14_09-29-06",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc printaFaltantes(vet []int, mapa map[int]bool) {\n\tfalta := false\n\tfor i := range mapa {\n\t\tif mapa[i] == false {\n\t\t\tfalta = true\n\t\t}\n\t}\n\n\tif falta == false {\n\t\tfmt.Println(\"N\")\n\t\treturn\n\t}\n\n    vetFaltantes := make([]int, 0)\n    for _, v := range vet {\n\t\tif mapa[v] == false {\n\t\t\tvetFaltantes = append(vetFaltantes, v)\n            }\n\t\t}\n    \n\tfor i, v := range vetFaltantes {\t\t\n\t\tfmt.Print(v)\n\t\tif i < len(vetFaltantes)-1 {\n\t\t\t\tfmt.Print(\" \")\n\t\t}\n\t}\n    fmt.Println()\n}\n\nfunc printaRepetidos(vet []int, mapa map[int]int) {\n\trepete := false\n\tfor i := range mapa {\n\t\tif mapa[i] > 1 {\n\t\t\trepete = true\n\t\t}\n\t}\n\n\tif repete == false {\n\t\tfmt.Println(\"N\")\n\t\treturn\n\t}\n\n\tvetRepetidos := make([]int, 0)\n\tfor _, v := range vet {\n\t\tif mapa[v] > 1 {\n\t\t\tvetRepetidos = append(vetRepetidos, v)\n\t\t\tmapa[v]--\n\t\t}\n\t}\n\n\tfor i, v := range vetRepetidos {\t\t\n\t\tfmt.Print(v)\n\t\tif i < len(vetRepetidos)-1 {\n\t\t\t\tfmt.Print(\" \")\n\t\t}\n\t}\n    fmt.Println()\n}\n\nfunc main() {\n\tvar nFigs, nBaruel int\n\tfmt.Scan(&nFigs)\n\n\tbaruelFalta := make(map[int]bool)\n\tbaruelRepetidos := make(map[int]int)\n\tfigs := make([]int, nFigs)\n\n\t// todas as fig original\n\tfor i := range figs {\n\t\tfigs[i] = i + 1\n\t\tbaruelFalta[i+1] = false\n\t}\n\n\tfmt.Scan(&nBaruel)\n\tbaruel := make([]int, nBaruel)\n\n\t// preenche todos os vetores\n\tfor i := range nBaruel {\n\t\tvar figurinha int\n\t\tfmt.Scan(&figurinha)\n\t\tbaruel[i] = figurinha\n\t\tbaruelFalta[figurinha] = true\n\t\tbaruelRepetidos[figurinha]++\n\t}\n\n\tprintaRepetidos(baruel, baruelRepetidos)\n\tprintaFaltantes(figs, baruelFalta)\n}\n",
+            "lines": "94"
         }
     ]
 }
