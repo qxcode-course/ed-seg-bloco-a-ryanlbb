@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_09-50-18",
+            "content": "@@ -427,33 +427,8 @@\n    %7D\n-%0A%0A    fmt.Println(casais)\n %0A%7D%0A%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-14_09-50-27",
+            "content": "@@ -1,463 +1,67 @@\n-package main%0Aimport %22fmt%22%0Afunc main() %7B%0A    var n int%0A    fmt.Scan(&n)%0A    animais := make(%5B%5Dint, n)%0A    animaisMap := make(map%5Bint%5Dint)%0A    for i := range animais %7B%0A        fmt.Scan(animais%5Bi%5D)%0A        animaisMap%5Banimais%5Bi%5D%5D++%0A    %7D%0A%0A    casais := 0%0A    for _, v := range animais %7B%0A        if animaisMap%5Bv%5D %3E 1 && animaisMap%5B-v%5D %3E 1 %7B%0A            casais++%0A            animaisMap%5Bv%5D--%0A            animaisMap%5B-v%5D--%0A        %7D %0A    %7D%0A%0A    fmt.Println(animaisMap)%0A%7D%0A\n+@@ -441,23 +441,19 @@%0A Println(%0A-animaisMap%0A+casais%0A )%250A%257D%250A%250A\n %0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-14_09-50-30",
+            "content": "@@ -176,17 +176,16 @@\n mt.Scan(\n-&\n animais%5B\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-14_09-50-48",
+            "content": "@@ -442,19 +442,23 @@\n Println(\n-casais\n+animaisMap\n )%0A%7D%0A%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-14_09-50-57",
+            "content": "@@ -249,32 +249,8 @@\n = 0%0A\n-    fmt.Println(casais)%0A\n     \n@@ -426,11 +426,35 @@\n %0A    %7D%0A%0A\n+    fmt.Println(casais)%0A\n %7D%0A%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-14_09-51-19",
+            "content": "@@ -261,26 +261,22 @@\n Println(\n-animaisMap\n+casais\n )%0A    fo\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-14_09-51-20",
+            "content": "@@ -331,17 +331,16 @@\n Map%5Bv%5D %3E\n-=\n  1 && an\n@@ -353,17 +353,16 @@\n ap%5B-v%5D %3E\n-=\n  1 %7B%0A   \n@@ -448,56 +448,16 @@\n     \n-    \n %7D %0A    \n- \n-   %7D%0A        fmt.Println(animaisMap)\n+%7D\n %0A%0A%7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-14_09-51-57",
+            "content": "@@ -483,20 +483,24 @@\n Println(\n-casais\n+animaisMap\n )%0A%0A%7D%0A%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-14_09-52-08",
+            "content": "@@ -467,17 +467,8 @@\n   %7D%0A\n-        %0A\n     \n@@ -491,11 +491,12 @@\n casais)%0A\n+%0A\n %7D%0A%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-14_09-52-19",
+            "content": "@@ -245,16 +245,44 @@\n is := 0%0A\n+    fmt.Println(animaisMap)%0A\n     for \n@@ -459,24 +459,32 @@\n  %0A        %7D%0A\n+        \n %0A        fmt\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-14_09-52-20",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    animais := make([]int, n)\n    animaisMap := make(map[int]int)\n    for i := range animais {\n        fmt.Scan(&animais[i])\n        animaisMap[animais[i]]++\n    }\n\n    casais := 0\n    for _, v := range animais {\n        if animaisMap[v] >= 1 && animaisMap[-v] >= 1 {\n            casais++\n            animaisMap[v]--\n            animaisMap[-v]--\n            } \n        }\n\n        fmt.Println(casais)\n}\n\n",
+            "lines": "24"
+        }
+    ]
+}

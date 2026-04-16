@@ -1,0 +1,5 @@
+2026-04-16 14:24:28, MOVE, v:1, k:eval1@baruel, mode:PICK
+2026-04-16 14:24:33, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:100
+2026-04-16 14:24:33, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:100
+2026-04-16 14:24:35, MOVE, v:1, k:eval1@baruel, mode:BACK
+2026-04-16 14:24:41, SELF, v:1, k:eval1@baruel, self:1, rate:100

@@ -29,3 +29,64 @@
 2026-04-14 09:42:37, EXEC, v:1, k:eval1@apagando, mode:FULL, rate:100, size:35
 2026-04-14 09:42:42, MOVE, v:1, k:eval1@apagando, mode:BACK
 2026-04-14 09:42:50, SELF, v:1, k:eval1@apagando, self:1, rate:100, study:10
+2026-04-14 09:44:18, MOVE, v:1, k:eval1@casais, mode:DOWN
+2026-04-14 09:44:20, MOVE, v:1, k:eval1@casais, mode:PICK
+2026-04-14 09:42:36, MOVE, v:1, k:eval1@apagando, mode:EDIT
+2026-04-14 09:42:36, MOVE, v:1, k:eval1@apagando, mode:EDIT
+2026-04-14 09:44:18, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 09:44:18, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 09:44:18, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 09:50:18, EXEC, v:1, k:eval1@casais, mode:FULL, rate:0, size:22
+2026-04-14 09:50:27, EXEC, v:1, k:eval1@casais, mode:FULL, rate:25, size:24
+2026-04-14 09:50:29, EXEC, v:1, k:eval1@casais, mode:FULL, rate:0, size:24
+2026-04-14 09:50:29, EXEC, v:1, k:eval1@casais, mode:FULL, rate:0, size:24
+2026-04-14 09:50:30, EXEC, v:1, k:eval1@casais, mode:FULL, rate:0, size:24
+2026-04-14 09:50:48, EXEC, v:1, k:eval1@casais, mode:FULL, rate:0, size:24
+2026-04-14 09:50:48, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 09:50:48, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 09:50:56, EXEC, v:1, k:eval1@casais, mode:FULL, rate:0
+2026-04-14 09:50:57, EXEC, v:1, k:eval1@casais, mode:FULL, rate:0, size:24
+2026-04-14 09:51:19, EXEC, v:1, k:eval1@casais, mode:FULL, rate:0, size:24
+2026-04-14 09:51:20, EXEC, v:1, k:eval1@casais, mode:FULL, rate:0, size:24
+2026-04-14 09:51:57, EXEC, v:1, k:eval1@casais, mode:FULL, rate:0, size:25
+2026-04-14 09:52:08, EXEC, v:1, k:eval1@casais, mode:FULL, rate:0, size:25
+2026-04-14 09:52:19, EXEC, v:1, k:eval1@casais, mode:FULL, rate:0, size:25
+2026-04-14 09:52:20, EXEC, v:1, k:eval1@casais, mode:FULL, rate:100, size:24
+2026-04-14 09:52:23, MOVE, v:1, k:eval1@casais, mode:BACK
+2026-04-14 09:52:33, SELF, v:1, k:eval1@casais, self:1, rate:100, study:5
+2026-04-14 09:52:19, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 09:54:25, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 10:00:02, MOVE, v:1, k:eval1@triangulo, mode:DOWN
+2026-04-14 10:00:03, MOVE, v:1, k:eval1@triangulo, mode:PICK
+2026-04-14 10:00:02, MOVE, v:1, k:eval1@triangulo, mode:EDIT
+2026-04-14 10:00:02, MOVE, v:1, k:eval1@triangulo, mode:EDIT
+2026-04-14 10:00:02, MOVE, v:1, k:eval1@triangulo, mode:EDIT
+2026-04-14 10:03:08, MOVE, v:1, k:eval1@triangulo, mode:BACK
+2026-04-14 10:03:10, MOVE, v:1, k:eval1@queimada, mode:DOWN
+2026-04-14 10:03:11, MOVE, v:1, k:eval1@queimada, mode:PICK
+2026-04-14 10:03:10, MOVE, v:1, k:eval1@queimada, mode:EDIT
+2026-04-14 10:03:10, MOVE, v:1, k:eval1@queimada, mode:EDIT
+2026-04-14 10:03:10, MOVE, v:1, k:eval1@queimada, mode:EDIT
+2026-04-14 10:15:17, MOVE, v:1, k:eval1@queimada, mode:BACK
+2026-04-14 10:48:43, MOVE, v:1, k:eval1@triangulo, mode:PICK
+2026-04-14 10:48:45, MOVE, v:1, k:eval1@triangulo, mode:BACK
+2026-04-14 10:48:48, MOVE, v:1, k:eval1@queimada, mode:PICK
+2026-04-14 10:50:56, MOVE, v:1, k:eval1@queimada, mode:BACK
+2026-04-14 10:51:13, MOVE, v:1, k:eval1@triangulo, mode:PICK
+2026-04-14 10:52:49, MOVE, v:1, k:eval1@triangulo, mode:BACK
+2026-04-14 20:00:13, MOVE, v:1, k:eval1@baruel, mode:PICK
+2026-04-14 20:00:14, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:100
+2026-04-14 20:00:16, MOVE, v:1, k:eval1@baruel, mode:BACK
+2026-04-14 20:00:25, SELF, v:1, k:eval1@baruel, self:1, rate:100, study:40
+2026-04-14 20:01:19, MOVE, v:1, k:ed@vetbuild, mode:DOWN
+2026-04-14 20:01:20, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-04-14 20:01:21, EXEC, v:1, k:ed@vetbuild, mode:FULL, size:130, fail:COMP
+2026-04-14 20:00:14, MOVE, v:1, k:eval1@baruel, mode:EDIT
+2026-04-14 20:01:19, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-04-14 20:01:19, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-04-14 20:01:19, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-04-14 20:01:19, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-04-14 20:09:17, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-04-14 20:09:20, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-04-14 20:05:54, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-04-14 20:13:43, MOVE, v:1, k:ed@vetbuild, mode:BACK
