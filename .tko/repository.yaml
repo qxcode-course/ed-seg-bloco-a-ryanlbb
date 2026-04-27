@@ -22,13 +22,13 @@ sources:
   quests: null
   tasks: null
 expanded:
-- eval1@eval1
 - ed@vector
 flags:
-  inbox: inbox
+  inbox: all
   panel: graph
   show_panel: 'true'
-  task_graph_mode: time
+  task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: eval1@baruel
+selected: ed@vetbuild
+selected_index: 5

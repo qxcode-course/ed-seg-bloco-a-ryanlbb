@@ -1,0 +1,45 @@
+2026-04-26 12:43:14, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-04-26 12:57:25, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-04-26 18:06:46, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-04-26 19:23:14, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-04-26 19:32:59, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-04-26 19:36:40, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-04-26 19:36:47, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-04-26 19:37:20, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20
+2026-04-26 19:37:21, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20
+2026-04-26 19:37:21, MOVE, v:1, k:ed@vetequals, mode:EDIT
+2026-04-26 19:39:14, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-04-26 19:39:35, MOVE, v:1, k:ed@setbuild, mode:DOWN
+2026-04-26 19:39:36, MOVE, v:1, k:ed@bettersearch, mode:DOWN
+2026-04-26 19:39:35, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-04-26 19:39:35, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-04-26 19:39:35, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-04-26 19:39:35, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-04-26 19:39:36, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-26 19:39:36, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-26 19:39:36, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-26 20:40:03, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-04-26 22:01:53, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-04-26 22:25:36, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:100
+2026-04-26 22:25:38, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0
+2026-04-26 22:26:17, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:100
+2026-04-26 22:26:17, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-04-26 22:26:17, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-04-26 22:35:54, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-04-26 22:36:18, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-04-26 22:40:31, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20, size:58
+2026-04-26 22:40:32, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20
+2026-04-26 22:41:28, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20
+2026-04-26 22:41:28, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20
+2026-04-26 22:40:21, MOVE, v:1, k:ed@vetequals, mode:EDIT
+2026-04-26 22:41:28, MOVE, v:1, k:ed@vetequals, mode:EDIT
+2026-04-26 22:42:57, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20
+2026-04-26 22:42:58, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20
+2026-04-26 22:44:55, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:100, size:62
+2026-04-26 22:45:45, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:30, size:62
+2026-04-26 22:45:46, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:100, size:62
+2026-04-26 22:45:47, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:100
+2026-04-26 22:45:49, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-04-26 22:45:57, SELF, v:1, k:ed@vetequals, self:1, rate:100, concept:1
+2026-04-26 22:45:47, MOVE, v:1, k:ed@vetequals, mode:EDIT
+2026-04-26 22:45:45, MOVE, v:1, k:ed@vetequals, mode:EDIT

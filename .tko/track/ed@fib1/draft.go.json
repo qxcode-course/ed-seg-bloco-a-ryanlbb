@@ -107,8 +107,158 @@
         },
         {
             "label": "2026-04-12_17-50-31",
-            "content": "package main\nimport \"fmt\"\n\nfunc coelhosEmMeses(meses, pares int) {\n    coelhos := fib(pares)\n    if meses == 1 {\n        fmt.Println(coelhos)\n        return\n    }\n\n    coelhosEmMeses(meses-1, pares)\n}\n\nfunc fib(n int) int{\nif n == 0 || n == 1 {\n        return 1\n    } else { \n\n        return fib(n-1) + fib(n-2)\n    }\n    \n}\n\nfunc main() {\n    var meses, pares int\n    fmt.Scan(&meses, &pares)\n    coelhosEmMeses(meses, pares)\n}\n",
+            "content": "@@ -56,24 +56,50 @@\n ares int) %7B%0A\n+    coelhos := fib(pares)%0A\n     if meses\n@@ -103,9 +103,9 @@\n ses \n-%3C\n+=\n = 1 \n@@ -126,16 +126,23 @@\n Println(\n+coelhos\n )%0A      \n@@ -157,17 +157,16 @@\n %0A    %7D%0A%0A\n-%0A\n     coel\n",
             "lines": "28"
+        },
+        {
+            "label": "2026-04-16_14-55-39",
+            "content": "@@ -19,16 +19,17 @@\n t %22fmt%22%0A\n+%0A\n func coe\n@@ -58,19 +58,16 @@\n es int) \n-int\n %7B%0A    if\n@@ -92,31 +92,48 @@\n     \n-return 1\n+fmt.Println()\n %0A    \n-%7D%0A%0A%09\n+    \n return\n+%0A    %7D%0A%0A%0A   \n  coe\n@@ -182,16 +182,37 @@\n int) int\n+%7B%0Aif n == 0 %7C%7C n == 1\n  %7B%0A     \n@@ -223,16 +223,18 @@\n eturn 1%0A\n+  \n   %7D else\n@@ -241,11 +241,8 @@\n  %7B %0A\n-%09%09%09\n %0A   \n@@ -275,17 +275,20 @@\n (n-2)%0A  \n-%7D\n+  %7D%0A\n     %0A%7D%0A%0A\n@@ -359,28 +359,16 @@\n es)%0A    \n-fmt.Println(\n coelhosE\n@@ -385,19 +385,13 @@\n es, \n-fib(\n pares)\n-))\n %0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-16_20-29-31",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func coe\n@@ -60,20 +60,22 @@\n int) int\n- \n %7B%0A\n-%09\n+    \n if meses\n@@ -78,26 +78,32 @@\n eses %3C= 1 %7B%0A\n-%09%09\n+        \n return 1%0A%09%7D%0A\n@@ -91,33 +91,36 @@\n        return 1%0A\n-%09\n+    \n %7D%0A%0A%09return coelh\n@@ -174,47 +174,49 @@\n t %7B%0A\n-%09if n == 0 %7C%7C n == 1 %7B%0A%09%09return 1%0A%09%7D%0A%0A%09\n+        return 1%0A  %7D else %7B %0A%09%09%09%0A        \n retu\n@@ -238,16 +238,24 @@\n ib(n-2)%0A\n+  %7D    %0A\n %7D%0A%0Afunc \n@@ -263,17 +263,20 @@\n ain() %7B%0A\n-%09\n+    \n var mese\n@@ -288,17 +288,20 @@\n res int%0A\n-%09\n+    \n fmt.Scan\n@@ -317,17 +317,20 @@\n &pares)%0A\n-%09\n+    \n fmt.Prin\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-16_20-32-36",
+            "content": "@@ -176,31 +176,10 @@\n = 0 \n-%7B%0A%09%09return 0%0A%09%7D else if\n+%7C%7C\n  n =\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-16_20-34-42",
+            "content": "@@ -21,16 +21,134 @@\n  %22fmt%22%0A%0A\n+func coelhosEmMeses(meses, pares int) int %7B%0A%09if meses %3C= 1 %7B%0A%09%09return 1%0A%09%7D%0A%0A%09return coelhosEmMeses(meses-1, pares)%0A%7D%0A%0A\n func fib\n@@ -330,26 +330,41 @@\n tln(\n-fib(meses) * \n+coelhosEmMeses(meses, fib(\n pares)\n+))\n %0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-17_10-17-51",
+            "content": "@@ -30,31 +30,13 @@\n unc \n-reproduzir(meses, pares\n+fib(n\n  int\n@@ -114,33 +114,27 @@\n urn \n-reproduzir(meses-1, pares\n+fib(n-1) + fib(n-2)\n %0A%7D%0A%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-17_14-04-24",
+            "content": "@@ -65,21 +65,17 @@\n t %7B%0A%09if \n-meses\n+n\n  == 0 %7B%0A\n@@ -96,21 +96,17 @@\n else if \n-meses\n+n\n  == 1 %7B%0A\n@@ -153,17 +153,16 @@\n 1, pares\n-)\n %0A%7D%0A%0Afunc\n@@ -236,32 +236,26 @@\n tln(\n-reproduzir\n+fib\n (meses\n-,\n+) *\n  pares)\n-)\n %0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-17_14-05-36",
+            "content": "@@ -1,173 +1,91 @@\n-package main%0A%0Aimport %22fmt%22%0A%0Afunc reproduzir(meses, pares int) int %7B%0A%09if meses == 0 %7B%0A%09%09return 0%0A%09%7D else if meses == 1 %7B%0A%09%09return 1%0A%09%7D%0A%0A%09return reproduzir(meses-1, pa\n+@@ -127,17 +127,16 @@%0A rn 1%250A%2509%257D%250A%0A-%2509%0A %250A%2509return%0A@@ -166,39 +166,8 @@%0A \n res)\n+%0A-\n  + r\n@@ -110,112 +110,24 @@\n ares\n-)%0A%7D%0A%0Afunc main() %7B%0A%09var meses, pares int%0A%09fmt.Scan(&meses, &pares)%0A%09fmt.Println(reproduzir(meses, pares))%0A%7D\n+ int)%0A %250A%257D%250A%250A\n %0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-04-17_14-29-53",
+            "content": "@@ -185,10 +185,8 @@\n eses\n--2\n , pa\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-17_14-30-26",
+            "content": "@@ -174,33 +174,33 @@\n eproduzir(meses-\n-1\n+2\n , pares)%0A%7D%0A%0Afunc\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-17_14-34-56",
+            "content": "@@ -73,16 +73,51 @@\n meses ==\n+ 0 %7B%0A%09%09return 0%0A%09%7D else if meses ==\n  1 %7B%0A%09%09r\n@@ -186,9 +186,9 @@\n ses-\n-2\n+1\n , pa\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-17_14-36-58",
+            "content": "@@ -80,22 +80,8 @@\n = 1 \n-%7C%7C meses == 0 \n %7B%0A%09%09\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-17_14-37-27",
+            "content": "@@ -140,18 +140,16 @@\n 1, pares\n-*2\n ) + repr\n@@ -173,10 +173,8 @@\n ares\n-*2\n )%0A%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-17_14-38-15",
+            "content": "@@ -141,21 +141,48 @@\n , pares*\n+2) + reproduzir(meses-2, \n pares\n+*2\n )%0A%7D%0A%0Afun\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-17_14-39-58",
+            "content": "@@ -217,35 +217,8 @@\n es)%0A\n-%09fmt.Println(meses, pares)%0A\n %09fmt\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-17_14-40-47",
+            "content": "@@ -213,16 +213,43 @@\n &pares)%0A\n+%09fmt.Println(meses, pares)%0A\n %09fmt.Pri\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-17_14-41-51",
+            "content": "@@ -144,32 +144,9 @@\n ares\n-) * reproduzir(meses-2, \n+*\n pare\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-17_14-42-32",
+            "content": "@@ -92,9 +92,9 @@\n  == \n-2\n+0\n  %7B%0A%09\n@@ -141,16 +141,45 @@\n , pares)\n+ * reproduzir(meses-2, pares)\n %0A%7D%0A%0Afunc\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-17_16-23-34",
+            "content": "@@ -139,14 +139,8 @@\n -1, \n-pares*\n pare\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-17_16-24-15",
+            "content": "@@ -26,21 +26,39 @@\n %22%0A%0Afunc \n-fib(n\n+reproduzir(meses, pares\n  int) in\n@@ -65,17 +65,21 @@\n t %7B%0A%09if \n-n\n+meses\n  == 1 %7C%7C\n@@ -79,17 +79,21 @@\n == 1 %7C%7C \n-n\n+meses\n  == 2 %7B%0A\n@@ -109,67 +109,49 @@\n 1%0A%09%7D\n- else if n == 0 %7B%0A%09%09return 0%0A%09%7D%0A%0A%09return fib(n-1) + fib(n-2\n+%0A%0A%09return reproduzir(meses-1, pares*pares\n )%0A%7D%0A\n@@ -230,26 +230,32 @@\n tln(\n-fib\n+reproduzir\n (meses\n-) *\n+,\n  pares)\n+)\n %0A%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-17_16-34-31",
+            "content": "@@ -30,48 +30,30 @@\n unc \n-reproduzir(meses, pares\n+fib(n int)\n  int\n-)\n  %7B%0A%09if \n-meses\n+n\n  == \n@@ -57,21 +57,17 @@\n == 1 %7C%7C \n-meses\n+n\n  == 2 %7B%0A\n@@ -72,22 +72,36 @@\n %7B%0A%09%09\n-fmt.Println(1)\n+return 1%0A%09%7D else if n == 0 %7B\n %0A%09%09r\n@@ -109,16 +109,18 @@\n turn\n+ 0\n %0A%09%7D%0A%0A%09re\n prod\n@@ -119,53 +119,31 @@\n %0A%09re\n-produzir(meses-1, pares*2)%0A%09fmt.Println(pares\n+turn fib(n-1) + fib(n-2\n )%0A%7D%0A\n@@ -210,25 +210,32 @@\n s)%0A%09\n-reproduzir\n+fmt.Println(fib\n (meses\n-,\n+) *\n  par\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-17_16-45-36",
+            "content": "@@ -143,17 +143,16 @@\n -1, \n-(\n pares*2)\n +par\n@@ -151,15 +151,8 @@\n s*2)\n-+pares)\n %0A%09fm\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-17_16-47-17",
+            "content": "@@ -176,24 +176,16 @@\n (pares)%0A\n-%09return%0A\n %7D%0A%0Afunc \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-17_16-47-53",
+            "content": "@@ -54,20 +54,16 @@\n res int)\n- int\n  %7B%0A%09if m\n@@ -117,23 +117,14 @@\n turn\n- 1\n %0A%09%7D%0A%0A%09\n-return \n repr\n@@ -156,16 +156,44 @@\n +pares)%0A\n+%09fmt.Println(pares)%0A%09return%0A\n %7D%0A%0Afunc \n@@ -250,28 +250,16 @@\n pares)%0A%09\n-fmt.Println(\n reproduz\n@@ -274,12 +274,11 @@\n , pares)\n-)\n %0A%7D%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-17_16-49-12",
+            "content": "@@ -156,16 +156,17 @@\n -1, \n+(\n pares*2)\n %0A%7D%0A%0A\n@@ -161,16 +161,23 @@\n pares*2)\n++pares)\n %0A%7D%0A%0Afunc\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-17_16-50-24",
+            "content": "@@ -92,16 +92,33 @@\n  == 2 %7B%0A\n+%09%09fmt.Println(1)%0A\n %09%09return\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-17_16-50-57",
+            "content": "@@ -144,43 +144,10 @@\n ares\n-) + reproduzir(pares*meses-2, pares\n+*2\n )%0A%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-17_20-19-15",
+            "content": "@@ -77,22 +77,8 @@\n s ==\n- 0 %7C%7C meses ==\n  1 %7C\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-17_20-21-06",
+            "content": "@@ -75,9 +75,37 @@\n ses \n-%3C\n+== 0 %7C%7C meses == 1 %7C%7C meses =\n = 2 \n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-17_20-24-39",
+            "content": "@@ -134,14 +134,8 @@\n ) + \n-pares*\n repr\n@@ -137,24 +137,30 @@\n  reproduzir(\n+pares*\n meses-2, par\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-17_20-35-23",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc reproduzir(meses, pares int) int {\n\tif meses <= 2 {\n\t\treturn 1\n\t}\n\n\treturn reproduzir(meses-1, pares) + pares*reproduzir(meses-2, pares)\n}\n\nfunc main() {\n\tvar meses, pares int\n\tfmt.Scan(&meses, &pares)\n\tfmt.Println(reproduzir(meses, pares))\n}\n",
+            "lines": "17"
         }
     ]
 }

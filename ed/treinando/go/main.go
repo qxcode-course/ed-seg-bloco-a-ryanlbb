@@ -10,6 +10,8 @@ import (
 
 func tostr(vet []int) string {
 	_ = vet
+
+	
 	return ""
 }
 
@@ -20,19 +22,29 @@ func tostrrev(vet []int) string {
 
 // reverse: inverte os elementos do slice
 func reverse(vet []int) {
-	_ = vet
+	if len(vet) == 0 {
+		return 
+	}
+
+	reverse(vet[1:len(vet)-1])
 }
 
 // sum: soma dos elementos do slice
 func sum(vet []int) int {
-	_ = vet
-	return 0
+	if len(vet) == 0 {
+		return 0
+	}
+
+	return vet[0] + sum(vet[1:])
 }
 
 // mult: produto dos elementos do slice
 func mult(vet []int) int {
-	_ = vet
-	return 0
+	if len(vet) == 0 {
+		return 1
+	}
+
+	return vet[0] * mult(vet[1:])
 }
 
 // min: retorna o índice e valor do menor valor
@@ -40,7 +52,11 @@ func mult(vet []int) int {
 // var rec func(v []int) (int, int)
 // para fazer uma recursão que retorna valor e índice
 func min(vet []int) int {
-	_ = vet
+	
+	if len(vet) == 0 {
+		return 0
+	}
+
 	return 0
 }
 

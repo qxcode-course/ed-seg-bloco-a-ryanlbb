@@ -1,0 +1,87 @@
+2026-04-17 10:11:56, MOVE, v:1, k:ed@fib1, mode:PICK
+2026-04-17 10:17:51, EXEC, v:1, k:ed@fib1, mode:FULL, rate:10, size:19
+2026-04-17 10:17:48, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 10:17:48, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 10:17:50, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 13:55:16, MOVE, v:1, k:ed@fib1, mode:PICK
+2026-04-17 13:55:17, EXEC, v:1, k:ed@fib1, mode:FULL, rate:10
+2026-04-17 13:55:16, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 14:04:07, EXEC, v:1, k:ed@fib1, mode:FULL, rate:10
+2026-04-17 14:04:24, EXEC, v:1, k:ed@fib1, mode:FULL, size:19, fail:COMP
+2026-04-17 14:05:36, EXEC, v:1, k:ed@fib1, mode:FULL, rate:20, size:19
+2026-04-17 14:05:34, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 14:05:28, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 14:05:28, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 14:12:33, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 14:12:33, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 14:27:43, EXEC, v:1, k:ed@fib1, mode:FULL, rate:20
+2026-04-17 14:28:37, EXEC, v:1, k:ed@fib1, mode:FULL, rate:20
+2026-04-17 14:28:36, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 14:29:09, EXEC, v:1, k:ed@fib1, mode:FULL, rate:20
+2026-04-17 14:29:16, EXEC, v:1, k:ed@fib1, mode:FULL, size:19, fail:COMP
+2026-04-17 14:29:16, EXEC, v:1, k:ed@fib1, mode:FULL, size:19, fail:COMP
+2026-04-17 14:29:53, EXEC, v:1, k:ed@fib1, mode:FULL, rate:10, size:19
+2026-04-17 14:30:26, EXEC, v:1, k:ed@fib1, mode:FULL, rate:28, size:19
+2026-04-17 14:30:25, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 14:30:23, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 14:30:23, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 14:34:56, EXEC, v:1, k:ed@fib1, mode:FULL, rate:11, size:19
+2026-04-17 14:36:58, EXEC, v:1, k:ed@fib1, mode:FULL, rate:10, size:17
+2026-04-17 14:37:27, EXEC, v:1, k:ed@fib1, mode:FULL, rate:12, size:17
+2026-04-17 14:38:15, EXEC, v:1, k:ed@fib1, mode:FULL, rate:12, size:17
+2026-04-17 14:38:36, EXEC, v:1, k:ed@fib1, mode:FULL, rate:12
+2026-04-17 14:38:33, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 14:38:33, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 14:38:35, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 14:39:58, EXEC, v:1, k:ed@fib1, mode:FULL, rate:20, size:17
+2026-04-17 14:40:47, EXEC, v:1, k:ed@fib1, mode:FULL, rate:0, size:18
+2026-04-17 14:41:51, EXEC, v:1, k:ed@fib1, mode:FULL, rate:20, size:17
+2026-04-17 14:42:32, EXEC, v:1, k:ed@fib1, mode:FULL, rate:20, size:17
+2026-04-17 14:42:29, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 14:42:29, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 14:42:31, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 16:09:46, MOVE, v:1, k:ed@fib1, mode:PICK
+2026-04-17 16:23:34, EXEC, v:1, k:ed@fib1, mode:FULL, rate:20, size:17
+2026-04-17 16:24:15, EXEC, v:1, k:ed@fib1, mode:FULL, rate:20, size:17
+2026-04-17 16:24:14, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 16:24:13, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 16:24:13, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 16:34:31, EXEC, v:1, k:ed@fib1, mode:FULL, rate:10, size:19
+2026-04-17 16:34:28, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 16:34:28, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 16:34:30, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 16:45:36, EXEC, v:1, k:ed@fib1, mode:FULL, rate:20, size:19
+2026-04-17 16:45:33, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 16:45:33, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 16:45:35, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 16:46:59, EXEC, v:1, k:ed@fib1, mode:FULL, rate:20
+2026-04-17 16:47:00, EXEC, v:1, k:ed@fib1, mode:FULL, rate:20
+2026-04-17 16:47:17, EXEC, v:1, k:ed@fib1, mode:FULL, rate:20, size:19
+2026-04-17 16:47:49, EXEC, v:1, k:ed@fib1, mode:FULL, rate:20
+2026-04-17 16:47:53, EXEC, v:1, k:ed@fib1, mode:FULL, rate:20, size:20
+2026-04-17 16:49:12, EXEC, v:1, k:ed@fib1, mode:FULL, rate:0, size:18
+2026-04-17 16:49:14, EXEC, v:1, k:ed@fib1, mode:FULL, rate:0
+2026-04-17 16:50:24, EXEC, v:1, k:ed@fib1, mode:FULL, rate:0, size:18
+2026-04-17 16:50:24, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 16:50:23, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 16:50:23, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 16:50:57, EXEC, v:1, k:ed@fib1, mode:FULL, rate:20, size:17
+2026-04-17 16:50:55, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 16:50:55, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 16:50:56, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 20:19:13, MOVE, v:1, k:ed@fib1, mode:PICK
+2026-04-17 20:19:15, EXEC, v:1, k:ed@fib1, mode:FULL, rate:21, size:17
+2026-04-17 20:19:12, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 20:19:12, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 20:19:14, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 20:21:06, EXEC, v:1, k:ed@fib1, mode:FULL, rate:21, size:17
+2026-04-17 20:24:39, EXEC, v:1, k:ed@fib1, mode:FULL, rate:21, size:17
+2026-04-17 20:24:37, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 20:24:37, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 20:24:38, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 20:35:23, EXEC, v:1, k:ed@fib1, mode:FULL, rate:100, size:17
+2026-04-17 20:35:21, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 20:35:21, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 20:35:22, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-04-17 20:38:07, MOVE, v:1, k:ed@fib1, mode:BACK
+2026-04-17 20:38:38, SELF, v:1, k:ed@fib1, self:1, rate:100, study:150, concept:1

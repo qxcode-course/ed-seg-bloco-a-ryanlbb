@@ -24,9 +24,13 @@ func equals(a []int, b []int) bool {
 	if EhVazio(a) && EhVazio(b) {
 		return true
 	} 
+
+	if EhVazio(a) || EhVazio(b) {
+		return false
+	}
 	
-	if a[0] == b[0] {
-		return true
+	if a[0] != b[0] {
+		return false
 	}
 	
 

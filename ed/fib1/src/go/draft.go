@@ -1,28 +1,17 @@
 package main
+
 import "fmt"
 
-func coelhosEmMeses(meses, pares int) {
-    if meses <= 1 {
-        fmt.Println()
-        return
-    }
+func reproduzir(meses, pares int) int {
+	if meses <= 2 {
+		return 1
+	}
 
-
-    coelhosEmMeses(meses-1, pares)
-}
-
-func fib(n int) int{
-if n == 0 || n == 1 {
-        return 1
-    } else { 
-
-        return fib(n-1) + fib(n-2)
-    }
-    
+	return reproduzir(meses-1, pares) + pares*reproduzir(meses-2, pares)
 }
 
 func main() {
-    var meses, pares int
-    fmt.Scan(&meses, &pares)
-    coelhosEmMeses(meses, pares)
+	var meses, pares int
+	fmt.Scan(&meses, &pares)
+	fmt.Println(reproduzir(meses, pares))
 }
