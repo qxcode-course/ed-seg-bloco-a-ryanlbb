@@ -26,7 +26,7 @@ expanded:
 - ed@list
 flags:
   inbox: all
-  panel: help
+  panel: graph
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'

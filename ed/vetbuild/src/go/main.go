@@ -158,14 +158,16 @@ func (vet *Vector) Contains(integer int) bool {
 }
 
 func (vet *Vector) Slice(start, end int) *Vector {
-	start %= vet.size
-	end %= vet.size
+	start = ((start % vet.size) + vet.size) % vet.size
+	end = ((end % vet.size) + vet.size) % vet.size
 
-	return &Vector{
+	vetDataNew := Vector{
 		data:     vet.data[start:end],
 		size:     end - start,
 		capacity: vet.capacity,
 	}
+
+	return &vetDataNew
 }
 
 func Join(slice []int, sep string) string {
@@ -268,7 +270,7 @@ func main() {
 			start, _ := strconv.Atoi(parts[1])
 			end, _ := strconv.Atoi(parts[2])
 			slice := v.Slice(start, end)
-			fmt.Println(slice)
+			fmt.Println(slice.Show())
 		default:
 			fmt.Println("fail: comando invalido")
 		}
