@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-27_09-32-31",
+            "content": "@@ -230,17 +230,17 @@\n %5D%5Bl%5D = '\n-o\n+.\n '%0A%09// se\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-04-27_09-32-52",
+            "content": "@@ -127,16 +127,17 @@\n %0A%09if l %3E\n+=\n  nl %7C%7C l\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-04-27_09-33-15",
+            "content": "@@ -173,16 +173,17 @@\n %0A%09if c %3E\n+=\n  nc %7C%7C c\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-04-27_09-33-15",
+            "content": "@@ -120,17 +120,16 @@\n rid%5B0%5D)%0A\n-%0A\n %09if l %3E \n@@ -166,17 +166,16 @@\n turn%0A%09%7D%0A\n-%0A\n %09if c %3E \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-04-27_09-37-29",
+            "content": "@@ -128,17 +128,16 @@\n %0A%09if l %3E\n-=\n  nl %7C%7C l\n@@ -175,17 +175,16 @@\n %0A%09if c %3E\n-=\n  nc %7C%7C c\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-27_09-38-51",
+            "content": "@@ -126,18 +126,16 @@\n )%0A%0A%09if l\n-+1\n  %3E= nl %7C\n@@ -137,18 +137,16 @@\n  nl %7C%7C l\n--1\n  %3C 0 %7C%7C \n@@ -174,18 +174,16 @@\n %7D%0A%0A%09if c\n-+1\n  %3E= nc %7C\n@@ -185,18 +185,16 @@\n  nc %7C%7C c\n--1\n  %3C 0 %7C%7C \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-27_09-41-43",
+            "content": "@@ -130,18 +130,21 @@\n if l\n++1\n  %3E\n+=\n  nl %7C%7C l\n  %3C 0\n@@ -139,20 +139,34 @@\n  nl %7C%7C l\n+-1\n  %3C 0\n+ %7C%7C l == '.'\n  %7B%0A%09%09ret\n@@ -182,18 +182,21 @@\n if c\n++1\n  %3E\n+=\n  nc %7C%7C c\n  %3C 0\n@@ -191,20 +191,34 @@\n  nc %7C%7C c\n+-1\n  %3C 0\n+ %7C%7C c == '.'\n  %7B%0A%09%09ret\n@@ -235,12 +235,12 @@\n rid%5B\n-l%5D%5Bc\n+c%5D%5Bl\n %5D = \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-27_09-50-28",
+            "content": "@@ -142,27 +142,8 @@\n  l %3C\n- 0 %7C%7C c %3E nc %7C%7C c %3C\n  0 %7B\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-27_09-51-04",
+            "content": "@@ -128,17 +128,16 @@\n %0A%09if l %3E\n-=\n  nl %7C%7C l\n@@ -147,17 +147,51 @@\n 0 %7C%7C c %3E\n-=\n+ nc %7C%7C c %3C 0 %7B%0A%09%09return%0A%09%7D%0A%0A%09if c %3E\n  nc %7C%7C c\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-27_09-51-28",
+            "content": "@@ -181,46 +181,8 @@\n %09%7D%0A%0A\n-%09if grid%5Bl%5D%5Bc%5D != '#' %7B%0A%09%09return%0A%09%7D %0A%0A\n %09gri\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-27_09-53-13",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc burnTrees(grid [][]rune, l, c int) {\n\tnl := len(grid)\n\tnc := len(grid[0])\n\n\tif l >= nl || l < 0 || c >= nc || c < 0 {\n\t\treturn\n\t}\n\n\tif grid[l][c] != '#' {\n\t\treturn\n\t} \n\n\tgrid[l][c] = 'o'\n\t// se estiver fora da matriz, retorne\n\t// se o elemento atual n\u00e3o for uma arvore, retorne\n\t// queime a arvore colocando o caractere 'o' na posi\u00e7\u00e3o atual\n\t// chame a recurs\u00e3o para todos os 4 vizinhos\n\tburnTrees(grid, l+1, c)\n\tburnTrees(grid, l, c+1)\n\tburnTrees(grid, l-1, c)\n\tburnTrees(grid, l, c-1)\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc, lfire, cfire int\n\tfmt.Sscanf(line, \"%d %d %d %d\", &nl, &nc, &lfire, &cfire)\n\n\tgrid := make([][]rune, 0, nl)\n\tfor range nl {\n\t\tscanner.Scan()\n\t\tline := []rune(scanner.Text())\n\t\tgrid = append(grid, line)\n\t}\n\tburnTrees(grid, lfire, cfire)\n\tshowGrid(grid)\n}\n\nfunc showGrid(grid [][]rune) {\n\tfor _, line := range grid {\n\t\tfmt.Println(string(line))\n\t}\n}\n",
+            "lines": "53"
+        }
+    ]
+}
