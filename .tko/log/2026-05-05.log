@@ -1,0 +1,14 @@
+2026-05-05 13:44:12, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-05 16:10:02, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-05 22:06:10, SELF, v:1, k:ed@editorint, self:1, rate:80, study:120, concept:1
+2026-05-05 22:09:44, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-05 22:09:49, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:0, size:310
+2026-05-05 22:09:51, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-05 22:09:53, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-05 22:09:55, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-05 22:09:45, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-05 22:13:14, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-05 22:13:14, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-05 22:16:59, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-05 22:16:59, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-05 22:22:07, SELF, v:1, k:ed@editorint, self:1, study:150, friend:codigo nao computou as mudanca de linha, acho que foi porque eu tava editando o arquivo sem abrir pelo tko sla, concept:1
