@@ -32,6 +32,7 @@ func (vet *Vector) Show() string {
 	return show
 }
 
+
 func (vet *Vector) Reserve(newCapacity int) {
 	vetDataNew := make([]int, newCapacity)
 
