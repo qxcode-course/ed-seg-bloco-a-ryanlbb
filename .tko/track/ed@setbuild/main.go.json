@@ -1,0 +1,94 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-12_10-48-53",
+            "content": "@@ -704,301 +704,23 @@\n %09%09%7D%0A\n-%09%7D%0A%09return -1%0A%7D%0A%0Afunc (s *Set) findInsertionIndex(value int) int %7B%0A%09l := 0%0A%09r := s.size - 1%0A%09for l %3C= r %7B%0A%09%09mid := (l + r) / 2%0A%09%09if s.data%5Bmid%5D %3E value %7B // se meio maior, direita antes do meio%0A%09%09%09r = mid - 1%0A%09%09%7D else %7B // se meio menor, esquerda depois do meio%0A%09%09%09l = mid + 1%0A%09%09%7D%0A%09%7D%0A%09return l\n+%0A%09%7D%0A%0A%09return -1\n %0A%7D%0A%0A\n@@ -939,16 +939,17 @@\n i-1%5D%0A%09%7D%0A\n+%0A\n %09s.data%5B\n@@ -980,656 +980,8 @@\n %0A%7D%0A%0A\n-func (s *Set) erase(index int) %7B%0A%09for i := index; i %3C s.size-1; i++ %7B%0A%09%09s.data%5Bi%5D = s.data%5Bi+1%5D%0A%09%7D%0A%09s.size--%0A%7D%0A%0Afunc (s *Set) Insert(value int) %7B%0A%09if s.binarySearch(value) != -1 %7B%0A%09%09return%0A%09%7D%0A%09s.insert(value, s.findInsertionIndex(value))%0A%7D%0A%0Afunc (s *Set) Contains(value int) bool %7B%0A%09return s.binarySearch(value) != 1%0A%7D%0A%0Afunc (s *Set) Erase(value int) %7B%0A%09if s.binarySearch(value) != -1 %7B%0A%09%09return%0A%09%7D%0A%0A%09s.erase(s.data%5Bs.binarySearch(value)%5D)%0A%7D%0A%0Afunc (s *Set) String() string %7B%0A%09set := %22%5B%22%0A%09for i := range s.size %7B%0A%09%09if i == s.size-1 %7B%0A%09%09%09set += fmt.Sprintf(%22%25d%22, s.data%5Bi%5D)%0A%09%09%7D%0A%0A%09%09set += fmt.Sprintf(%22%25d, %22, s.data%5Bi%5D)%0A%09%7D%0A%09set += %22%5D%22%0A%0A%09return set%0A%7D%0A%0A\n func\n@@ -1053,16 +1053,19 @@\n tdin)%0A%0A%09\n+// \n v := New\n@@ -1296,24 +1296,27 @@\n  %22init%22:%0A%09%09%09\n+// \n value, _ := \n@@ -1341,16 +1341,19 @@\n %5B1%5D)%0A%09%09%09\n+// \n v = NewS\n@@ -1382,16 +1382,19 @@\n rt%22:%0A%09%09%09\n+// \n for _, p\n@@ -1421,16 +1421,19 @@\n :%5D %7B%0A%09%09%09\n+// \n %09value, \n@@ -1463,71 +1463,27 @@\n %0A%09%09%09\n-%09\n-v.Insert(value)%0A%09%09%09%7D%0A%09%09case %22show%22:%0A%09%09%09fmt.Println(v.String())\n+// %7D%0A%09%09case %22show%22:\n %0A%09%09c\n@@ -1494,24 +1494,27 @@\n %22erase%22:%0A%09%09%09\n+// \n value, _ := \n@@ -1540,26 +1540,8 @@\n 1%5D)%0A\n-%09%09%09v.Erase(value)%0A\n %09%09ca\n@@ -1597,29 +1597,8 @@\n 1%5D)%0A\n-%09%09%09v.Contains(value)%0A\n %09%09ca\n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-05-14_11-53-10",
+            "content": "@@ -1777,24 +1777,26 @@\n  i == s.size\n+-1\n  %7B%0A%09%09%09set +=\n",
+            "lines": "163"
+        },
+        {
+            "label": "2026-05-14_19-10-17",
+            "content": "@@ -1767,12 +1767,8 @@\n ize \n-- 1 \n %7B%0A%09%09\n",
+            "lines": "163"
+        },
+        {
+            "label": "2026-05-14_19-10-43",
+            "content": "@@ -1763,16 +1763,20 @@\n  s.size \n+- 1 \n %7B%0A%09%09if i\n@@ -1785,18 +1785,16 @@\n = s.size\n--1\n  %7B%0A%09%09%09se\n",
+            "lines": "163"
+        },
+        {
+            "label": "2026-05-14_19-10-53",
+            "content": "@@ -1829,17 +1829,8 @@\n i%5D)%0A\n-%09%09%09break%0A\n %09%09%7D%0A\n",
+            "lines": "163"
+        },
+        {
+            "label": "2026-05-14_19-11-04",
+            "content": "@@ -1425,17 +1425,17 @@\n (value) \n-=\n+!\n = -1 %7B%0A%09\n",
+            "lines": "164"
+        },
+        {
+            "label": "2026-05-14_19-13-30",
+            "content": "@@ -1624,33 +1624,33 @@\n rySearch(value) \n-=\n+!\n = -1 %7B%0A%09%09return%0A\n",
+            "lines": "164"
+        },
+        {
+            "label": "2026-05-14_19-14-39",
+            "content": "@@ -1425,17 +1425,17 @@\n (value) \n-!\n+=\n = -1 %7B%0A%09\n",
+            "lines": "164"
+        },
+        {
+            "label": "2026-05-14_19-19-02",
+            "content": "@@ -1671,34 +1671,28 @@\n .data%5Bs.\n-findInsertionIndex\n+binarySearch\n (value)%5D\n",
+            "lines": "164"
+        },
+        {
+            "label": "2026-05-14_19-19-52",
+            "content": "@@ -1,2668 +1,56 @@\n-package main%0A%0Aimport (%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A%09%22strconv%22%0A%09%22strings%22%0A)%0A%0Atype Set struct %7B%0A%09data     %5B%5Dint%0A%09size     int%0A%09capacity int%0A%7D%0A%0Afunc NewSet(cap int) *Set %7B%0A%09return &Set%7B%0A%09%09data:     make(%5B%5Dint, cap),%0A%09%09size:     0,%0A%09%09capacity: cap,%0A%09%7D%0A%7D%0A%0Afunc (s *Set) reserve(newCapacity int) %7B%0A%09newSet := make(%5B%5Dint, newCapacity)%0A%0A%09copy(newSet, s.data)%0A%0A%09s.capacity = newCapacity%0A%09s.data = newSet%0A%7D%0A%0Afunc (s *Set) binarySearch(value int) int %7B%0A%09l := 0%0A%09r := s.size - 1%0A%0A%09for l %3C= r %7B%0A%09%09mid := (l + r) / 2%0A%0A%09%09if s.data%5Bmid%5D == value %7B%0A%09%09%09return mid%0A%09%09%7D%0A%0A%09%09if s.data%5Bmid%5D %3E value %7B // se meio maior, direita antes do meio%0A%09%09%09r = mid - 1%0A%09%09%7D else %7B // se meio menor, esquerda depois do meio%0A%09%09%09l = mid + 1%0A%09%09%7D%0A%09%7D%0A%09return -1%0A%7D%0A%0Afunc (s *Set) findInsertionIndex(value int) int %7B%0A%09l := 0%0A%09r := s.size - 1%0A%09for l %3C= r %7B%0A%09%09mid := (l + r) / 2%0A%09%09if s.data%5Bmid%5D %3E value %7B // se meio maior, direita antes do meio%0A%09%09%09r = mid - 1%0A%09%09%7D else %7B // se meio menor, esquerda depois do meio%0A%09%09%09l = mid + 1%0A%09%09%7D%0A%09%7D%0A%09return l%0A%7D%0A%0Afunc (s *Set) insert(value, index int) %7B%0A%09if s.size == s.capacity %7B%0A%09%09newCap := s.capacity * 2%0A%09%09if newCap == 0 %7B%0A%09%09%09newCap = 1%0A%09%09%7D%0A%09%09s.reserve(newCap)%0A%09%7D%0A%0A%09for i := s.size; i %3E index; i-- %7B%0A%09%09s.data%5Bi%5D = s.data%5Bi-1%5D%0A%09%7D%0A%09s.data%5Bindex%5D = value%0A%09s.size++%0A%7D%0A%0Afunc (s *Set) erase(index int) %7B%0A%09for i := index; i %3C s.size-1; i++ %7B%0A%09%09s.data%5Bi%5D = s.data%5Bi+1%5D%0A%09%7D%0A%09s.size--%0A%7D%0A%0Afunc (s *Set) Insert(value int) %7B%0A%09if s.binarySearch(value) != -1 %7B%0A%09%09return%0A%09%7D%0A%09s.insert(value, s.findInsertionIndex(value))%0A%7D%0A%0Afunc (s *Set) Contains(value int) bool %7B%0A%09return s.binarySearch(value) != 1%0A%7D%0A%0Afunc (s *Set) Erase(value int) %7B%0A%09if s.binarySearch(value) == -1 %7B%0A%09%09return%0A%09%7D%0A%0A%09s.erase(s.data%5Bs.binarySearch(value)%5D)%0A%7D%0A%0Afunc (s *Set) String() string %7B%0A%09set := %22%5B%22%0A%09for i := range s.size %7B%0A%09%09if i == s.size-1 %7B%0A%09%09%09set += fmt.Sprintf(%22%25d%22, s.data%5Bi%5D)%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09set += fmt.Sprintf(%22%25d, %22, s.data%5Bi%5D)%0A%09%7D%0A%09set += %22%5D%22%0A%0A%09return set%0A%7D%0A%0Afunc main() %7B%0A%09var line, cmd string%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%0A%09v := NewSet(0)%0A%09for scanner.Scan() %7B%0A%09%09fmt.Print(%22$%22)%0A%09%09line = scanner.Text()%0A%09%09fmt.Println(line)%0A%09%09parts := strings.Fields(line)%0A%09%09if len(parts) == 0 %7B%0A%09%09%09continue%0A%09%09%7D%0A%09%09cmd = parts%5B0%5D%0A%0A%09%09switch cmd %7B%0A%09%09case %22end%22:%0A%09%09%09return%0A%09%09case %22init%22:%0A%09%09%09value, _ := strconv.Atoi(parts%5B1%5D)%0A%09%09%09v = NewSet(value)%0A%09%09case %22insert%22:%0A%09%09%09for _, part := range parts%5B1:%5D %7B%0A%09%09%09%09value, _ := strconv.Atoi(part)%0A%09%09%09%09v.Insert(value)%0A%09%09%09%7D%0A%09%09case %22show%22:%0A%09%09%09fmt.Println(v.String())%0A%09%09case %22erase%22:%0A%09%09%09value, _ := strconv.Atoi(parts%5B1%5D)%0A%09%09%09v.Erase(value)%0A%09%09case %22contains%22:%0A%09%09%09value, _ := strconv.Atoi(parts%5B1%5D)%0A%09%09%09v.Contains(value)%0A%09%09case %22clear%22:%0A%09%09default:%0A%09%09%09fmt.Println(%22fail: comando invalido%22)%0A%09%09%7D%0A%09%7D%0A%7D\n+@@ -301,16 +301,24 @@%0A e(%255B%255Dint,%0A+ s.size,%0A  newCapa\n %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-05-14_19-25-28",
+            "content": "@@ -2566,28 +2566,16 @@\n %5B1%5D)%0A%09%09%09\n-fmt.Println(\n v.Contai\n@@ -2583,17 +2583,16 @@\n s(value)\n-)\n %0A%09%09case \n",
+            "lines": "164"
+        },
+        {
+            "label": "2026-05-14_19-26-00",
+            "content": "@@ -1560,17 +1560,16 @@\n lue) != \n--\n 1%0A%7D%0A%0Afun\n",
+            "lines": "164"
+        },
+        {
+            "label": "2026-05-14_19-26-29",
+            "content": "@@ -1437,17 +1437,16 @@\n turn%0A%09%7D%0A\n-%0A\n %09s.inser\n@@ -1683,18 +1683,16 @@\n h(value)\n--1\n %5D)%0A%7D%0A%0Afu\n",
+            "lines": "164"
+        },
+        {
+            "label": "2026-05-14_19-27-34",
+            "content": "@@ -1684,16 +1684,18 @@\n h(value)\n+-1\n %5D)%0A%7D%0A%0Afu\n",
+            "lines": "165"
+        },
+        {
+            "label": "2026-05-14_19-27-39",
+            "content": "@@ -1658,16 +1658,23 @@\n erase(s.\n+data%5Bs.\n binarySe\n@@ -1680,24 +1680,25 @@\n earch(value)\n+%5D\n )%0A%7D%0A%0Afunc (s\n",
+            "lines": "165"
+        },
+        {
+            "label": "2026-05-14_19-30-16",
+            "content": "@@ -1601,14 +1601,8 @@\n int)\n- error\n  %7B%0A%09\n@@ -1646,38 +1646,8 @@\n turn\n- fmt.Errorf(%22value not found%22)\n %0A%09%7D%0A\n@@ -1683,20 +1683,8 @@\n e))%0A\n-%09return nil%0A\n %7D%0A%0Af\n",
+            "lines": "165"
+        },
+        {
+            "label": "2026-05-14_19-30-54",
+            "content": "@@ -2537,15 +2537,8 @@\n %0A%09%09%09\n-err := \n v.Er\n@@ -2552,53 +2552,8 @@\n ue)%0A\n-%09%09%09if err != nil %7B%0A%09%09%09%09fmt.Println(err)%0A%09%09%09%7D%0A\n %09%09ca\n",
+            "lines": "166"
+        },
+        {
+            "label": "2026-05-14_19-35-01",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Set struct {\n\tdata     []int\n\tsize     int\n\tcapacity int\n}\n\nfunc NewSet(cap int) *Set {\n\treturn &Set{\n\t\tdata:     make([]int, cap),\n\t\tsize:     0,\n\t\tcapacity: cap,\n\t}\n}\n\nfunc (s *Set) reserve(newCapacity int) {\n\tnewSet := make([]int, newCapacity)\n\n\tcopy(newSet, s.data)\n\n\ts.capacity = newCapacity\n\ts.data = newSet\n}\n\nfunc (s *Set) binarySearch(value int) int {\n\tl := 0\n\tr := s.size - 1\n\n\tfor l <= r {\n\t\tmid := (l + r) / 2\n\n\t\tif s.data[mid] == value {\n\t\t\treturn mid\n\t\t}\n\n\t\tif s.data[mid] > value { // se meio maior, direita antes do meio\n\t\t\tr = mid - 1\n\t\t} else { // se meio menor, esquerda depois do meio\n\t\t\tl = mid + 1\n\t\t}\n\t}\n\treturn -1\n}\n\nfunc (s *Set) findInsertionIndex(value int) int {\n\tl := 0\n\tr := s.size - 1\n\tfor l <= r {\n\t\tmid := (l + r) / 2\n\t\tif s.data[mid] > value { // se meio maior, direita antes do meio\n\t\t\tr = mid - 1\n\t\t} else { // se meio menor, esquerda depois do meio\n\t\t\tl = mid + 1\n\t\t}\n\t}\n\treturn l\n}\n\nfunc (s *Set) insert(value, index int) {\n\tif s.size == s.capacity {\n\t\tnewCap := s.capacity * 2\n\t\tif newCap == 0 {\n\t\t\tnewCap = 1\n\t\t}\n\t\ts.reserve(newCap)\n\t}\n\n\tfor i := s.size; i > index; i-- {\n\t\ts.data[i] = s.data[i-1]\n\t}\n\ts.data[index] = value\n\ts.size++\n}\n\nfunc (s *Set) erase(index int) {\n\tfor i := index; i < s.size-1; i++ {\n\t\ts.data[i] = s.data[i+1]\n\t}\n\ts.size--\n}\n\nfunc (s *Set) Insert(value int) {\n\tif s.binarySearch(value) != -1 {\n\t\treturn\n\t}\n\n\ts.insert(value, s.findInsertionIndex(value))\n}\n\nfunc (s *Set) Contains(value int) bool {\n\treturn s.binarySearch(value) != -1\n}\n\nfunc (s *Set) Erase(value int) error {\n\tif s.binarySearch(value) == -1 {\n\t\treturn fmt.Errorf(\"value not found\")\n\t}\n\n\ts.erase(s.binarySearch(value))\n\treturn nil\n}\n\nfunc (s *Set) String() string {\n\tset := \"[\"\n\tfor i := range s.size {\n\t\tif i == s.size-1 {\n\t\t\tset += fmt.Sprintf(\"%d\", s.data[i])\n\t\t\tbreak\n\t\t}\n\n\t\tset += fmt.Sprintf(\"%d, \", s.data[i])\n\t}\n\tset += \"]\"\n\n\treturn set\n}\n\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tv := NewSet(0)\n\tfor scanner.Scan() {\n\t\tfmt.Print(\"$\")\n\t\tline = scanner.Text()\n\t\tfmt.Println(line)\n\t\tparts := strings.Fields(line)\n\t\tif len(parts) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = parts[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\tv = NewSet(value)\n\t\tcase \"insert\":\n\t\t\tfor _, part := range parts[1:] {\n\t\t\t\tvalue, _ := strconv.Atoi(part)\n\t\t\t\tv.Insert(value)\n\t\t\t}\n\t\tcase \"show\":\n\t\t\tfmt.Println(v.String())\n\t\tcase \"erase\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\terr := v.Erase(value)\n\t\t\tif err != nil {\n\t\t\t\tfmt.Println(err)\n\t\t\t}\n\t\tcase \"contains\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\tfmt.Println(v.Contains(value))\n\t\tcase \"clear\":\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "169"
+        }
+    ]
+}

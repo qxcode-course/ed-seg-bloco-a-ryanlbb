@@ -1,0 +1,4 @@
+2026-05-18 10:18:50, MOVE, v:1, k:ed@multiset, mode:PICK
+2026-05-18 10:18:51, EXEC, v:1, k:ed@multiset, mode:FULL, rate:100, size:224
+2026-05-18 10:18:52, MOVE, v:1, k:ed@multiset, mode:BACK
+2026-05-18 10:19:13, SELF, v:1, k:ed@multiset, self:1, rate:100, study:45

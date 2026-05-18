@@ -9,8 +9,24 @@ import (
 )
 
 func BetterSearch(slice []int, value int) (bool, int) {
-	_, _ = slice, value
-	return false, 0
+	l := 0
+	r := len(slice) - 1
+
+	for l <= r {
+		mid := (l + r) / 2
+
+		if slice[mid] == value {
+			return true, mid
+		}
+
+		if slice[mid] < value {
+			l = mid + 1
+		} else {
+			r = mid - 1
+		}
+	}
+
+	return false, l
 }
 
 func main() {

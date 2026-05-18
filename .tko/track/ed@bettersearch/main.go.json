@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-14_20-02-40",
+            "content": "@@ -124,200 +124,27 @@\n  %7B%0A%09\n-low := 0%0A%09high := len(slice)%0A%09mid := (low + high) / 2%0A%0A%09for low %3C= high %7B%0A%09%09if slice%5Bmid%5D == value %7B%0A%09%09%09return true, mid%0A%09%09%7D%0A%0A%09%09if slice%5Bmid%5D %3E low %7B%0A%09%09%09mid += 1%0A%09%09%7D else %7B%0A%09%09%09mid -= 1%0A%09%09%7D%0A%09%7D%0A\n+_, _ = slice, value\n %0A%09re\n@@ -159,11 +159,9 @@\n se, \n-low\n+0\n %0A%7D%0A%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-05-14_20-03-48",
+            "content": "@@ -1,8 +1,29 @@\n+@@ -1,776 +1,153 @@%0A-\n package \n@@ -30,18 +30,22 @@\n main\n-%0A%0A\n+%250A%250A\n import (\n %0A%09%22b\n@@ -44,56 +44,102 @@\n rt (\n-%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A%09%22strconv%22%0A%09%22strings%22%0A)%0A%0A\n+%250A%2509%2522bufio%2522%250A%2509%2522fmt%2522%250A%2509%2522os%2522%250A%2509%2522strconv%2522%250A%2509%2522strings%2522%250A)%250A%250A\n func\n@@ -158,18 +158,22 @@\n h(slice \n-%5B%5D\n+%255B%255D\n int, val\n@@ -196,19 +196,25 @@\n nt) \n-%7B%0A%09\n+%257B%250A%2509\n low := 0\n %0A%09hi\n@@ -209,18 +209,22 @@\n low := 0\n-%0A%09\n+%250A%2509\n high := \n@@ -237,14 +237,14 @@\n ice)\n- - 1%0A%09\n+%250A%2509\n mid \n@@ -266,19 +266,25 @@\n  / 2\n-%0A%0A%09\n+%250A%250A%2509\n for low \n %3C= h\n@@ -283,143 +283,235 @@\n low \n-%3C\n+%253C\n = high \n-%7B%0A%09%09if slice%5Bmid%5D == value %7B%0A%09%09%09return true, mid%0A%09%09%7D%0A%0A%09%09if slice%5Bmid%5D %3C value %7B%0A%09%09%09\n+%257B%250A%2509%2509if slice%255Bmid%255D == value %257B%250A%2509%2509%2509return true, mid%250A%2509%2509%257D%250A%250A%2509%2509if slice%255Bmid%255D %253C value %257B%250A%2509%2509%2509\n low \n++\n = \n-mid%0A%09%09%7D else %7B%0A%09%09%09\n+1%250A%2509%2509%257D else %257B%250A%2509%2509%2509\n high \n+-\n = \n-mid%0A%09%09%7D%0A%09%7D%0A%0A%09\n+1%250A%2509%2509%257D%250A%2509%257D%250A%250A%2509\n retu\n@@ -527,12 +527,20 @@\n  low\n-%0A%7D%0A%0A\n+%250A%257D%250A%250A\n func\n@@ -547,19 +547,25 @@\n  main() \n-%7B%0A%09\n+%257B%250A%2509\n scanner \n@@ -593,18 +593,22 @@\n s.Stdin)\n-%0A%09\n+%250A%2509\n scanner.\n@@ -613,18 +613,22 @@\n r.Scan()\n-%0A%09\n+%250A%2509\n parts :=\n@@ -662,32 +662,52 @@\n (), \n-%22 %22)%0A%09slice := %5B%5Dint%7B%7D%0A%09\n+%2522 %2522)%250A%2509slice := %255B%255Dint%257B%257D%250A%2509\n for \n@@ -732,9 +732,11 @@\n arts\n-%5B\n+%255B\n 1 : \n@@ -751,14 +751,24 @@\n s)-1\n-%5D %7B%0A%09%09\n+%255D %257B%250A%2509%2509\n valu\n@@ -793,19 +793,25 @@\n oi(elem)\n-%0A%09%09\n+%250A%2509%2509\n slice = \n@@ -834,13 +834,23 @@\n lue)\n-%0A%09%7D%0A%09\n+%250A%2509%257D%250A%2509\n scan\n@@ -859,18 +859,22 @@\n r.Scan()\n-%0A%09\n+%250A%2509\n value, _\n@@ -905,18 +905,22 @@\n .Text())\n-%0A%09\n+%250A%2509\n found, r\n@@ -954,18 +954,22 @@\n , value)\n-%0A%09\n+%250A%2509\n if found\n@@ -969,20 +969,28 @@\n f found \n-%7B%0A%09%09\n+%257B%250A%2509%2509\n fmt.Prin\n@@ -997,11 +997,15 @@\n tln(\n-%22V%22\n+%2522V%2522\n , re\n@@ -1013,21 +1013,35 @@\n ult)\n-%0A%09%7D else %7B%0A%09%09\n+%250A%2509%257D else %257B%250A%2509%2509\n fmt.\n@@ -1052,11 +1052,15 @@\n tln(\n-%22F%22\n+%2522F%2522\n , re\n@@ -1068,10 +1068,235 @@\n ult)\n-%0A%09%7D%0A%7D\n+%250A%2509%257D%250A%257D%0A+@@ -266,24 +266,22 @@%250A id%25255D %250A-%25253C value%250A+%25253E low%250A  %25257B%25250A%252509%252509%252509%250A-low%250A+mid%250A  += %250A@@ -296,20 +296,19 @@%250A se %25257B%25250A%252509%252509%252509%250A-high%250A+mid%250A  -= 1%25250A%252509%252509%0A %250A\n %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-05-14_20-09-21",
+            "content": "@@ -198,17 +198,16 @@\n  high %7B%0A\n-%0A\n %09%09if sli\n@@ -283,16 +283,17 @@\n %0A%09%09%09\n-mid += 1\n+low = mid\n %0A%09%09%7D\n@@ -307,16 +307,18 @@\n %0A%09%09%09\n-mid -= 1\n+high = mid\n %0A%09%09%7D\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-14_20-12-55",
+            "content": "@@ -280,19 +280,19 @@\n ue %7B%0A%09%09%09\n-low\n+mid\n  += 1%0A%09%09\n@@ -303,20 +303,19 @@\n se %7B%0A%09%09%09\n-high\n+mid\n  -= 1%0A%09%09\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-05-14_20-14-10",
+            "content": "@@ -325,13 +325,8 @@\n %09%7D%0A%0A\n-%09if %0A\n %09ret\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-05-14_21-48-57",
+            "content": "@@ -321,16 +321,21 @@\n %09%09%7D%0A%09%7D%0A%0A\n+%09if %0A\n %09return \n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-14_21-49-03",
+            "content": "@@ -284,14 +284,13 @@\n %0A%09%09%09\n-high -\n+low +\n = 1%0A\n@@ -299,29 +299,30 @@\n %7D else %7B%0A%09%09%09\n-low +\n+high -\n = 1%0A%09%09%7D%0A%09%7D%0A%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-05-17_19-09-51",
+            "content": "@@ -125,23 +125,21 @@\n %7B%0A%09l\n-eft\n+ow\n  := 0%0A%09\n-r\n+h\n igh\n-t\n  := \n@@ -157,31 +157,8 @@\n - 1%0A\n-%0A%09for left %3C= right %7B%0A%09\n %09mid\n@@ -167,26 +167,44 @@\n = (l\n-eft + r\n+ow + h\n igh\n-t\n ) / 2%0A%0A\n+%09for low %3C= high %7B%0A%0A\n %09%09if\n@@ -284,20 +284,15 @@\n %0A%09%09%09\n-left = mid +\n+high -=\n  1%0A%09\n@@ -308,21 +308,14 @@\n %0A%09%09%09\n-right = mid -\n+low +=\n  1%0A%09\n@@ -341,11 +341,10 @@\n e, l\n-eft\n+ow\n %0A%7D%0A%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-05-17_19-14-34",
+            "content": "@@ -125,16 +125,19 @@\n %7B%0A%09l\n+eft\n  := 0%0A%09r\n  := \n@@ -132,16 +132,20 @@\n  := 0%0A%09r\n+ight\n  := len(\n@@ -166,13 +166,20 @@\n or l\n+eft\n  %3C= r\n+ight\n  %7B%0A%09\n@@ -192,12 +192,19 @@\n = (l\n+eft\n  + r\n+ight\n ) / \n@@ -288,16 +288,19 @@\n e %7B%0A%09%09%09l\n+eft\n  = mid +\n@@ -317,16 +317,20 @@\n e %7B%0A%09%09%09r\n+ight\n  = mid -\n@@ -356,16 +356,19 @@\n false, l\n+eft\n %0A%7D%0A%0Afunc\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-05-17_19-18-32",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc BetterSearch(slice []int, value int) (bool, int) {\n\tl := 0\n\tr := len(slice) - 1\n\n\tfor l <= r {\n\t\tmid := (l + r) / 2\n\n\t\tif slice[mid] == value {\n\t\t\treturn true, mid\n\t\t}\n\n\t\tif slice[mid] < value {\n\t\t\tl = mid + 1\n\t\t} else {\n\t\t\tr = mid - 1\n\t\t}\n\t}\n\n\treturn false, l\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tslice := []int{}\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tfound, result := BetterSearch(slice, value)\n\tif found {\n\t\tfmt.Println(\"V\", result)\n\t} else {\n\t\tfmt.Println(\"F\", result)\n\t}\n}\n",
+            "lines": "49"
+        }
+    ]
+}
