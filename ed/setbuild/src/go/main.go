@@ -56,9 +56,9 @@ func (s *Set) findInsertionIndex(value int) int {
 	r := s.size - 1
 	for l <= r {
 		mid := (l + r) / 2
-		if s.data[mid] > value { // se meio maior, direita antes do meio
+		if s.data[mid] > value {
 			r = mid - 1
-		} else { // se meio menor, esquerda depois do meio
+		} else {
 			l = mid + 1
 		}
 	}

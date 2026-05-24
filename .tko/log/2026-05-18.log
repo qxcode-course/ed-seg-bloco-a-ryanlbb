@@ -2,3 +2,13 @@
 2026-05-18 10:18:51, EXEC, v:1, k:ed@multiset, mode:FULL, rate:100, size:224
 2026-05-18 10:18:52, MOVE, v:1, k:ed@multiset, mode:BACK
 2026-05-18 10:19:13, SELF, v:1, k:ed@multiset, self:1, rate:100, study:45
+2026-05-18 10:20:53, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-18 10:20:53, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-18 10:42:39, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-18 10:42:39, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-18 16:02:36, MOVE, v:1, k:ed@lista_d2, mode:DOWN
+2026-05-18 16:02:38, MOVE, v:1, k:ed@lista_d2, mode:PICK
+2026-05-18 16:02:36, MOVE, v:1, k:ed@lista_d2, mode:EDIT
+2026-05-18 16:02:36, MOVE, v:1, k:ed@lista_d2, mode:EDIT
+2026-05-18 16:02:36, MOVE, v:1, k:ed@lista_d2, mode:EDIT
+2026-05-18 16:02:36, MOVE, v:1, k:ed@lista_d2, mode:EDIT
