@@ -1,0 +1,59 @@
+2026-05-25 09:13:32, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-05-25 09:13:33, EXEC, v:1, k:ed@cercado, mode:FULL, rate:0, size:48
+2026-05-25 09:13:29, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 09:13:29, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 09:13:32, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 09:16:45, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33, size:48
+2026-05-25 09:16:43, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 09:16:43, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 09:16:45, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 09:18:52, EXEC, v:1, k:ed@cercado, mode:FULL, rate:100, size:58
+2026-05-25 09:20:36, EXEC, v:1, k:ed@cercado, mode:FULL, rate:100, size:59
+2026-05-25 09:20:38, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-05-25 09:20:48, SELF, v:1, k:ed@cercado, self:1, rate:100, study:20, concept:1
+2026-05-25 09:20:34, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 09:20:34, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 09:20:36, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 09:26:22, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 09:26:22, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 09:30:41, SELF, v:1, k:ed@cercado, self:1, rate:100, study:20, concept:1
+2026-05-25 09:30:43, MOVE, v:1, k:ed@pintura, mode:DOWN
+2026-05-25 09:30:26, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 09:30:26, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 09:30:43, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-25 09:30:43, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-25 10:43:35, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-25 10:43:35, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-25 10:46:14, MOVE, v:1, k:ed@pintura, mode:PICK
+2026-05-25 10:46:15, EXEC, v:1, k:ed@pintura, mode:FULL, rate:50, size:77
+2026-05-25 10:46:13, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-25 10:46:13, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-25 10:46:15, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-25 10:49:03, EXEC, v:1, k:ed@pintura, mode:FULL, rate:50, size:77
+2026-05-25 10:49:04, EXEC, v:1, k:ed@pintura, mode:FULL, rate:50
+2026-05-25 10:50:52, EXEC, v:1, k:ed@pintura, mode:FULL, rate:50, size:77
+2026-05-25 10:53:05, EXEC, v:1, k:ed@pintura, mode:FULL, rate:50, size:77
+2026-05-25 10:53:11, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-25 10:53:11, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-25 10:53:04, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-25 10:54:33, EXEC, v:1, k:ed@pintura, mode:FULL, rate:100, size:77
+2026-05-25 10:54:35, MOVE, v:1, k:ed@pintura, mode:BACK
+2026-05-25 10:54:45, SELF, v:1, k:ed@pintura, self:1, rate:100, study:20
+2026-05-25 10:55:02, MOVE, v:1, k:ed@longest, mode:DOWN
+2026-05-25 10:55:03, MOVE, v:1, k:ed@longest, mode:PICK
+2026-05-25 10:55:12, MOVE, v:1, k:ed@longest, mode:BACK
+2026-05-25 10:56:10, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-25 10:56:10, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-25 10:54:33, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-25 10:55:02, MOVE, v:1, k:ed@longest, mode:EDIT
+2026-05-25 10:55:02, MOVE, v:1, k:ed@longest, mode:EDIT
+2026-05-25 10:55:02, MOVE, v:1, k:ed@longest, mode:EDIT
+2026-05-25 10:56:11, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-25 10:56:11, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-25 14:21:11, SELF, v:1, k:ed@dfs_read, self:1, rate:100
+2026-05-25 14:21:26, SELF, v:1, k:ed@dfs_read, self:1, rate:100
+2026-05-25 15:19:17, SELF, v:1, k:ed@dfs_read, self:1, rate:100
+2026-05-25 15:45:43, MOVE, v:1, k:ed@lista_d4, mode:PICK
+2026-05-25 15:45:44, EXEC, v:1, k:ed@lista_d4, mode:FULL, rate:0, size:124
+2026-05-25 15:45:44, MOVE, v:1, k:ed@lista_d4, mode:EDIT
+2026-05-25 15:48:35, MOVE, v:1, k:ed@lista_d4, mode:BACK

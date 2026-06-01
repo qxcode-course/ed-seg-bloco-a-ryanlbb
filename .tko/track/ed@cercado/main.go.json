@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-24_21-47-51",
+            "content": "@@ -344,18 +344,16 @@\n n(board)\n--1\n  %7C%7C j %3E \n@@ -366,10 +366,8 @@\n ard)\n--1\n  %7B%0A%09\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-05-24_21-48-21",
+            "content": "@@ -404,105 +404,8 @@\n  'X'\n-%0A%0A%09connect(board, i-1, j)%0A%09connect(board, i+1, j)%0A%09connect(board, i, j-1)%0A%09connect(board, i, j+1)\n %0A%7D%0A%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-05-24_21-50-20",
+            "content": "@@ -344,16 +344,18 @@\n n(board)\n+-1\n  %7C%7C j %3E \n@@ -364,16 +364,18 @@\n n(board)\n+-1\n  %7B%0A%09%09ret\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-05-24_21-50-41",
+            "content": "@@ -333,17 +333,16 @@\n 0 %7C%7C i %3E\n-=\n  len(boa\n@@ -351,17 +351,16 @@\n ) %7C%7C j %3E\n-=\n  len(boa\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-05-24_21-51-32",
+            "content": "@@ -368,50 +368,8 @@\n ard)\n- %7C%7C i == len(board)-1 %7C%7C j == len(board)-1\n  %7B%0A%09\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-05-24_21-53-57",
+            "content": "@@ -194,63 +194,21 @@\n 'O' \n-&& i == len(board)-1 %7C%7C j == len(board%5Bi%5D)-1 %7B%0A%09%09%09%09save\n+%7B%0A%09%09%09%09connect\n (boa\n@@ -237,20 +237,23 @@\n %7D%0A%0Afunc \n-save\n+connect\n (board %5B\n@@ -273,16 +273,51 @@\n  int) %7B%0A\n+%09// verifica se nao foge do escopo%0A\n %09if i %3C \n@@ -364,16 +364,58 @@\n n(board)\n+ %7C%7C i == len(board)-1 %7C%7C j == len(board)-1\n  %7B%0A%09%09ret\n@@ -442,17 +442,20 @@\n  = '\n-S\n+X\n '%0A%0A%09\n-save\n+connect\n (boa\n@@ -463,28 +463,31 @@\n d, i-1, j)%0A%09\n-save\n+connect\n (board, i+1,\n@@ -491,20 +491,23 @@\n +1, j)%0A%09\n-save\n+connect\n (board, \n@@ -519,12 +519,15 @@\n 1)%0A%09\n-save\n+connect\n (boa\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-05-25_09-13-33",
+            "content": "@@ -372,30 +372,8 @@\n ard)\n- %7C%7C board%5Bi%5D%5Bj%5D != 'O'\n  %7B%0A%09\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-25_09-16-45",
+            "content": "@@ -274,178 +274,8 @@\n %7D%0A%09%7D\n-%0A%0A%09for i := range board %7B%0A%09%09for j := range board%5Bi%5D %7B%0A%09%09%09if board%5Bi%5D%5Bj%5D == 'O' %7B%0A%09%09%09%09board%5Bi%5D%5Bj%5D = 'X'%0A%09%09%09%7D else if board%5Bi%5D%5Bj%5D == 'S' %7B%0A%09%09%09%09board%5Bi%5D%5Bj%5D = 'O'%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-25_09-18-52",
+            "content": "@@ -331,14 +331,10 @@\n %0A%09%09%09\n-switch\n+if\n  boa\n@@ -346,22 +346,16 @@\n %5Bj%5D \n-%7B%0A%09%09%09case\n+==\n  'O'\n-:\n+ %7B\n %0A%09%09%09\n@@ -380,17 +380,38 @@\n %0A%09%09%09\n-case\n+%7D else if board%5Bi%5D%5Bj%5D ==\n  'S'\n-:\n+ %7B\n %0A%09%09%09\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-05-25_09-20-36",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00c3O ALTERE A ASSINATURA DA FUN\u00c7\u00c3O solve\nfunc solve(board [][]byte) {\n\tfor i := range board {\n\t\tfor j := range board[i] {\n\t\t\tif board[i][j] == 'O' && i == len(board)-1 || j == len(board[i])-1 {\n\t\t\t\tsave(board, i, j)\n\t\t\t}\n\t\t}\n\t}\n\n\tfor i := range board {\n\t\tfor j := range board[i] {\n\t\t\tswitch board[i][j] {\n\t\t\tcase 'O':\n\t\t\t\tboard[i][j] = 'X'\n\t\t\tcase 'S':\n\t\t\t\tboard[i][j] = 'O'\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunc save(board [][]byte, i, j int) {\n\tif i < 0 || j < 0 || i >= len(board) || j >= len(board) || board[i][j] != 'O' {\n\t\treturn\n\t}\n\n\tboard[i][j] = 'S'\n\n\tsave(board, i-1, j)\n\tsave(board, i+1, j)\n\tsave(board, i, j-1)\n\tsave(board, i, j+1)\n}\n\n// N\u00c3O ALTERE A MAIN\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar nrows, ncols int\n\tfmt.Sscanf(scanner.Text(), \"%d %d\", &nrows, &ncols)\n\tboard := make([][]byte, nrows)\n\tfor i := 0; i < nrows; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\tsolve(board)\n\tfor _, row := range board {\n\t\tfmt.Println(string(row))\n\t}\n}\n",
+            "lines": "59"
+        }
+    ]
+}

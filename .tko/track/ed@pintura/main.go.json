@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-25_10-46-15",
+            "content": "@@ -433,17 +433,17 @@\n  0 %7C%7C i \n-%3E\n+%3C\n = len(im\n@@ -452,17 +452,17 @@\n e) %7C%7C j \n-%3E\n+%3C\n = len(im\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-05-25_10-49-03",
+            "content": "@@ -465,17 +465,17 @@\n n(image%5B\n-0\n+i\n %5D) %7C%7C im\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-05-25_10-50-52",
+            "content": "@@ -319,22 +319,20 @@\n  color, \n-sr, sc\n+i, j\n )%0A%09%09%09%7D%0A%09\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-05-25_10-53-05",
+            "content": "@@ -319,20 +319,22 @@\n  color, \n-i, j\n+sr, sc\n )%0A%09%09%09%7D%0A%09\n@@ -501,32 +501,8 @@\n int \n-%7C%7C image%5Bi%5D%5Bj%5D == color \n %7B%0A%09%09\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-05-25_10-54-33",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\n// N\u00e3o modifique a assinatura da fun\u00e7\u00e3o floodFill\nfunc floodFill(image [][]int, sr int, sc int, color int) [][]int {\n\tfor i := range image {\n\t\tfor j := range image[i] {\n\t\t\tif i == sr && j == sc {\n\t\t\t\ttoPaint := image[i][j]\n\t\t\t\tpaint(image, toPaint, color, i, j)\n\t\t\t}\n\t\t}\n\t}\n\n\treturn image\n}\n\nfunc paint(image [][]int, toPaint, color, i, j int) {\n\tif i < 0 || j < 0 || i >= len(image) || j >= len(image[0]) || image[i][j] != toPaint || image[i][j] == color {\n\t\treturn\n\t}\n\n\timage[i][j] = color\n\n\tpaint(image, toPaint, color, i-1, j)\n\tpaint(image, toPaint, color, i+1, j)\n\tpaint(image, toPaint, color, i, j-1)\n\tpaint(image, toPaint, color, i, j+1)\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tparts := strings.Fields(line)\n\tnl, _ := strconv.Atoi(parts[0])\n\tnc, _ := strconv.Atoi(parts[1])\n\n\timage := make([][]int, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\trowStr := strings.Fields(scanner.Text())\n\t\trow := make([]int, nc)\n\t\tfor j := 0; j < nc; j++ {\n\t\t\trow[j], _ = strconv.Atoi(rowStr[j])\n\t\t}\n\t\timage[i] = row\n\t}\n\n\t// L\u00ea sr, sc e color\n\tscanner.Scan()\n\tparams := strings.Fields(scanner.Text())\n\tsr, _ := strconv.Atoi(params[0])\n\tsc, _ := strconv.Atoi(params[1])\n\tcolor, _ := strconv.Atoi(params[2])\n\n\tresult := floodFill(image, sr, sc, color)\n\n\t// Imprime a matriz resultante\n\tfor _, row := range result {\n\t\tfor j, val := range row {\n\t\t\tif j > 0 {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Print(val)\n\t\t}\n\t\tfmt.Println()\n\t}\n}\n",
+            "lines": "77"
+        }
+    ]
+}

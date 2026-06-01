@@ -55,10 +55,9 @@ func (l *LList[T]) String() string {
 	return "[" + strings.Join(values, ", ") + "]"
 }
 
-
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
-// 	ll := NewLList[int]()
+	// 	ll := NewLList[int]()
 
 	for {
 		fmt.Print("$")

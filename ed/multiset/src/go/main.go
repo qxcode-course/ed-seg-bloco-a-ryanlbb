@@ -76,22 +76,6 @@ func (ms *Multiset) findValueIdx(value int) int {
 	return -1
 }
 
-func (ms *Multiset) search(value int) (bool, int) {
-	idx := -1
-
-	for i := range ms.size {
-		if ms.data[i] == value {
-			idx = i
-		}
-	}
-
-	if idx == -1 {
-		return false, ms.findInsertionIdx(value)
-	}
-
-	return true, idx
-}
-
 func (ms *Multiset) Erase(value int) error {
 	if ms.findValueIdx(value) == -1 {
 		return fmt.Errorf("value not found")
