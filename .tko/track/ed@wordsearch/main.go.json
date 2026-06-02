@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-02_10-48-20",
+            "content": "@@ -168,722 +168,39 @@\n  %7B%0A%09\n-exists := false%0A%09for i := range grid %7B%0A%09%09for j := range grid%5Bi%5D %7B%0A%09%09%09if word%5B0%5D == grid%5Bi%5D%5Bj%5D %7B%0A%09%09%09%09exists = search(grid, word, string(word%5B0%5D), 0, i, j)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09return exists%0A%7D%0A%0Afunc search(grid %5B%5D%5B%5Dbyte, word, currentWord string, strIdx, i, j int) bool %7B%0A%09if word == currentWord %7B%0A%09%09return true%0A%09%7D%0A%09if i %3E= len(grid) %7C%7C j %3E= len(grid%5B0%5D) %7C%7C i %3C 0 %7C%7C j %3C 0 %7C%7C currentWord != word%5B:strIdx%5D %7B%0A%09%09return false%0A%09%7D%0A%0A%09return search(grid, word, currentWord+string(grid%5Bi-1%5D%5Bj%5D), strIdx+1, i, j) %7C%7C%0A%09%09search(grid, word, currentWord+string(grid%5Bi+1%5D%5Bj%5D), strIdx+1, i, j) %7C%7C%0A%09%09search(grid, word, currentWord+string(grid%5Bi%5D%5Bj-1%5D), strIdx+1, i, j) %7C%7C%0A%09%09search(grid, word, currentWord+string(grid%5Bi%5D%5Bj+1%5D), strIdx+1, i, j)\n+_, _ = grid, word%0A%09return false\n %0A%7D%0A%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-06-02_15-22-03",
+            "content": "@@ -299,25 +299,22 @@\n  string(\n-grid%5Bi%5D%5Bj\n+word%5B0\n %5D), 0, i\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-06-02_15-22-45",
+            "content": "@@ -437,25 +437,16 @@\n %09if word\n-%5B:strIdx%5D\n  == curr\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-06-02_15-24-26",
+            "content": "@@ -163,16 +163,33 @@\n  bool %7B%0A\n+%09exists := false%0A\n %09for i :\n@@ -264,18 +264,24 @@\n %5D %7B%0A%09%09%09%09\n-if\n+exists =\n  search(\n@@ -324,33 +324,8 @@\n , j)\n- %7B%0A%09%09%09%09%09return true%0A%09%09%09%09%7D\n %0A%09%09%09\n@@ -341,21 +341,22 @@\n %09return \n-false\n+exists\n %0A%7D%0A%0Afunc\n@@ -437,16 +437,25 @@\n %09if word\n+%5B:strIdx%5D\n  == curr\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-06-02_15-32-21",
+            "content": "@@ -656,18 +656,16 @@\n Idx+1, i\n--1\n , j) %7C%7C%0A\n@@ -730,18 +730,16 @@\n Idx+1, i\n-+1\n , j) %7C%7C%0A\n@@ -807,18 +807,16 @@\n +1, i, j\n--1\n ) %7C%7C%0A%09%09s\n@@ -881,18 +881,16 @@\n +1, i, j\n-+1\n )%0A%7D%0A%0Afun\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-02_15-35-50",
+            "content": "@@ -268,16 +268,36 @@\n d, word,\n+ string(grid%5Bi%5D%5Bj%5D),\n  0, i, j\n@@ -379,24 +379,37 @@\n %5B%5Dbyte, word\n+, currentWord\n  string, str\n@@ -442,30 +442,23 @@\n word\n-%5BstrIdx%5D == grid%5Bi%5D%5Bj%5D\n+ == currentWord\n  %7B%0A%09\n@@ -534,26 +534,27 @@\n  %3C 0 %7C%7C \n-grid%5Bi%5D%5Bj%5D\n+currentWord\n  != word\n@@ -554,16 +554,17 @@\n != word%5B\n+:\n strIdx%5D \n@@ -602,32 +602,66 @@\n arch(grid, word,\n+ currentWord+string(grid%5Bi-1%5D%5Bj%5D),\n  strIdx+1, i-1, \n@@ -678,32 +678,66 @@\n arch(grid, word,\n+ currentWord+string(grid%5Bi+1%5D%5Bj%5D),\n  strIdx+1, i+1, \n@@ -754,32 +754,66 @@\n arch(grid, word,\n+ currentWord+string(grid%5Bi%5D%5Bj-1%5D),\n  strIdx+1, i, j-\n@@ -834,24 +834,58 @@\n (grid, word,\n+ currentWord+string(grid%5Bi%5D%5Bj+1%5D),\n  strIdx+1, i\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-02_15-40-57",
+            "content": "@@ -397,16 +397,66 @@\n  bool %7B%0A\n+%09if word%5BstrIdx%5D == grid%5Bi%5D%5Bj%5D %7B%0A%09%09return true%0A%09%7D%0A\n %09if i %3E=\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-02_15-41-56",
+            "content": "@@ -269,17 +269,17 @@\n , word, \n-1\n+0\n , i, j) \n@@ -401,58 +401,8 @@\n l %7B%0A\n-%09if word%5BstrIdx%5D == grid%5Bi%5D%5Bj%5D %7B%0A%09%09return true%0A%09%7D%0A\n %09if \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-06-02_15-43-28",
+            "content": "@@ -405,29 +405,34 @@\n %09if \n+word%5B\n strIdx\n+%5D\n  == \n-len(word)-1\n+grid%5Bi%5D%5Bj%5D\n  %7B%0A%09\n@@ -561,64 +561,14 @@\n %7D%0A%0A%09\n-anteriorByte := grid%5Bi%5D%5Bj%5D%0A%09grid%5Bi%5D%5Bj%5D = '#'%0A%0A%09solver :=\n+return\n  sea\n@@ -684,24 +684,24 @@\n  i, j-1) %7C%7C%0A\n+\n %09%09search(gri\n@@ -730,52 +730,8 @@\n j+1)\n-%0A%0A%09grid%5Bi%5D%5Bj%5D = anteriorByte%0A%0A%09return solver\n %0A%7D%0A%0A\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-02_15-53-55",
+            "content": "@@ -397,16 +397,61 @@\n  bool %7B%0A\n+%09if strIdx == len(word)-1 %7B%0A%09%09return true%0A%09%7D%0A\n %09if i %3E=\n@@ -553,53 +553,8 @@\n e%0A%09%7D\n-%0A%09if strIdx == len(word)-1 %7B%0A%09%09return true%0A%09%7D\n %0A%0A%09a\n@@ -604,16 +604,17 @@\n %0A%0A%09solve\n+r\n  := sear\n@@ -814,16 +814,17 @@\n rn solve\n+r\n %0A%7D%0A%0Afunc\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-06-02_15-54-48",
+            "content": "@@ -269,17 +269,17 @@\n , word, \n-0\n+1\n , i, j) \n@@ -555,93 +555,8 @@\n %09%7D%0A%0A\n-%09/* marca a posic que esta atualmente%0A%09como visitada pra nao checar aqui novamente*/%0A\n %09ant\n@@ -776,37 +776,8 @@\n 1)%0A%0A\n-%09// volta o estado anteriror%0A\n %09gri\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-06-02_16-00-07",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00e3o mude a assinatura desta fun\u00e7\u00e3o, ela \u00e9 a fun\u00e7\u00e3o chamada pelo LeetCode\nfunc exist(grid [][]byte, word string) bool {\n\tfor i := range grid {\n\t\tfor j := range grid[i] {\n\t\t\tif word[0] == grid[i][j] {\n\t\t\t\tif search(grid, word, 0, i, j) {\n\t\t\t\t\treturn true\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\treturn false\n}\n\nfunc search(grid [][]byte, word string, strIdx, i, j int) bool {\n\tif i >= len(grid) || j >= len(grid[0]) || i < 0 || j < 0 || grid[i][j] != word[strIdx] {\n\t\treturn false\n\t}\n\tif strIdx == len(word)-1 {\n\t\treturn true\n\t}\n\n\t/* marca a posic que esta atualmente\n\tcomo visitada pra nao checar aqui novamente*/\n\tanteriorByte := grid[i][j]\n\tgrid[i][j] = '#'\n\n\tsolve := search(grid, word, strIdx+1, i-1, j) ||\n\t\tsearch(grid, word, strIdx+1, i+1, j) ||\n\t\tsearch(grid, word, strIdx+1, i, j-1) ||\n\t\tsearch(grid, word, strIdx+1, i, j+1)\n\n\t// volta o estado anteriror\n\tgrid[i][j] = anteriorByte\n\n\treturn solve\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar word string\n\tfmt.Sscanf(scanner.Text(), \"%s\", &word)\n\tgrid := make([][]byte, 0)\n\tfor scanner.Scan() {\n\t\tgrid = append(grid, []byte(scanner.Text()))\n\t}\n\tif exist(grid, word) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "lines": "61"
+        }
+    ]
+}

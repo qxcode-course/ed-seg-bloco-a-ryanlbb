@@ -45,3 +45,18 @@
 2026-06-01 11:19:01, EXEC, v:1, k:ed@pilha, mode:FULL, rate:0
 2026-06-01 11:20:03, EXEC, v:1, k:ed@pilha, mode:FULL, rate:0, size:121
 2026-06-01 11:20:50, MOVE, v:1, k:ed@pilha, mode:BACK
+2026-06-01 14:06:29, MOVE, v:1, k:ed@pilha, mode:PICK
+2026-06-01 14:06:29, EXEC, v:1, k:ed@pilha, mode:FULL, rate:0
+2026-06-01 14:06:29, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-01 14:24:35, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-01 14:24:34, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-01 14:24:35, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-01 14:28:36, EXEC, v:1, k:ed@pilha, mode:FULL, rate:0
+2026-06-01 14:28:36, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-01 15:55:09, MOVE, v:1, k:ed@pilha, mode:BACK
+2026-06-01 16:18:39, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-06-01 16:18:39, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-06-01 16:56:04, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-01 16:56:04, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:100
+2026-06-01 16:57:04, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-01 16:56:04, MOVE, v:1, k:ed@subset_sum, mode:EDIT
