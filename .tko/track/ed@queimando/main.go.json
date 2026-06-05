@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-05_17-32-10",
+            "content": "@@ -591,30 +591,16 @@\n ,%0A%09%09%7D)%0A%0A\n-%09%09stack.Pop()%0A\n %09%7D%0A%09// E\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-06-05_17-32-27",
+            "content": "@@ -220,17 +220,16 @@\n op().l %3E\n-=\n  len(gri\n@@ -249,17 +249,16 @@\n op().c %3E\n-=\n  len(gri\n@@ -434,48 +434,10 @@\n  = '\n-o'%0A%09%09oldTop := stack.Top()%0A%09%09stack.Pop()\n+#'\n %0A%0A%09%09\n@@ -455,23 +455,16 @@\n Pos%7B%0A%09%09%09\n-oldTop.\n l - 1,%0A%09\n@@ -461,31 +461,24 @@\n %09%09l - 1,%0A%09%09%09\n-oldTop.\n c,%0A%09%09%7D)%0A%09%09st\n@@ -494,23 +494,16 @@\n Pos%7B%0A%09%09%09\n-oldTop.\n l + 1,%0A%09\n@@ -504,23 +504,16 @@\n + 1,%0A%09%09%09\n-oldTop.\n c,%0A%09%09%7D)%0A\n@@ -533,36 +533,22 @@\n Pos%7B%0A%09%09%09\n-oldTop.l,%0A%09%09%09oldTop.\n+l,%0A%09%09%09\n c - 1,%0A%09\n@@ -576,38 +576,39 @@\n %0A%09%09%09\n-oldTop.l,%0A%09%09%09oldTop.c + 1,%0A%09%09%7D\n+l,%0A%09%09%09c + 1,%0A%09%09%7D)%0A%0A%09%09stack.Pop(\n )%0A%09%7D\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-06-05_17-38-10",
+            "content": "@@ -314,47 +314,14 @@\n %3C 0 \n-%7B\n+%7C%7C\n %0A%09%09%09\n-stack.Pop()%0A%09%09%09continue%0A%09%09%7D%0A%0A%09%09if \n grid\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-06-05_17-38-55",
+            "content": "@@ -206,17 +206,10 @@\n %7B%0A%09%09\n-oldTop :=\n+if\n  sta\n@@ -220,35 +220,8 @@\n op()\n-%0A%09%09stack.Pop()%0A%0A%09%09if oldTop\n .l %3E\n@@ -235,22 +235,27 @@\n rid) %7C%7C \n-old\n+stack.\n Top\n+()\n .c %3E= le\n@@ -271,22 +271,27 @@\n ) %7C%7C%0A%09%09%09\n-old\n+stack.\n Top\n+()\n .l %3C 0 %7C\n@@ -292,22 +292,27 @@\n  %3C 0 %7C%7C \n-old\n+stack.\n Top\n+()\n .c %3C 0 %7B\n@@ -312,16 +312,31 @@\n c %3C 0 %7B%0A\n+%09%09%09stack.Pop()%0A\n %09%09%09conti\n@@ -358,24 +358,34 @@\n rid%5B\n-old\n+stack.\n Top\n+()\n .l%5D%5B\n-old\n+stack.\n Top\n+()\n .c%5D \n@@ -393,16 +393,31 @@\n = '.' %7B%0A\n+%09%09%09stack.Pop()%0A\n %09%09%09conti\n@@ -467,16 +467,54 @@\n c%5D = 'o'\n+%0A%09%09oldTop := stack.Top()%0A%09%09stack.Pop()\n %0A%0A%09%09stac\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-06-05_17-41-30",
+            "content": "@@ -411,32 +411,42 @@\n %0A%09%09grid%5B\n-old\n+stack.\n Top\n+()\n .l%5D%5B\n-old\n+stack.\n Top\n+()\n .c%5D = 'o\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-06-05_17-42-57",
+            "content": "@@ -386,14 +386,30 @@\n == '\n-#\n+.\n ' %7B%0A%09\n+%09%09continue%0A%09%09%7D%0A%0A\n %09%09gr\n@@ -438,17 +438,16 @@\n  = 'o'%0A%0A\n-%09\n %09%09stack.\n@@ -451,33 +451,32 @@\n ck.Push(Pos%7B%0A%09%09%09\n-%09\n oldTop.l - 1,%0A%09%09\n@@ -472,25 +472,24 @@\n p.l - 1,%0A%09%09%09\n-%09\n oldTop.c,%0A%09%09\n@@ -482,33 +482,31 @@\n %09%09oldTop.c,%0A\n-%09\n %09%09%7D)%0A%09%09\n-%09\n stack.Push(P\n@@ -501,33 +501,32 @@\n stack.Push(Pos%7B%0A\n-%09\n %09%09%09oldTop.l + 1,\n@@ -525,25 +525,24 @@\n p.l + 1,%0A%09%09%09\n-%09\n oldTop.c,%0A%09%09\n@@ -537,29 +537,27 @@\n oldTop.c,%0A%09%09\n-%09\n %7D)%0A\n-%09\n %09%09stack.Push\n@@ -557,33 +557,32 @@\n ck.Push(Pos%7B%0A%09%09%09\n-%09\n oldTop.l,%0A%09%09%09%09ol\n@@ -567,33 +567,32 @@\n s%7B%0A%09%09%09oldTop.l,%0A\n-%09\n %09%09%09oldTop.c - 1,\n@@ -594,21 +594,19 @@\n  - 1,%0A%09%09\n-%09\n %7D)%0A\n-%09\n %09%09stack.\n@@ -615,17 +615,16 @@\n sh(Pos%7B%0A\n-%09\n %09%09%09oldTo\n@@ -631,17 +631,16 @@\n p.l,%0A%09%09%09\n-%09\n oldTop.c\n@@ -649,18 +649,13 @@\n  1,%0A\n-%09\n %09%09%7D)%0A\n-%09%09%7D%0A\n %09%7D%0A%09\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-06-05_17-44-06",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl int\n\tc int\n}\n\nfunc burnTrees(grid [][]rune, l, c int) {\n\tstack := NewStack[Pos]()\n\tstack.Push(Pos{\n\t\tl,\n\t\tc,\n\t})\n\n\tfor !stack.IsEmpty() {\n\t\toldTop := stack.Top()\n\t\tstack.Pop()\n\n\t\tif oldTop.l >= len(grid) || oldTop.c >= len(grid[0]) ||\n\t\t\toldTop.l < 0 || oldTop.c < 0 {\n\t\t\tcontinue\n\t\t}\n\n\t\tif grid[oldTop.l][oldTop.c] == '#' {\n\t\t\tgrid[oldTop.l][oldTop.c] = 'o'\n\n\t\t\tstack.Push(Pos{\n\t\t\t\toldTop.l - 1,\n\t\t\t\toldTop.c,\n\t\t\t})\n\t\t\tstack.Push(Pos{\n\t\t\t\toldTop.l + 1,\n\t\t\t\toldTop.c,\n\t\t\t})\n\t\t\tstack.Push(Pos{\n\t\t\t\toldTop.l,\n\t\t\t\toldTop.c - 1,\n\t\t\t})\n\t\t\tstack.Push(Pos{\n\t\t\t\toldTop.l,\n\t\t\t\toldTop.c + 1,\n\t\t\t})\n\t\t}\n\t}\n\t// Essa fun\u00e7\u00e3o deve usar uma list como pilha\n\t// e marcar as \u00e1rvores na matriz como queimados\n\t// Uma sugest\u00e3o de como fazer isso \u00e9:\n\t// - adicionar a primeira posi\u00e7\u00e3o na pilha\n\t// - enquanto a pilha n\u00e3o estiver vazia:\n\t//   - retirar o elemento do topo\n\t//   - se puder ser queimado, queime e adicione seus vizinhos \u00e0 pilha\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc, lfire, cfire int\n\tfmt.Sscanf(line, \"%d %d %d %d\", &nl, &nc, &lfire, &cfire)\n\n\tgrid := make([][]rune, 0, nl)\n\tfor range nl {\n\t\tscanner.Scan()\n\t\tline := []rune(scanner.Text())\n\t\tgrid = append(grid, line)\n\t}\n\tburnTrees(grid, lfire, cfire)\n\tshowGrid(grid)\n}\n\nfunc showGrid(mat [][]rune) {\n\tfor _, linha := range mat {\n\t\tfmt.Println(string(linha))\n\t}\n}\n",
+            "lines": "81"
+        }
+    ]
+}

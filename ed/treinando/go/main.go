@@ -8,25 +8,54 @@ import (
 	"strings"
 )
 
-func tostr(vet []int) string {
-	_ = vet
+func tostrHelper(vet []int) string {
+	if len(vet) == 1 {
+		return fmt.Sprint(vet[0])
+	}
 
-	
-	return ""
+	return fmt.Sprint(vet[0], ", "+tostrHelper(vet[1:]))
+}
+
+func tostr(vet []int) string {
+	if len(vet) == 0 {
+		return "[]"
+	}
+
+	return "[" + tostrHelper(vet) + "]"
+}
+
+func tostrrevHelper(vet []int) string {
+	if len(vet) == 1 {
+		return fmt.Sprint(vet[0])
+	}
+
+	return fmt.Sprint(vet[len(vet)-1], ", "+tostrrevHelper(vet[:len(vet)-1]))
 }
 
 func tostrrev(vet []int) string {
-	_ = vet
-	return ""
+	if len(vet) == 0 {
+		return "[]"
+	}
+
+	return "[" + tostrrevHelper(vet) + "]"
 }
 
 // reverse: inverte os elementos do slice
 func reverse(vet []int) {
 	if len(vet) == 0 {
-		return 
+		return
 	}
 
-	reverse(vet[1:len(vet)-1])
+	l, r := 0, len(vet)-1
+	if l == r {
+		return
+	}
+
+	prevR := vet[r]
+	vet[l] = r
+	vet[r] = prevR
+
+	reverse(vet[l+1 : r-1])
 }
 
 // sum: soma dos elementos do slice
@@ -52,7 +81,6 @@ func mult(vet []int) int {
 // var rec func(v []int) (int, int)
 // para fazer uma recursão que retorna valor e índice
 func min(vet []int) int {
-	
 	if len(vet) == 0 {
 		return 0
 	}

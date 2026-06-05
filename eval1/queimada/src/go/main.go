@@ -7,7 +7,16 @@ import (
 )
 
 func burnTrees(grid [][]rune, l, c int) {
-	_, _, _ = grid, l, c
+	if l < 0 || c < 0 || l >= len(grid) || c >= len(grid[0]) || grid[l][c] != '#' {
+		return
+	}
+
+	grid[l][c] = 'o'
+
+	burnTrees(grid, l-1, c)
+	burnTrees(grid, l+1, c)
+	burnTrees(grid, l, c-1)
+	burnTrees(grid, l, c+1)
 	// se estiver fora da matriz, retorne
 	// se o elemento atual não for uma arvore, retorne
 	// queime a arvore colocando o caractere 'o' na posição atual
@@ -21,7 +30,9 @@ func main() {
 	var nl, nc, lfire, cfire int
 	fmt.Sscanf(line, "%d %d %d %d", &nl, &nc, &lfire, &cfire)
 
-	grid := make([][]rune, 0, nlcan()
+	grid := make([][]rune, 0, nl)
+	for range nl {
+		scanner.Scan()
 		line := []rune(scanner.Text())
 		grid = append(grid, line)
 	}

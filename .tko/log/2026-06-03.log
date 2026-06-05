@@ -1,0 +1,79 @@
+2026-06-03 09:58:53, MOVE, v:1, k:ed@queimando, mode:DOWN
+2026-06-03 09:58:56, MOVE, v:1, k:ed@queimando, mode:PICK
+2026-06-03 09:59:03, MOVE, v:1, k:ed@queimando, mode:BACK
+2026-06-03 09:59:22, MOVE, v:1, k:ed@pilha, mode:PICK
+2026-06-03 09:59:30, MOVE, v:1, k:ed@pilha, mode:BACK
+2026-06-03 09:58:53, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-03 09:58:53, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-03 09:58:53, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-03 09:58:53, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-03 10:02:24, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-03 10:02:24, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-03 10:04:04, MOVE, v:1, k:ed@pilha, mode:PICK
+2026-06-03 10:04:04, EXEC, v:1, k:ed@pilha, mode:FULL, rate:0, size:121
+2026-06-03 10:06:23, EXEC, v:1, k:ed@pilha, mode:FULL, rate:66, size:121
+2026-06-03 10:06:44, EXEC, v:1, k:ed@pilha, mode:FULL, rate:66, size:121
+2026-06-03 10:08:07, EXEC, v:1, k:ed@pilha, mode:FULL, rate:100, size:121
+2026-06-03 10:08:25, MOVE, v:1, k:ed@pilha, mode:BACK
+2026-06-03 10:08:37, SELF, v:1, k:ed@pilha, self:1, rate:100, friend:60, concept:1
+2026-06-03 10:08:07, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-03 10:08:06, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-03 10:08:06, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-03 10:08:51, SELF, v:1, k:ed@editorint, self:1, rate:100, friend:codigo nao computou as mudanca de linha, concept:1
+2026-06-03 10:09:07, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-06-03 10:09:25, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-06-03 10:09:44, SELF, v:1, k:ed@recursao, self:1, rate:100
+2026-06-03 10:10:00, SELF, v:1, k:ed@fractais_png, self:1, rate:100
+2026-06-03 10:10:05, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-06-03 10:10:06, MOVE, v:1, k:ed@fractais_png, mode:BACK
+2026-06-03 10:10:07, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-06-03 10:10:07, MOVE, v:1, k:ed@fractais_png, mode:BACK
+2026-06-03 10:10:10, SELF, v:1, k:ed@fractais_png, self:1
+2026-06-03 10:10:15, SELF, v:1, k:ed@fractais_png, self:1
+2026-06-03 10:10:43, MOVE, v:1, k:ed@balanceada, mode:DOWN
+2026-06-03 10:10:44, MOVE, v:1, k:ed@balanceada, mode:PICK
+2026-06-03 10:11:00, MOVE, v:1, k:ed@balanceada, mode:BACK
+2026-06-03 10:11:49, MOVE, v:1, k:ed@chaves, mode:DOWN
+2026-06-03 10:11:49, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-06-03 10:12:02, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-06-03 10:13:12, SELF, v:1, k:ed@dfs_read, self:1, rate:100
+2026-06-03 10:10:43, MOVE, v:1, k:ed@balanceada, mode:EDIT
+2026-06-03 10:11:49, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-03 10:11:49, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-03 10:13:40, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-06-03 10:13:50, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-06-03 10:17:21, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-06-03 10:17:35, EXEC, v:1, k:ed@chaves, mode:FULL, rate:0, size:47
+2026-06-03 10:17:37, EXEC, v:1, k:ed@chaves, mode:FULL, rate:0
+2026-06-03 10:17:57, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-06-03 10:17:37, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-03 10:22:20, MOVE, v:1, k:eval1@queimada, mode:PICK
+2026-06-03 10:22:37, MOVE, v:1, k:eval1@queimada, mode:BACK
+2026-06-03 10:25:31, MOVE, v:1, k:eval1@queimada, mode:PICK
+2026-06-03 10:25:31, EXEC, v:1, k:eval1@queimada, mode:FULL, size:45, fail:COMP
+2026-06-03 10:25:32, EXEC, v:1, k:eval1@queimada, mode:FULL, fail:COMP
+2026-06-03 10:25:39, MOVE, v:1, k:eval1@queimada, mode:BACK
+2026-06-03 10:25:40, MOVE, v:1, k:eval1@queimada, mode:PICK
+2026-06-03 10:26:41, EXEC, v:1, k:eval1@queimada, mode:FULL, fail:COMP
+2026-06-03 10:26:42, EXEC, v:1, k:eval1@queimada, mode:FULL, fail:COMP
+2026-06-03 10:26:43, MOVE, v:1, k:eval1@queimada, mode:BACK
+2026-06-03 10:26:44, MOVE, v:1, k:eval1@queimada, mode:PICK
+2026-06-03 10:27:39, EXEC, v:1, k:eval1@queimada, mode:FULL, size:45, fail:COMP
+2026-06-03 10:28:08, EXEC, v:1, k:eval1@queimada, mode:FULL, size:49, fail:COMP
+2026-06-03 10:28:34, MOVE, v:1, k:eval1@queimada, mode:EDIT
+2026-06-03 10:28:34, MOVE, v:1, k:eval1@queimada, mode:EDIT
+2026-06-03 10:31:51, MOVE, v:1, k:eval1@queimada, mode:BACK
+2026-06-03 10:32:10, MOVE, v:1, k:eval1@queimada, mode:DOWN
+2026-06-03 10:32:11, MOVE, v:1, k:eval1@queimada, mode:PICK
+2026-06-03 10:32:49, EXEC, v:1, k:eval1@queimada, mode:FULL, rate:100, size:47
+2026-06-03 10:32:50, MOVE, v:1, k:eval1@queimada, mode:BACK
+2026-06-03 10:32:58, MOVE, v:1, k:eval1@queimada, mode:PICK
+2026-06-03 10:32:58, EXEC, v:1, k:eval1@queimada, mode:FULL, rate:100
+2026-06-03 10:32:59, MOVE, v:1, k:eval1@queimada, mode:BACK
+2026-06-03 10:33:17, SELF, v:1, k:eval1@queimada, self:1, rate:100, study:20
+2026-06-03 10:33:43, SELF, v:1, k:ed@editorint, self:1, rate:100, friend:codigo nao computou as mudanca de linha, concept:1
+2026-06-03 10:34:01, MOVE, v:1, k:eval1@triangulo, mode:PICK
+2026-06-03 14:13:15, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-06-03 14:13:17, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0
+2026-06-03 14:13:48, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-06-03 14:13:17, MOVE, v:1, k:ed@treinando, mode:EDIT

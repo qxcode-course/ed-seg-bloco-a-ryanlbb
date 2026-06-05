@@ -1,0 +1,48 @@
+2026-06-04 15:57:38, SELF, v:1, k:ed@dfs_read, self:1, rate:100
+2026-06-04 15:58:04, SELF, v:1, k:ed@editorint, self:1, rate:100, friend:codigo nao computou as mudanca de linha, concept:1
+2026-06-04 16:00:06, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-06-04 16:00:12, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-06-04 16:06:07, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-06-04 16:03:27, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-06-04 16:03:27, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-06-04 16:07:52, EXEC, v:1, k:ed@treinando, mode:FULL, size:97, fail:COMP
+2026-06-04 16:08:11, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:96
+2026-06-04 16:08:10, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-06-04 16:08:10, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-06-04 16:08:11, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-06-04 16:20:21, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-06-04 16:20:21, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-06-04 16:25:50, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-06-04 16:25:50, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-06-04 16:27:27, EXEC, v:1, k:ed@treinando, mode:FULL, size:102, fail:COMP
+2026-06-04 16:28:48, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-06-04 16:29:01, SELF, v:1, k:ed@fractais_png, self:1, rate:100
+2026-06-04 16:29:06, SELF, v:1, k:ed@fractais_png, self:1
+2026-06-04 16:28:45, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-06-04 16:28:45, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-06-04 16:40:40, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-06-04 16:40:42, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-06-04 16:40:43, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-06-04 16:40:43, EXEC, v:1, k:ed@treinando, mode:FULL, size:110, fail:COMP
+2026-06-04 16:40:38, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-06-04 16:40:38, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-06-04 16:43:56, EXEC, v:1, k:ed@treinando, mode:FULL, size:110, fail:COMP
+2026-06-04 16:43:57, EXEC, v:1, k:ed@treinando, mode:FULL, fail:COMP
+2026-06-04 16:43:57, EXEC, v:1, k:ed@treinando, mode:FULL, fail:COMP
+2026-06-04 16:43:59, EXEC, v:1, k:ed@treinando, mode:FULL, fail:COMP
+2026-06-04 16:43:59, EXEC, v:1, k:ed@treinando, mode:FULL, fail:COMP
+2026-06-04 16:44:42, EXEC, v:1, k:ed@treinando, mode:FULL, rate:16, size:108
+2026-06-04 16:44:41, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-06-04 16:44:41, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-06-04 16:44:42, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-06-04 16:48:42, EXEC, v:1, k:ed@treinando, mode:FULL, rate:16, size:119
+2026-06-04 16:48:49, EXEC, v:1, k:ed@treinando, mode:FULL, rate:16, size:119
+2026-06-04 16:49:58, EXEC, v:1, k:ed@treinando, mode:FULL, rate:33, size:119
+2026-06-04 16:49:57, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-06-04 16:49:57, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-06-04 16:49:58, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-06-04 16:55:17, EXEC, v:1, k:ed@treinando, mode:FULL, rate:33, size:128
+2026-06-04 16:56:08, EXEC, v:1, k:ed@treinando, mode:FULL, rate:33
+2026-06-04 16:56:06, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-06-04 16:56:06, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-06-04 16:56:08, MOVE, v:1, k:ed@treinando, mode:EDIT

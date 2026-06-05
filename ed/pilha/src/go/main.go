@@ -14,7 +14,7 @@ type Stack[T any] struct {
 
 func NewStack[T any](cap int) *Stack[T] {
 	return &Stack[T]{
-		make([]T, cap),
+		make([]T, 0, cap),
 	}
 }
 
@@ -27,7 +27,7 @@ func (s *Stack[T]) Pop() error {
 		return fmt.Errorf("stack is empty")
 	}
 
-	s.data = s.data[1:]
+	s.data = s.data[:len(s.data)-1]
 	return nil
 }
 
@@ -37,7 +37,7 @@ func (s *Stack[T]) Peek() (T, error) {
 		return zero, fmt.Errorf("stack is empty")
 	}
 
-	return s.data[len(s.data)], nil
+	return s.data[len(s.data)-1], nil
 }
 
 func (s *Stack[T]) IsEmpty() bool {
@@ -49,7 +49,7 @@ func (s *Stack[T]) Size() int {
 }
 
 func (s *Stack[T]) Clear() {
-	clear(s.data)
+	s.data = s.data[:0]
 }
 
 func (s *Stack[T]) String() string {
