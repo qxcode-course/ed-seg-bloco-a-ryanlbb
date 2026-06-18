@@ -1,0 +1,79 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-08_14-24-39",
+            "content": "@@ -254,13 +254,9 @@\n n)%0A%09\n-fmt.P\n+p\n rint\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-06-08_14-25-20",
+            "content": "@@ -129,16 +129,17 @@\n %5Bj%5D == '\n+z\n ' %7B%0A%09%09%09%7D\n@@ -271,14 +271,8 @@\n oard\n-%5B0%5D%5B0%5D\n )%0A%09q\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-06-08_14-25-52",
+            "content": "@@ -133,9 +133,8 @@\n == '\n-1\n ' %7B%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-06-08_14-26-01",
+            "content": "@@ -59,19 +59,8 @@\n t %7B%0A\n-%09cont := 0%0A\n %09for\n@@ -133,66 +133,13 @@\n == '\n-F\n+1\n ' %7B%0A\n-%09%09%09%09board%5Bi%5D%5Bj%5D = 'Q'%0A%09%09%09%09invalidatePos(board, i, j)%0A\n %09%09%09%7D\n@@ -159,12 +159,9 @@\n urn \n-cont\n+0\n %0A%7D%0A%0A\n@@ -169,540 +169,117 @@\n unc \n-invalidatePos(board %5B%5D%5B%5Drune, i, j int) %7B%0A%09if i %3C 0 %7C%7C j %3C 0 %7C%7C i %3E= len(board) %7C%7C j %3E= len(board%5B0%5D) %7B%0A%09%09return%0A%09%7D%0A%09board%5Bi%5D%5Bj%5D = '#'%0A%09invalidatePos(board, i+1, j)%0A%09invalidatePos(board, i-1, j)%0A%09invalidatePos(board, i, j+1)%0A%09invalidatePos(board, i, j-1)%0A%09invalidatePos(board, i+1, j+1)%0A%09invalidatePos(board, i-1, j-1)%0A%09invalidatePos(board, i+1, j-1)%0A%09invalidatePos(board, i-1, j+1)%0A%7D%0A%0Afunc main() %7B%0A%09var n int%0A%09fmt.Scan(&n)%0A%09board := make(%5B%5D%5B%5Drune, n)%0A%09for i := range board %7B%0A%09%09for j := range board%5Bi%5D %7B%0A%09%09%09board%5Bi%5D%5Bj%5D = 'F'%0A%09%09%7D%0A%09%7D\n+putQueens() %7B%0A%7D%0A%0Afunc main() %7B%0A%09var n int%0A%09fmt.Scan(&n)%0A%09board := make(%5B%5D%5B%5Drune, n)%0A%09fmt.Println(board%5B0%5D%5B0%5D)\n %0A%09qu\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-06-08_14-34-40",
+            "content": "@@ -337,30 +337,8 @@\n %5B0%5D)\n- %7C%7C board%5Bi%5D%5Bj%5D == '#'\n  %7B%0A%09\n@@ -348,17 +348,16 @@\n turn%0A%09%7D%0A\n-%0A\n %09board%5Bi\n@@ -367,17 +367,16 @@\n %5D = '#'%0A\n-%0A\n %09invalid\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-06-08_14-35-16",
+            "content": "@@ -202,19 +202,8 @@\n  j)%0A\n-%09%09%09%09cont++%0A\n %09%09%09%7D\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-06-08_14-35-42",
+            "content": "@@ -805,20 +805,8 @@\n %09%7D%0A%09\n-fmt.Println(\n quee\n@@ -814,13 +814,12 @@\n s(board)\n-)\n %0A%7D%0A%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-06-08_14-36-06",
+            "content": "@@ -804,28 +804,8 @@\n %0A%09%7D%0A\n-%09fmt.Println(board)%0A\n %09fmt\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-06-08_14-37-25",
+            "content": "@@ -202,52 +202,8 @@\n  j)%0A\n-%09%09%09%09invalidateDiagonalPos(board, i+1, j+1)%0A%0A\n %09%09%09%09\n@@ -209,16 +209,16 @@\n %09cont++%0A\n+\n %09%09%09%7D%0A%09%09%7D\n@@ -526,183 +526,8 @@\n -1)%0A\n-%7D%0A%0Afunc invalidateDiagonalPos(board %5B%5D%5B%5Drune, i, j int) %7B%0A%09if i %3C 0 %7C%7C j %3C 0 %7C%7C i %3E= len(board) %7C%7C j %3E= len(board%5B0%5D) %7C%7C board%5Bi%5D%5Bj%5D == '#' %7B%0A%09%09return%0A%09%7D%0A%0A%09board%5Bi%5D%5Bj%5D = '#'%0A%0A\n %09inv\n@@ -529,32 +529,24 @@\n %0A%09invalidate\n-Diagonal\n Pos(board, i\n@@ -561,32 +561,24 @@\n %0A%09invalidate\n-Diagonal\n Pos(board, i\n@@ -593,32 +593,24 @@\n %0A%09invalidate\n-Diagonal\n Pos(board, i\n@@ -633,16 +633,8 @@\n date\n-Diagonal\n Pos(\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-08_14-41-58",
+            "content": "@@ -1073,14 +1073,8 @@\n oard\n-%5B0%5D%5B0%5D\n )%0A%09f\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-08_14-42-18",
+            "content": "@@ -975,65 +975,8 @@\n  n)%0A\n-%09for i := range board %7B%0A%09%09board%5Bi%5D = make(%5B%5Drune, n)%0A%09%7D%0A%0A\n %09for\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-08_14-46-40",
+            "content": "@@ -1108,16 +1108,41 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%09fmt.Println(board%5B0%5D%5B0%5D)\n %0A%09fmt.Pr\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-06-08_14-46-59",
+            "content": "@@ -206,33 +206,58 @@\n %09%09%09%09\n-cont++%0A%09%09%09%09println(board)\n+invalidateDiagonalPos(board, i+1, j+1)%0A%0A%09%09%09%09cont++\n %0A%09%09%09\n@@ -536,16 +536,16 @@\n i, j+1)%0A\n-\n %09invalid\n@@ -565,24 +565,359 @@\n  i, j-1)%0A%7D%0A%0A\n+func invalidateDiagonalPos(board %5B%5D%5B%5Drune, i, j int) %7B%0A%09if i %3C 0 %7C%7C j %3C 0 %7C%7C i %3E= len(board) %7C%7C j %3E= len(board%5B0%5D) %7C%7C board%5Bi%5D%5Bj%5D == '#' %7B%0A%09%09return%0A%09%7D%0A%0A%09board%5Bi%5D%5Bj%5D = '#'%0A%0A%09invalidateDiagonalPos(board, i+1, j+1)%0A%09invalidateDiagonalPos(board, i-1, j-1)%0A%09invalidateDiagonalPos(board, i+1, j-1)%0A%09invalidateDiagonalPos(board, i-1, j+1)%0A%7D%0A%0A\n func main() \n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-06-08_14-47-53",
+            "content": "@@ -752,27 +752,8 @@\n %0A%09%7D%0A\n-%09fmt.Println(board)\n %0A%09fm\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-06-08_14-48-17",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc queens(board [][]rune) int {\n\tcont := 0\n\tfor i := range board {\n\t\tfor j := range board[i] {\n\t\t\tif board[i][j] == 'F' {\n\t\t\t\tboard[i][j] = 'Q'\n\t\t\t\tinvalidatePos(board, i, j)\n\t\t\t\tcont++\n\t\t\t\tprintln(board)\n\t\t\t}\n\t\t}\n\t}\n\n\treturn cont\n}\n\nfunc invalidatePos(board [][]rune, i, j int) {\n\tif i < 0 || j < 0 || i >= len(board) || j >= len(board[0]) || board[i][j] == '#' {\n\t\treturn\n\t}\n\n\tboard[i][j] = '#'\n\n\tinvalidatePos(board, i+1, j)\n\tinvalidatePos(board, i-1, j)\n\tinvalidatePos(board, i, j+1)\n\tinvalidatePos(board, i, j-1)\n}\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\tboard := make([][]rune, n)\n\tfor i := range board {\n\t\tboard[i] = make([]rune, n)\n\t}\n\n\tfor i := range board {\n\t\tfor j := range board[i] {\n\t\t\tboard[i][j] = 'F'\n\t\t}\n\t}\n\tfmt.Println(board)\n\tfmt.Println(queens(board))\n}\n\n",
+            "lines": "50"
+        }
+    ]
+}

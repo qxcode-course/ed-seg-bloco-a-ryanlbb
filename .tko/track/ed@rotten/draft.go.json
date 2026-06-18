@@ -2,8 +2,198 @@
     "patches": [
         {
             "label": "2026-05-20_16-33-26",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar m, n int\n\tfmt.Scan(&m, &n)\n\tapple := make([][]int, m)\n\n\tfor i := range m {\n\t\tfor j := range n {\n\t\t\tfmt.Scan(&apple[i][j])\n\t\t}\n\t}\n}\n",
+            "content": "@@ -172,28 +172,7 @@\n %7D%0A%09%7D\n-%0A%0A%09fmt.Println(apple)\n %0A%7D%0A\n",
             "lines": "15"
+        },
+        {
+            "label": "2026-06-09_19-13-41",
+            "content": "@@ -100,17 +100,17 @@\n )%0A%0A%09for \n-l\n+i\n  := rang\n@@ -115,43 +115,62 @@\n nge \n-apple\n+m %7B%0A%09%09for j := range n\n  %7B%0A%09%09\n+%09\n-apple%5Bl%5D = make(%5B%5Dint, n)\n+fmt.Scan(&apple%5Bi%5D%5Bj%5D)%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-06-09_19-15-10",
+            "content": "@@ -155,93 +155,8 @@\n %09%7D%0A%0A\n-%09for l := range apple %7B%0A%09%09for c := range apple%5Bl%5D %7B%0A%09%09%09fmt.Scan(&apple%5Bl%5D%5Bc%5D)%0A%09%09%7D%0A%09%7D%0A\n %09fmt\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-06-09_19-15-53",
+            "content": "@@ -1,67 +1,90 @@\n-package main%0A%0Aimport %22fmt%22%0A%0Atype Pos struct %7B%0A%09x int%0A%09y int%0A%7D%0A%0A\n+@@ -25,278 +25,8 @@%0A t%2522%250A%250A%0A-type Pos struct %257B%250A%2509x int%250A%2509y int%250A%257D%250A%250A\n func\n@@ -96,20 +96,28 @@\n en(grid \n-%5B%5D%5B%5D\n+%255B%255D%255B%255D\n int, l, \n@@ -127,19 +127,25 @@\n nt) int \n-%7B%0A%09\n+%257B%250A%2509\n cont := \n@@ -145,18 +145,22 @@\n ont := 0\n-%0A%09\n+%250A%2509\n spread :\n@@ -165,17 +165,29 @@\n  := \n-%5B%5DPos%7B%7D%0A%09\n+%255B%255DPos%257B%257D%250A%2509\n for \n@@ -202,20 +202,28 @@\n ge grid \n-%7B%0A%09%09\n+%257B%250A%2509%2509\n for c :=\n@@ -237,42 +237,76 @@\n grid\n-%5Bl%5D %7B%0A%09%09%09if grid%5Bl%5D%5Bc%5D == 2 %7B%0A%09%09%09%09\n+%255Bl%255D %257B%250A%2509%2509%2509if grid%255Bl%255D%255Bc%255D == 2 %257B%250A%2509%2509%2509%2509\n spre\n@@ -332,30 +332,64 @@\n  Pos\n-%7B\n+%257B\n l, c\n-%7D)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09\n+%257D)%250A%2509%2509%2509%257D%250A%2509%2509%257D%250A%2509%257D%250A%250A%2509\n fmt.\n@@ -403,18 +403,22 @@\n (spread)\n-%0A%09\n+%250A%2509\n return c\n@@ -424,261 +424,427 @@\n cont\n-%0A%7D%0A%0Afunc main() %7B%0A%09var m, n int%0A%09fmt.Scan(&m, &n)%0A%09apples := make(%5B%5D%5B%5Dint, m)%0A%0A%09for l := range apples %7B%0A%09%09apples%5Bl%5D = make(%5B%5Dint, n)%0A%09%7D%0A%0A%09for l := range apples %7B%0A%09%09for c := range apples%5Bl%5D %7B%0A%09%09%09fmt.Scan(&apples%5Bl%5D%5Bc%5D)%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Prin\n+%250A%257D%250A%250A%0A func%0A@@ -73,17 +73,16 @@%0A )%250A%2509apple%0A-s%0A  := make%0A@@ -122,25 +122,24 @@%0A le %257B%250A%2509%2509apple%0A-s%0A %255Bl%255D = make(%255B%0A@@ -172,17 +172,16 @@%0A ge apple%0A-s%0A  %257B%250A%2509%2509for%0A@@ -197,17 +197,16 @@%0A ge apple%0A-s%0A %255Bl%255D %257B%250A%2509%2509%0A@@ -221,17 +221,16 @@%0A n(&apple%0A-s%0A %255Bl%255D%255Bc%255D)%250A%0A@@ -236,17 +236,16 @@%0A %250A%2509%2509%257D%250A%2509%257D%250A%0A-%250A%0A %2509fmt.Pri%0A@@ -253,22 +253,13 @@%0A \n tln(\n+%0A-\n rotten(\n+%0A \n apple\n-s))%0A%7D\n+%0A-s)%0A )%250A%257D%250A\n %0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-06-09_19-24-34",
+            "content": "@@ -77,16 +77,26 @@\n rid %5B%5D%5B%5D\n+int, l, c \n int) int\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-06-09_19-24-51",
+            "content": "@@ -93,24 +93,25 @@\n  %7B%0A%09\n-time\n+cont\n  := 0%0A%09\n-queue\n+spread\n  := \n@@ -196,21 +196,22 @@\n 2 %7B%0A%09%09%09%09\n-queue\n+spread\n  = appen\n@@ -212,21 +212,22 @@\n  append(\n-queue\n+spread\n , Pos%7Bl,\n@@ -248,113 +248,8 @@\n %09%7D%0A%0A\n-%09for len(queue) %3E 0 %7B%0A%09%09oldPos := queue%5B0%5D%0A%09%09queue = queue%5B1:%5D%0A%09%09if len(queue) == 0 %7B%0A%09%09%09time++%0A%09%09%7D%0A%0A%09%7D%0A%0A\n %09fmt\n@@ -257,19 +257,21 @@\n Println(\n-gri\n+sprea\n d)%0A%09retu\n@@ -273,17 +273,20 @@\n %09return \n-0\n+cont\n %0A%7D%0A%0Afunc\n@@ -328,21 +328,20 @@\n m, &n)%0A%09\n-orang\n+appl\n es := ma\n@@ -376,25 +376,23 @@\n nge \n-orang\n+appl\n es %7B%0A%09%09\n-orang\n+appl\n es%5Bl\n@@ -430,21 +430,20 @@\n = range \n-orang\n+appl\n es %7B%0A%09%09f\n@@ -456,21 +456,20 @@\n = range \n-orang\n+appl\n es%5Bl%5D %7B%0A\n@@ -481,21 +481,20 @@\n t.Scan(&\n-orang\n+appl\n es%5Bl%5D%5Bc%5D\n@@ -527,13 +527,12 @@\n ten(\n-orang\n+appl\n es))\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-06-10_13-47-28",
+            "content": "@@ -269,11 +269,8 @@\n %7B%0A%09%09\n-// \n oldP\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-06-10_13-47-36",
+            "content": "@@ -362,21 +362,20 @@\n Println(\n-queue\n+grid\n )%0A%09retur\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-06-10_13-47-51",
+            "content": "@@ -627,17 +627,8 @@\n tln(\n-oranges, \n rott\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-06-10_13-49-44",
+            "content": "@@ -195,30 +195,8 @@\n 2 %7B%0A\n-%09%09%09%09fmt.Println(l, c)%0A\n %09%09%09%09\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-06-10_13-50-46",
+            "content": "@@ -113,22 +113,15 @@\n  := \n-make(\n %5B%5DPos\n-, 0)\n+%7B%7D\n %0A%09fo\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-10_13-51-45",
+            "content": "@@ -1,696 +1,122 @@\n-package main%0A%0Aimport %22fmt%22%0A%0Atype Pos struct %7B%0A%09x int%0A%09y int%0A%7D%0A%0Afunc rotten(grid %5B%5D%5B%5Dint) int %7B%0A%09time := 0%0A%09queue := %5B%5DPos%7B%7D%0A%09for l := range grid %7B%0A%09%09for c := range grid%5Bl%5D %7B%0A%09%09%09if grid%5Bl%5D%5Bc%5D == 2 %7B%0A%09%09%09%09fmt.Println(%22Achou %22, l, c)%0A%09%09%09%09queue = append(queue, Pos%7Bx: l, y: c%7D)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09for len(queue) %3E 0 %7B%0A%09%09// oldPos := queue%5B0%5D%0A%09%09queue = queue%5B1:%5D%0A%09%09if len(queue) == 0 %7B%0A%09%09%09time++%0A%09%09%7D%0A%0A%09%7D%0A%0A%09fmt.Println(queue)%0A%09return 0%0A%7D%0A%0Afunc main() %7B%0A%09var m, n int%0A%09fmt.Scan(&m, &n)%0A%09oranges := make(%5B%5D%5B%5Dint, m)%0A%0A%09for l := range oranges %7B%0A%09%09oranges%5Bl%5D = make(%5B%5Dint, n)%0A%09%7D%0A%0A%09for l := range oranges %7B%0A%09%09for c := range oranges%5Bl%5D %7B%0A%09%09%09fmt.Scan(&oranges%5Bl%5D%5Bc%5D)%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Println(oranges, rotten(oranges))%0A%7D\n+@@ -113,15 +113,22 @@%0A  := %0A+make(%0A %255B%255DPos%0A-%257B%257D%0A+, 0)%0A %250A%2509fo%0A@@ -254,16 +254,10 @@%0A Pos%257B%0A-x: l, y:%0A+l,%0A  c%257D)\n %0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-06-10_13-55-07",
+            "content": "@@ -213,16 +213,17 @@\n n(%22Achou\n+ \n %22, l, c)\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-10_13-55-11",
+            "content": "@@ -256,55 +256,19 @@\n Pos%7B\n-l, c%7D)%0A%09%09%09%09fmt.Println(%22Fila atualmente%22, queue\n+x: l, y: c%7D\n )%0A%09%09\n@@ -386,16 +386,36 @@\n %09%7D%0A%0A%09%7D%0A%0A\n+%09fmt.Println(queue)%0A\n %09return \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-10_13-56-02",
+            "content": "@@ -585,21 +585,21 @@\n  := \n-0; l %3C m; l++\n+range oranges\n  %7B%0A%09\n@@ -612,21 +612,24 @@\n  := \n-0; c %3C n; c++\n+range oranges%5Bl%5D\n  %7B%0A%09\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-10_14-13-34",
+            "content": "@@ -517,37 +517,37 @@\n %0A%0A%09for l := \n-0; l %3C m; l++\n+range oranges\n  %7B%0A%09%09oranges\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-10_14-13-54",
+            "content": "@@ -467,27 +467,8 @@\n int%0A\n-%09fmt.Println(m, n)%0A\n %09fmt\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-10_14-14-10",
+            "content": "@@ -472,26 +472,27 @@\n fmt.\n-Sca\n+Printl\n n(\n-&\n m, \n-&\n n)%0A%09fmt.\n Prin\n@@ -483,35 +483,34 @@\n (m, n)%0A%09fmt.\n-Printl\n+Sca\n n(\n+&\n m, \n+&\n n)%0A%09oranges \n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-06-10_14-14-17",
+            "content": "@@ -191,16 +191,47 @@\n  == 2 %7B%0A\n+%09%09%09%09fmt.Println(%22Achou%22, l, c)%0A\n %09%09%09%09queu\n@@ -259,16 +259,58 @@\n %7Bl, c%7D)%0A\n+%09%09%09%09fmt.Println(%22Fila atualmente%22, queue)%0A\n %09%09%09%7D%0A%09%09%7D\n@@ -481,16 +481,35 @@\n &m, &n)%0A\n+%09fmt.Println(m, n)%0A\n %09oranges\n@@ -536,37 +536,37 @@\n %0A%0A%09for l := \n-range oranges\n+0; l %3C m; l++\n  %7B%0A%09%09oranges\n@@ -600,29 +600,29 @@\n or l := \n-range oranges\n+0; l %3C m; l++\n  %7B%0A%09%09for\n@@ -631,24 +631,21 @@\n  := \n-range oranges%5Bl%5D\n+0; c %3C n; c++\n  %7B%0A%09\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-06-10_14-16-14",
+            "content": "@@ -60,197 +60,8 @@\n %0A%7D%0A%0A\n-func isOrange(grid %5B%5D%5B%5Dint, p Pos) bool %7B%0A%09if p.x %3C 0 %7C%7C p.y %3C 0 %7C%7C p.x %3E= len(grid) %7C%7C p.y %3E= len(grid%5B0%5D) %7B%0A%09%09return false%0A%09%7D%0A%09if grid%5Bp.x%5D%5Bp.y%5D != 2 %7B%0A%09%09return false%0A%09%7D%0A%0A%09return true%0A%7D%0A%0A\n func\n@@ -245,29 +245,8 @@\n %09%7D%0A%0A\n-%09batch := len(queue)%0A\n %09for\n@@ -269,63 +269,11 @@\n %7B%0A%09%09\n-if batch %3C= 0 %7B%0A%09%09%09time++%0A%09%09%09batch = len(queue)%0A%09%09%7D%0A%0A%09%09\n+// \n oldP\n@@ -311,421 +311,45 @@\n 1:%5D%0A\n-%0A\n %09%09\n-up := Pos%7BoldPos.x, oldPos.y + 1%7D%0A%09%09down := Pos%7BoldPos.x, oldPos.y - 1%7D%0A%09%09right := Pos%7BoldPos.x + 1, oldPos.y%7D%0A%09%09left := Pos%7BoldPos.x - 1, oldPos.y%7D%0A%0A%09%09if isOrange(grid, up) %7B%0A%09%09%09queue = app\n+if l\n en\n-d\n (queue\n-, up)%0A%09%09%7D%0A%09%09if isOrange(grid, down) %7B%0A%09%09%09queue = append(queue, down)%0A%09%09%7D%0A%09%09if isOrange(grid, right) %7B%0A%09%09%09queue = append(queue, right)%0A%09%09%7D%0A%09%09if isOrange(grid, left) %7B%0A%09%09%09queue = append(queue, left)%0A%09%09%7D%0A%0A%09%09batch--\n+) == 0 %7B%0A%09%09%09time++%0A%09%09%7D%0A\n %0A%09%7D%0A\n@@ -357,20 +357,17 @@\n %09return \n-time\n+0\n %0A%7D%0A%0Afunc\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-10_16-32-46",
+            "content": "@@ -977,36 +977,8 @@\n %09%7D%0A%0A\n-%09%09fmt.Println(%22lote atual%22)%0A\n %09%09ba\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-06-10_16-35-31",
+            "content": "@@ -1003,15 +1003,8 @@\n ual%22\n-, batch\n )%0A%09%09\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-06-10_16-35-40",
+            "content": "@@ -1279,16 +1279,25 @@\n Println(\n+oranges, \n rotten(o\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-06-10_16-36-17",
+            "content": "@@ -203,17 +203,17 @@\n x%5D%5Bp.y%5D \n-=\n+!\n = 2 %7B%0A%09%09\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-06-10_16-37-53",
+            "content": "@@ -206,17 +206,17 @@\n p.y%5D == \n-1\n+2\n  %7B%0A%09%09ret\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-06-10_16-37-59",
+            "content": "@@ -532,43 +532,8 @@\n %09%7D%0A%0A\n-%09%09grid%5Bqueue%5B0%5D.x%5D%5Bqueue%5B0%5D.y%5D = 2%0A\n %09%09ol\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-06-10_16-39-17",
+            "content": "@@ -456,21 +456,26 @@\n e)%0A%09for \n-batch\n+len(queue)\n  %3E 0 %7B%0A%09\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-06-10_16-41-56",
+            "content": "@@ -523,16 +523,51 @@\n e)%0A%09%09%7D%0A%0A\n+%09%09grid%5Bqueue%5B0%5D.x%5D%5Bqueue%5B0%5D.y%5D = 2%0A\n %09%09oldPos\n@@ -604,82 +604,8 @@\n :%5D%0A%0A\n-%09%09if grid%5BoldPos.x%5D%5BoldPos.y%5D == 1 %7B%0A%09%09%09grid%5BoldPos.x%5D%5BoldPos.y%5D = 2%0A%09%09%7D%0A%0A\n %09%09up\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-06-10_16-43-32",
+            "content": "@@ -641,28 +641,8 @@\n %0A%09%09%7D\n-%0A%09%09fmt.Println(grid)\n %0A%0A%09%09\n",
+            "lines": "87"
+        },
+        {
+            "label": "2026-06-10_16-43-48",
+            "content": "@@ -455,16 +455,67 @@\n ue)%0A%09for\n+ batch %3E 0 %7B%0A%09%09if batch %3C= 0 %7B%0A%09%09%09time++%0A%09%09%09batch =\n  len(que\n@@ -517,22 +517,20 @@\n n(queue)\n- %3E 0 %7B\n+%0A%09%09%7D\n %0A%0A%09%09oldP\n@@ -633,24 +633,44 @@\n s.y%5D = 2%0A%09%09%7D\n+%0A%09%09fmt.Println(grid)\n %0A%0A%09%09up := Po\n@@ -841,32 +841,8 @@\n ) %7B%0A\n-%09%09%09grid%5Bup.x%5D%5Bup.y%5D = 2%0A\n %09%09%09q\n@@ -902,36 +902,8 @@\n ) %7B%0A\n-%09%09%09grid%5Bdown.x%5D%5Bdown.y%5D = 2%0A\n %09%09%09q\n@@ -966,38 +966,8 @@\n ) %7B%0A\n-%09%09%09grid%5Bright.x%5D%5Bright.y%5D = 2%0A\n %09%09%09q\n@@ -1030,36 +1030,8 @@\n ) %7B%0A\n-%09%09%09grid%5Bleft.x%5D%5Bleft.y%5D = 2%0A\n %09%09%09q\n@@ -1068,69 +1068,50 @@\n %0A%0A%09%09\n-batch--%0A%09%09if batch == 0 %7B%0A%09%09%09time++%0A%09%09%09batch = len(queue)%0A%09%09%7D\n+fmt.Println(%22lote atual%22, batch)%0A%09%09batch--\n %0A%09%7D%0A\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-06-10_16-52-30",
+            "content": "@@ -516,16 +516,90 @@\n ue%5B1:%5D%0A%0A\n+%09%09if grid%5BoldPos.x%5D%5BoldPos.y%5D == 1 %7B%0A%09%09%09grid%5BoldPos.x%5D%5BoldPos.y%5D = 2%0A%09%09%7D%0A%0A\n %09%09up := \n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-06-10_16-52-59",
+            "content": "@@ -207,9 +207,9 @@\n .y%5D \n-!\n+=\n = 1 \n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-06-10_16-53-30",
+            "content": "@@ -1056,26 +1056,8 @@\n h ==\n- 0 && len(queue) %3E\n  0 %7B\n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-06-10_16-56-17",
+            "content": "@@ -290,10 +290,9 @@\n  := \n--1\n+0\n %0A%09qu\n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-06-10_16-56-28",
+            "content": "@@ -18,18 +18,13 @@\n ort \n-(%0A%09\n %22fmt%22\n-%0A)\n %0A%0Aty\n@@ -1120,109 +1120,8 @@\n %09%7D%0A%0A\n-%09for l := range grid %7B%0A%09%09for c := range grid%5Bl%5D %7B%0A%09%09%09if grid%5Bl%5D%5Bc%5D == 1 %7B%0A%09%09%09%09return -1%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A\n %09ret\n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-06-10_17-05-08",
+            "content": "@@ -291,17 +291,18 @@\n time := \n-0\n+-1\n %0A%09queue \n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-06-10_17-05-16",
+            "content": "@@ -297,21 +297,8 @@\n = 0%0A\n-%09apples := 0%0A\n %09que\n@@ -311,16 +311,16 @@\n %5B%5DPos%7B%7D%0A\n+\n %09for l :\n@@ -431,50 +431,8 @@\n %09%09%7D%0A\n-%09%09%09if grid%5Bl%5D%5Bc%5D == 1 %7B%0A%09%09%09%09apples++%0A%09%09%09%7D%0A\n %09%09%7D%0A\n@@ -500,16 +500,16 @@\n ueue%5B0%5D%0A\n+\n %09%09queue \n@@ -523,19 +523,8 @@\n %5B1:%5D\n-%0A%09%09apples--\n %0A%0A%09%09\n@@ -1125,24 +1125,83 @@\n %7D%0A%0A%09\n-if apples %3E 0\n+for l := range grid %7B%0A%09%09for c := range grid%5Bl%5D %7B%0A%09%09%09if grid%5Bl%5D%5Bc%5D == 1\n  %7B%0A\n+%09%09\n %09%09re\n@@ -1209,17 +1209,27 @@\n urn -1%0A%09\n-%7D\n+%09%09%7D%0A%09%09%7D%0A%09%7D%0A\n %0A%09return\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-06-10_21-31-57",
+            "content": "@@ -1198,17 +1198,16 @@\n apples %3E\n-=\n  0 %7B%0A%09%09r\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-06-10_21-32-08",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\ntype Pos struct {\n\tx int\n\ty int\n}\n\nfunc isOrange(grid [][]int, p Pos) bool {\n\tif p.x < 0 || p.y < 0 || p.x >= len(grid) || p.y >= len(grid[0]) {\n\t\treturn false\n\t}\n\tif grid[p.x][p.y] != 1 {\n\t\treturn false\n\t}\n\n\treturn true\n}\n\nfunc rotten(grid [][]int) int {\n\ttime := 0\n\tapples := 0\n\tqueue := []Pos{}\n\tfor l := range grid {\n\t\tfor c := range grid[l] {\n\t\t\tif grid[l][c] == 2 {\n\t\t\t\tqueue = append(queue, Pos{l, c})\n\t\t\t}\n\t\t\tif grid[l][c] == 1 {\n\t\t\t\tapples++\n\t\t\t}\n\t\t}\n\t}\n\n\tbatch := len(queue)\n\tfor len(queue) > 0 {\n\n\t\toldPos := queue[0]\n\t\tqueue = queue[1:]\n\t\tapples--\n\n\t\tup := Pos{oldPos.x, oldPos.y + 1}\n\t\tdown := Pos{oldPos.x, oldPos.y - 1}\n\t\tright := Pos{oldPos.x + 1, oldPos.y}\n\t\tleft := Pos{oldPos.x - 1, oldPos.y}\n\n\t\tif isOrange(grid, up) {\n\t\t\tgrid[up.x][up.y] = 2\n\t\t\tqueue = append(queue, up)\n\t\t}\n\t\tif isOrange(grid, down) {\n\t\t\tgrid[down.x][down.y] = 2\n\t\t\tqueue = append(queue, down)\n\t\t}\n\t\tif isOrange(grid, right) {\n\t\t\tgrid[right.x][right.y] = 2\n\t\t\tqueue = append(queue, right)\n\t\t}\n\t\tif isOrange(grid, left) {\n\t\t\tgrid[left.x][left.y] = 2\n\t\t\tqueue = append(queue, left)\n\t\t}\n\n\t\tbatch--\n\t\tif batch == 0 && len(queue) > 0 {\n\t\t\ttime++\n\t\t\tbatch = len(queue)\n\t\t}\n\t}\n\n\tif apples >= 0 {\n\t\treturn -1\n\t}\n\treturn time\n}\n\nfunc main() {\n\tvar m, n int\n\tfmt.Scan(&m, &n)\n\toranges := make([][]int, m)\n\n\tfor l := range oranges {\n\t\toranges[l] = make([]int, n)\n\t}\n\n\tfor l := range oranges {\n\t\tfor c := range oranges[l] {\n\t\t\tfmt.Scan(&oranges[l][c])\n\t\t}\n\t}\n\n\tfmt.Println(rotten(oranges))\n}\n",
+            "lines": "96"
         }
     ]
 }

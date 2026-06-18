@@ -57,7 +57,7 @@ func (l *LList[T]) String() string {
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
-	// 	ll := NewLList[int]()
+	ll := NewLList[int]()
 
 	for {
 		fmt.Print("$")
@@ -76,7 +76,7 @@ func main() {
 
 		switch cmd {
 		case "show":
-			// fmt.Println(ll.String())
+			fmt.Println(ll.String())
 		case "size":
 			// fmt.Println(ll.Size())
 		case "push_back":

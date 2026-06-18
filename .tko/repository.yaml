@@ -19,13 +19,15 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@linear
+- ed@bfs
 flags:
   inbox: all
-  panel: graph
-  show_panel: 'true'
+  panel: skills
   task_graph_mode: executions
   show_time: 'true'
+audit:
+  enabled: false
+  interval_seconds: null
 lang: go
-selected: ed@caminhao
-selected_index: 13
+selected: ed@detonate
+selected_index: 12

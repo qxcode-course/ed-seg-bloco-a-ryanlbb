@@ -22,7 +22,7 @@ func getMen(vet []int) []int {
 func getCalmWomen(vet []int) []int {
 	calmWomen := make([]int, 0)
 	for _, v := range vet {
-		if v < 0  && v > -10 {
+		if v < 0 && v > -10 {
 			calmWomen = append(calmWomen, v)
 		}
 	}
@@ -35,10 +35,21 @@ func sortVet(vet []int) []int {
 }
 
 func sortStress(vet []int) []int {
-	stressAbs := make([]int, len(vet))
-	
-	return stressAbs
-	
+	ordenada := make([]int, len(vet))
+	copy(ordenada, vet)
+	sort.Slice(ordenada, func(i, j int) bool {
+		vi := ordenada[i]
+		vj := ordenada[j]
+		if vi < 0 {
+			vi = -vi
+		}
+		if vj < 0 {
+			vj = -vj
+		}
+		return vi < vj
+	})
+
+	return ordenada
 }
 
 func reverse(vet []int) []int {
@@ -136,4 +147,3 @@ func str2vet(s string) []int {
 	}
 	return vet
 }
-

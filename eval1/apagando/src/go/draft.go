@@ -1,5 +1,7 @@
 package main
+
 import "fmt"
+
 func main() {
 	var nVet, nApagando int
 	fmt.Scan(&nVet)

@@ -2,23 +2,33 @@ package main
 
 import (
 	"fmt"
-	"strings"
 )
 
 // mostra a lista com o elemento sword destacado
 func ToStr(l *DList[int], sword *DNode[int]) string {
-	return ""
+	str := "[ "
+	for node := l.root.next; node != l.root; node = node.next {
+		str += fmt.Sprint(node.Value)
+		if node == sword {
+			str += ">"
+		}
+		str += " "
+	}
+	return str + "]"
 }
 
 // move para frente na lista circular
 func Next(l *DList[int], it *DNode[int]) *DNode[int] {
-	return nil
+	if it.next == l.root {
+		return l.root.next
+	}
+
+	return it.next
 }
 
 func main() {
 	var qtd, chosen int
 	fmt.Scan(&qtd, &chosen)
-	fmt.Println(qtd, chosen)
 	l := NewDList[int]()
 	for i := 1; i <= qtd; i++ {
 		l.PushBack(i)
