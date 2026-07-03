@@ -142,8 +142,58 @@
         },
         {
             "label": "2026-06-09_10-08-40",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar totalFig, nBaruelFig int\n\tfmt.Scan(&totalFig)\n\tfigs := make([]int, totalFig)\n\tfigsBaruel := make(map[int]int)\n\trepetidas := make([]int, 0)\n\n\t// todas as fig\n\tfor i := range totalFig {\n\t\tfigs[i] = i + 1\n\t}\n\n\tfmt.Scan(&nBaruelFig)\n\n\t// fig que o caba tem\n\tfor range nBaruelFig {\n\t\tvar a int\n\t\tfmt.Scan(&a)\n\t\tfigsBaruel[a]++\n\n\t\tif figsBaruel[a] > 1 {\n\t\t\trepetidas = append(repetidas, a)\n\t\t}\n\t}\n\n\tfaltas := 0\n\tfor i, v := range figs {\n\t\tif figsBaruel[v] > 0 {\n\t\t\tfigs[i] = 0\n\t\t}\n\t}\n\n\tif len(repetidas) == 0 {\n\t\tfmt.Print(\"N\")\n\t} else {\n\t\tfor _, v := range repetidas {\n\t\t\tfmt.Print(v, \" \")\n\t\t}\n\t}\n\tfmt.Println()\n\n\tif faltas > 0 {\n\t\tfor _, v := range figs {\n\t\t\tif v != 0 {\n\t\t\t\tfmt.Print(v, \" \")\n\t\t\t}\n\t\t}\n\t} else {\n\t\tfmt.Print(\"N\")\n\t}\n\tfmt.Println()\n\tfmt.Println(faltas)\n}\n\n",
+            "content": "@@ -515,35 +515,12 @@\n = 0%0A\n-%09%09%7D else %7B%0A%09%09%09faltas++%0A\n %09%09%7D%0A\n+\n %09%7D%0A%0A\n@@ -608,23 +608,8 @@\n s %7B%0A\n-%09%09%09if i %3E 0 %7B%0A%09\n %09%09%09f\n@@ -621,34 +621,16 @@\n int(\n+v, \n %22 %22)%0A\n-%09%09%09%7D%0A%09%09%09fmt.Print(v)%0A\n %09%09%7D%0A\n@@ -669,27 +669,8 @@\n 0 %7B%0A\n-%09%09primeiro := true%0A\n %09%09fo\n@@ -711,28 +711,8 @@\n 0 %7B%0A\n-%09%09%09%09if !primeiro %7B%0A%09\n %09%09%09%09\n@@ -725,56 +725,16 @@\n int(\n+v, \n %22 %22)%0A\n-%09%09%09%09%7D%0A%09%09%09%09fmt.Print(v)%0A%09%09%09%09primeiro = true%0A\n %09%09%09%7D\n@@ -783,10 +783,32 @@\n intln()%0A\n+%09fmt.Println(faltas)%0A\n %7D%0A\n+%0A\n",
             "lines": "58"
+        },
+        {
+            "label": "2026-07-03_12-35-54",
+            "content": "@@ -597,25 +597,25 @@\n lse %7B%0A%09%09for \n-i\n+_\n , v := range\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-07-03_12-36-08",
+            "content": "@@ -739,12 +739,11 @@\n  := \n-fals\n+tru\n e%0A%09%09\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-07-03_12-37-28",
+            "content": "@@ -787,25 +787,8 @@\n 0 %7B%0A\n-%09%09%09%09fmt.Print(v)%0A\n %09%09%09%09\n@@ -828,16 +828,33 @@\n )%0A%09%09%09%09%7D%0A\n+%09%09%09%09fmt.Print(v)%0A\n %09%09%09%09prim\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-07-03_12-37-52",
+            "content": "@@ -721,23 +721,43 @@\n s %3E 0 %7B%0A\n+%09%09primeiro := false%0A\n %09%09for \n-i\n+_\n , v := r\n@@ -811,23 +811,17 @@\n %09if \n-i %3C len(figs)-1\n+!primeiro\n  %7B%0A%09\n@@ -845,16 +845,36 @@\n )%0A%09%09%09%09%7D%0A\n+%09%09%09%09primeiro = true%0A\n %09%09%09%7D%0A%09%09%7D\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-07-03_12-38-40",
+            "content": "@@ -805,9 +805,9 @@\n gs)-\n-2\n+1\n  %7B%0A%09\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-07-03_12-39-03",
+            "content": "@@ -801,17 +801,17 @@\n n(figs)-\n-1\n+2\n  %7B%0A%09%09%09%09%09\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-07-03_12-39-11",
+            "content": "@@ -790,17 +790,16 @@\n %09%09if i %3C\n-=\n  len(fig\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-07-03_12-39-16",
+            "content": "@@ -801,16 +801,18 @@\n en(figs)\n+-1\n  %7B%0A%09%09%09%09%09\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-07-03_12-39-27",
+            "content": "@@ -725,34 +725,15 @@\n 0 %7B%0A\n-%09%09primeiro := true%0A\n %09%09for \n-_\n+i\n , v \n@@ -767,28 +767,8 @@\n 0 %7B%0A\n-%09%09%09%09if !primeiro %7B%0A%09\n %09%09%09%09\n@@ -781,19 +781,36 @@\n int(\n-%22 %22\n+v\n )%0A%09%09%09%09\n-%7D%0A\n+if i %3C= len(figs) %7B%0A%09\n %09%09%09%09\n@@ -823,31 +823,18 @@\n int(\n-v\n+%22 %22\n )%0A%09%09%09%09\n-primeiro = false\n+%7D\n %0A%09%09%09\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-07-03_12-41-33",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar totalFig, nBaruelFig int\n\tfmt.Scan(&totalFig)\n\tfigs := make([]int, totalFig)\n\tfigsBaruel := make(map[int]int)\n\trepetidas := make([]int, 0)\n\n\t// todas as fig\n\tfor i := range totalFig {\n\t\tfigs[i] = i + 1\n\t}\n\n\tfmt.Scan(&nBaruelFig)\n\n\t// fig que o caba tem\n\tfor range nBaruelFig {\n\t\tvar a int\n\t\tfmt.Scan(&a)\n\t\tfigsBaruel[a]++\n\n\t\tif figsBaruel[a] > 1 {\n\t\t\trepetidas = append(repetidas, a)\n\t\t}\n\t}\n\n\tfaltas := 0\n\tfor i, v := range figs {\n\t\tif figsBaruel[v] > 0 {\n\t\t\tfigs[i] = 0\n\t\t} else {\n\t\t\tfaltas++\n\t\t}\n\t}\n\n\tif len(repetidas) == 0 {\n\t\tfmt.Print(\"N\")\n\t} else {\n\t\tfor i, v := range repetidas {\n\t\t\tif i > 0 {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Print(v)\n\t\t}\n\t}\n\tfmt.Println()\n\n\tif faltas > 0 {\n\t\tprimeiro := true\n\t\tfor _, v := range figs {\n\t\t\tif v != 0 {\n\t\t\t\tif !primeiro {\n\t\t\t\t\tfmt.Print(\" \")\n\t\t\t\t}\n\t\t\t\tfmt.Print(v)\n\t\t\t\tprimeiro = false\n\t\t\t}\n\t\t}\n\t} else {\n\t\tfmt.Print(\"N\")\n\t}\n\tfmt.Println()\n}\n",
+            "lines": "66"
         }
     ]
 }

@@ -19,7 +19,7 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@bfs
+- ed@tree
 flags:
   inbox: all
   panel: skills
@@ -29,5 +29,5 @@ audit:
   enabled: false
   interval_seconds: null
 lang: go
-selected: ed@detonate
-selected_index: 12
+selected: ed@backtrack
+selected_index: 6

@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-29_15-16-10",
+            "content": "@@ -26,23 +26,23 @@\n %22%0A%0Afunc \n-is\n+eh\n Prim\n-e\n+o\n (n, div \n@@ -93,18 +93,19 @@\n %0A%09if n %3C\n- 2\n+= 1\n  %7C%7C n%25di\n@@ -144,24 +144,22 @@\n urn \n-is\n+eh\n Prim\n-e\n+o\n (n, div\n-+1\n )%0A%7D%0A\n@@ -168,73 +168,17 @@\n unc \n-listPrime(n, cont int) %7B%0A%09vet := make(%5B%5Dint, n)%0A%09if n == cont\n+main()\n  %7B%0A\n-%09\n %09fmt\n@@ -190,152 +190,23 @@\n tln(\n-vet)%0A%09%7D%0A%0A%09if isPrime(n, 2) %7B%0A%09%09cont++%0A%09%09vet = append(vet, n)%0A%09%7D%0A%0A%09listPrime(n+1, cont)%0A%7D%0A%0Afunc main() %7B%0A%09var n int%0A%09fmt.Scan(&n)%0A%09listPrime(n, 0\n+%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-29_15-45-15",
+            "content": "@@ -186,28 +186,16 @@\n cont\n-, currentNum\n  int) %7B%0A\n %09vet\n@@ -190,16 +190,16 @@\n  int) %7B%0A\n+\n %09vet := \n@@ -264,26 +264,17 @@\n isPrime(\n-currentNum\n+n\n , 2) %7B%0A%09\n@@ -324,28 +324,16 @@\n me(n\n++1\n , cont\n-, currentNum+1\n )%0A%7D%0A\n@@ -372,16 +372,16 @@\n can(&n)%0A\n+\n %09listPri\n@@ -387,15 +387,12 @@\n ime(n, 0\n-, 2\n )%0A%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-06-29_15-48-58",
+            "content": "@@ -179,19 +179,8 @@\n ime(\n-vet %5B%5Dint, \n n, c\n@@ -202,16 +202,39 @@\n  int) %7B%0A\n+%09vet := make(%5B%5Dint, n)%0A\n %09if n ==\n@@ -264,17 +264,8 @@\n et)%0A\n-%09%09return%0A\n %09%7D%0A%0A\n@@ -322,26 +322,17 @@\n nd(vet, \n-currentNum\n+n\n )%0A%09%7D%0A%0A%09l\n@@ -340,21 +340,16 @@\n stPrime(\n-vet, \n n, cont,\n@@ -405,39 +405,16 @@\n can(&n)%0A\n-%09vet := make(%5B%5Dint, n)%0A\n %09listPri\n@@ -420,20 +420,15 @@\n ime(\n-vet, \n n, 0, \n-0\n+2\n )%0A%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-06-29_16-09-44",
+            "content": "@@ -435,19 +435,16 @@\n e(%5B%5Dint,\n- 0,\n  n)%0A%09lis\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-06-29_16-16-16",
+            "content": "@@ -381,142 +381,8 @@\n %0A%7D%0A%0A\n-func toStr(vet %5B%5Dint) %7B%0A%09fmt.Println(%22%5B%22)%0A%09for i, v := range vet %7B%0A%09%09fmt.Print(v)%0A%09%09if i != len(vet)-1 %7B%0A%09%09%09fmt.Print(%22, %22)%0A%09%09%7D%0A%09%7D%0A%7D%0A%0A\n func\n@@ -471,18 +471,6 @@\n  0)%0A\n-%09toStr(vet)%0A\n %7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-07-03_12-12-30",
+            "content": "@@ -512,26 +512,8 @@\n %0A%09%7D%0A\n-%09fmt.Println(%22%5D%22)%0A\n %7D%0A%0Af\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-07-03_12-12-59",
+            "content": "@@ -411,16 +411,18 @@\n mt.Print\n+ln\n (%22%5B%22)%0A%09f\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-07-03_12-13-06",
+            "content": "@@ -231,21 +231,27 @@\n ont %7B%0A%09%09\n-toStr\n+fmt.Println\n (vet)%0A%09%09\n@@ -617,10 +617,22 @@\n , 0, 0)%0A\n+%09toStr(vet)%0A\n %7D%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-07-03_12-21-14",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc isPrime(n, div int) bool {\n\tif n == div {\n\t\treturn true\n\t}\n\n\tif n < 2 || n%div == 0 {\n\t\treturn false\n\t}\n\n\treturn isPrime(n, div+1)\n}\n\nfunc listPrime(vet []int, n, cont, currentNum int) {\n\tif n == cont {\n\t\ttoStr(vet)\n\t\treturn\n\t}\n\n\tif isPrime(currentNum, 2) {\n\t\tcont++\n\t\tvet = append(vet, currentNum)\n\t}\n\n\tlistPrime(vet, n, cont, currentNum+1)\n}\n\nfunc toStr(vet []int) {\n\tfmt.Print(\"[\")\n\tfor i, v := range vet {\n\t\tfmt.Print(v)\n\t\tif i != len(vet)-1 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\tvet := make([]int, 0, n)\n\tlistPrime(vet, n, 0, 0)\n}\n",
+            "lines": "47"
+        }
+    ]
+}

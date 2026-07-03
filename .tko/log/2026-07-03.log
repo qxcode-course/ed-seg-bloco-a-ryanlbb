@@ -1,0 +1,53 @@
+2026-07-03 12:07:50, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-07-03 12:08:20, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-07-03 12:08:37, MOVE, v:1, k:ed@priminhos, mode:PICK
+2026-07-03 12:08:45, MOVE, v:1, k:ed@priminhos, mode:BACK
+2026-07-03 12:10:15, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-07-03 12:10:15, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-07-03 12:12:02, MOVE, v:1, k:ed@priminhos, mode:PICK
+2026-07-03 12:12:30, EXEC, v:1, k:ed@priminhos, mode:FULL, rate:0, size:47
+2026-07-03 12:12:59, EXEC, v:1, k:ed@priminhos, mode:FULL, rate:0, size:48
+2026-07-03 12:13:06, EXEC, v:1, k:ed@priminhos, mode:FULL, rate:0, size:48
+2026-07-03 12:13:05, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-07-03 12:13:05, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-07-03 12:13:06, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-07-03 12:20:48, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-07-03 12:20:48, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-07-03 12:21:14, EXEC, v:1, k:ed@priminhos, mode:FULL, rate:100, size:47
+2026-07-03 12:21:15, MOVE, v:1, k:ed@priminhos, mode:BACK
+2026-07-03 12:21:19, SELF, v:1, k:ed@priminhos, self:1, rate:100
+2026-07-03 12:24:50, MOVE, v:1, k:ed@escada, mode:PICK
+2026-07-03 12:25:05, MOVE, v:1, k:ed@escada, mode:BACK
+2026-07-03 12:25:36, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-07-03 12:25:36, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0
+2026-07-03 12:25:40, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-07-03 12:25:45, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-07-03 12:21:13, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-07-03 12:21:13, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-07-03 12:21:14, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-07-03 12:25:36, MOVE, v:1, k:ed@baruel, mode:EDIT
+2026-07-03 12:28:20, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0
+2026-07-03 12:28:20, MOVE, v:1, k:ed@baruel, mode:EDIT
+2026-07-03 12:30:41, MOVE, v:1, k:ed@baruel, mode:EDIT
+2026-07-03 12:30:41, MOVE, v:1, k:ed@baruel, mode:EDIT
+2026-07-03 12:35:54, EXEC, v:1, k:ed@baruel, mode:FULL, size:66, fail:COMP
+2026-07-03 12:35:53, MOVE, v:1, k:ed@baruel, mode:EDIT
+2026-07-03 12:35:53, MOVE, v:1, k:ed@baruel, mode:EDIT
+2026-07-03 12:36:08, EXEC, v:1, k:ed@baruel, mode:FULL, rate:50, size:66
+2026-07-03 12:37:28, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:66
+2026-07-03 12:37:31, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25
+2026-07-03 12:37:52, EXEC, v:1, k:ed@baruel, mode:FULL, rate:50, size:66
+2026-07-03 12:38:40, EXEC, v:1, k:ed@baruel, mode:FULL, rate:50, size:64
+2026-07-03 12:39:03, EXEC, v:1, k:ed@baruel, mode:FULL, rate:50, size:64
+2026-07-03 12:39:11, EXEC, v:1, k:ed@baruel, mode:FULL, rate:50, size:64
+2026-07-03 12:39:16, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:64
+2026-07-03 12:39:27, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:64
+2026-07-03 12:39:27, MOVE, v:1, k:ed@baruel, mode:EDIT
+2026-07-03 12:39:27, MOVE, v:1, k:ed@baruel, mode:EDIT
+2026-07-03 12:39:27, MOVE, v:1, k:ed@baruel, mode:EDIT
+2026-07-03 12:41:33, EXEC, v:1, k:ed@baruel, mode:FULL, rate:100, size:66
+2026-07-03 12:41:34, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-07-03 12:41:40, SELF, v:1, k:ed@baruel, self:1, rate:100
+2026-07-03 12:41:32, MOVE, v:1, k:ed@baruel, mode:EDIT
+2026-07-03 12:41:32, MOVE, v:1, k:ed@baruel, mode:EDIT
+2026-07-03 12:41:33, MOVE, v:1, k:ed@baruel, mode:EDIT
