@@ -29,5 +29,5 @@ audit:
   enabled: false
   interval_seconds: null
 lang: go
-selected: ed@backtrack
-selected_index: 6
+selected: ed@bst_insert
+selected_index: 16

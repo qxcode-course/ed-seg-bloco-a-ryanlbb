@@ -1,0 +1,19 @@
+2026-07-10 14:10:49, MOVE, v:1, k:ed@serial, mode:DOWN
+2026-07-10 14:10:50, MOVE, v:1, k:ed@serial, mode:PICK
+2026-07-10 14:10:49, MOVE, v:1, k:ed@serial, mode:EDIT
+2026-07-10 17:02:34, SELF, v:1, k:ed@editorint, self:1, rate:100, friend:codigo nao computou as mudanca de linha, concept:1
+2026-07-10 17:50:37, MOVE, v:1, k:ed@formatada, mode:PICK
+2026-07-10 17:50:40, MOVE, v:1, k:ed@formatada, mode:BACK
+2026-07-10 17:50:42, MOVE, v:1, k:ed@inverter, mode:DOWN
+2026-07-10 17:50:42, MOVE, v:1, k:ed@inverter, mode:PICK
+2026-07-10 17:51:11, MOVE, v:1, k:ed@inverter, mode:BACK
+2026-07-10 17:51:14, MOVE, v:1, k:ed@serial, mode:PICK
+2026-07-10 17:50:42, MOVE, v:1, k:ed@inverter, mode:EDIT
+2026-07-10 17:50:42, MOVE, v:1, k:ed@inverter, mode:EDIT
+2026-07-10 18:06:01, MOVE, v:1, k:ed@serial, mode:BACK
+2026-07-10 18:07:54, MOVE, v:1, k:ed@bst_insert, mode:DOWN
+2026-07-10 18:07:57, MOVE, v:1, k:ed@bst_insert, mode:PICK
+2026-07-10 18:07:54, MOVE, v:1, k:ed@bst_insert, mode:EDIT
+2026-07-10 18:07:54, MOVE, v:1, k:ed@bst_insert, mode:EDIT
+2026-07-10 18:25:57, MOVE, v:1, k:ed@serial, mode:EDIT
+2026-07-10 18:25:57, MOVE, v:1, k:ed@serial, mode:EDIT
