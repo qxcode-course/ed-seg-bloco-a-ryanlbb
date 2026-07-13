@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-13_16-51-22",
+            "content": "@@ -529,20 +529,19 @@\n  %7B%0A%09%09%09n.\n-Righ\n+Lef\n t.insert\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-13_16-54-06",
+            "content": "@@ -606,524 +606,15 @@\n  %7B%0A%09\n-fatherNode := node.findFather(value)%0A%0A%09if value %3C fatherNode.Value %7B%0A%09%09newLeft := fatherNode.Left.Left%0A%09%09fatherNode.Left = nil%0A%09%09fatherNode.Left = newLeft%0A%09%7D else %7B%0A%09%09newRight := fatherNode.Right.Left%0A%09%09fatherNode.Right = nil%0A%09%09fatherNode.Right = newRight%0A%09%7D%0A%0A%09return node%0A%7D%0A%0Afunc (n *Node) findFather(v int) *Node %7B%0A%09if v %3C n.Value %7B%0A%09%09if n.Left.Value == v %7B%0A%09%09%09return n%0A%09%09%7D else %7B%0A%09%09%09n.Left.findFather(v)%0A%09%09%7D%0A%09%7D else if v %3E n.Value %7B%0A%09%09if n.Right.Value == v %7B%0A%09%09%09return n%0A%09%09%7D else %7B%0A%09%09%09n.Right.findFather(v)%0A%09%09%7D%0A%09%7D\n+// TODO\n %0A%0A%09r\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-13_17-59-13",
+            "content": "@@ -641,18 +641,16 @@\n alue)%0A%0A%09\n-//\n if value\n@@ -672,18 +672,17 @@\n alue %7B%0A%09\n-//\n+%09\n newLeft \n@@ -698,34 +698,33 @@\n Node.Left.Left%0A%09\n-//\n+%09\n fatherNode.Left \n@@ -730,18 +730,17 @@\n  = nil%0A%09\n-//\n+%09\n fatherNo\n@@ -758,18 +758,16 @@\n ewLeft%0A%09\n-//\n %7D else %7B\n@@ -768,18 +768,17 @@\n else %7B%0A%09\n-//\n+%09\n newRight\n@@ -804,18 +804,17 @@\n t.Left%0A%09\n-//\n+%09\n fatherNo\n@@ -829,18 +829,16 @@\n  = nil%0A%09\n-//\n %09fatherN\n@@ -863,37 +863,10 @@\n ht%0A%09\n-//%7D%0A%0A%09fmt.Println(fatherNode)\n+%7D%0A\n %0A%09re\n",
+            "lines": "129"
+        },
+        {
+            "label": "2026-07-13_18-06-43",
+            "content": "@@ -641,16 +641,18 @@\n alue)%0A%0A%09\n+//\n if value\n@@ -678,52 +678,10 @@\n  %7B%0A%09\n-%09if node.Left == nil %7B%0A%09%09%09return node%0A%09%09%7D%0A%09%09\n+//\n newL\n@@ -701,33 +701,34 @@\n Node.Left.Left%0A%09\n-%09\n+//\n fatherNode.Left \n@@ -726,33 +726,34 @@\n ode.Left = nil%0A%09\n-%09\n+//\n fatherNode.Left \n@@ -767,91 +767,22 @@\n ft%0A%09\n+//\n %7D else \n-if value %3E fatherNode.Value %7B%0A%09%09if node.Right == nil %7B%0A%09%09%09return node%0A%09%09%7D%0A%09%09\n+%7B%0A%09//\n newR\n@@ -812,17 +812,18 @@\n t.Left%0A%09\n-%09\n+//\n fatherNo\n@@ -838,16 +838,18 @@\n  = nil%0A%09\n+//\n %09fatherN\n@@ -870,16 +870,18 @@\n wRight%0A%09\n+//\n %7D%0A%0A%09fmt.\n@@ -961,40 +961,8 @@\n e %7B%0A\n-%09if n == nil %7B%0A%09%09return nil%0A%09%7D%0A%0A\n %09if \n@@ -982,31 +982,35 @@\n %0A%09%09if n.Left\n+.Value\n  == \n-nil\n+v\n  %7B%0A%09%09%09return\n@@ -1015,65 +1015,23 @@\n rn n\n-il\n %0A%09%09%7D\n-%0A%09%09if n.Left.Value == v %7B%0A%09%09%09return n%0A%09%09%7D%0A%09%09return \n+ else %7B%0A%09%09%09\n n.Le\n@@ -1047,16 +1047,20 @@\n ther(v)%0A\n+%09%09%7D%0A\n %09%7D else \n@@ -1080,48 +1080,8 @@\n e %7B%0A\n-%09%09if n.Right == nil %7B%0A%09%09%09return nil%0A%09%09%7D%0A\n %09%09if\n@@ -1121,18 +1121,19 @@\n %0A%09%09%7D\n-%0A%09%09return \n+ else %7B%0A%09%09%09\n n.Ri\n@@ -1150,16 +1150,20 @@\n ther(v)%0A\n+%09%09%7D%0A\n %09%7D%0A%0A%09ret\n",
+            "lines": "130"
+        },
+        {
+            "label": "2026-07-13_18-13-07",
+            "content": "@@ -606,19 +606,778 @@\n  %7B%0A%09\n-return node\n+fatherNode := node.findFather(value)%0A%0A%09if value %3C fatherNode.Value %7B%0A%09%09if node.Left == nil %7B%0A%09%09%09return node%0A%09%09%7D%0A%09%09newLeft := fatherNode.Left.Left%0A%09%09fatherNode.Left = nil%0A%09%09fatherNode.Left = newLeft%0A%09%7D else if value %3E fatherNode.Value %7B%0A%09%09if node.Right == nil %7B%0A%09%09%09return node%0A%09%09%7D%0A%09%09newRight := fatherNode.Right.Left%0A%09%09fatherNode.Right = nil%0A%09%09fatherNode.Right = newRight%0A%09%7D%0A%0A%09fmt.Println(fatherNode)%0A%09return node%0A%7D%0A%0Afunc (n *Node) findFather(v int) *Node %7B%0A%09if n == nil %7B%0A%09%09return nil%0A%09%7D%0A%0A%09if v %3C n.Value %7B%0A%09%09if n.Left == nil %7B%0A%09%09%09return nil%0A%09%09%7D%0A%09%09if n.Left.Value == v %7B%0A%09%09%09return n%0A%09%09%7D%0A%09%09return n.Left.findFather(v)%0A%09%7D else if v %3E n.Value %7B%0A%09%09if n.Right == nil %7B%0A%09%09%09return nil%0A%09%09%7D%0A%09%09if n.Right.Value == v %7B%0A%09%09%09return n%0A%09%09%7D%0A%09%09return n.Right.findFather(v)%0A%09%7D%0A%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "144"
+        },
+        {
+            "label": "2026-07-13_18-16-35",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\nfunc BstInsert(values []int) *Node {\n\troot := &Node{Value: values[0]}\n\tfor i := 1; i < len(values); i++ {\n\t\troot.insert(values[i])\n\t}\n\treturn root\n}\n\nfunc (n *Node) insert(v int) {\n\tif n.Value == v {\n\t\treturn\n\t}\n\n\tif v < n.Value {\n\t\tif n.Left == nil {\n\t\t\tn.Left = &Node{Value: v}\n\t\t} else {\n\t\t\tn.Left.insert(v)\n\t\t}\n\t} else if v > n.Value {\n\t\tif n.Right == nil {\n\t\t\tn.Right = &Node{Value: v}\n\t\t} else {\n\t\t\tn.Right.insert(v)\n\t\t}\n\t}\n}\n\nfunc BstRemove(node *Node, value int) *Node {\n\treturn node\n}\n\n// -----------------------------------------------------------------------------------\nfunc BShow(node *Node, history string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, history+\"l\")\n\t}\n\tfor i := 0; i < len(history)-1; i++ {\n\t\tif history[i] != history[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif history != \"\" {\n\t\tif history[len(history)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, history+\"r\")\n\t}\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tvalues := make([]int, 0, len(parts))\n\tfor _, elem := range parts {\n\t\tv, err := strconv.Atoi(elem)\n\t\tif err == nil {\n\t\t\tvalues = append(values, v)\n\t\t}\n\t}\n\tscanner.Scan()\n\ttoRemove, _ := strconv.Atoi(scanner.Text())\n\n\t_ = toRemove // Ignora o valor a ser removido, pois n\u00e3o est\u00e1 implementado\n\troot := BstInsert(values)\n\tfmt.Println(\"original:\")\n\tBShow(root, \"\") // Chama a fun\u00e7\u00e3o de impress\u00e3o formatada\n\troot = BstRemove(root, toRemove)\n\tfmt.Println(\"modificado:\")\n\tBShow(root, \"\") // Chama a fun\u00e7\u00e3o de impress\u00e3o formatada da \u00e1rvore modificada\n}\n",
+            "lines": "99"
+        }
+    ]
+}
